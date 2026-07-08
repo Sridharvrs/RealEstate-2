@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  <title>Authentication</title>
+</head>
+<body>
+
+<!--=====================================
+        AUTH MODAL
+======================================-->
+
+<div class="auth-modal hidden" id="authModal">
+
+    <div class="auth-box">
+
+        <!-- Close Button -->
+
+        <button class="auth-close" id="authClose">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <!--==============================
+                Tabs
+        ==============================-->
+
+        <div class="auth-tabs">
+
+            <button class="tab active" data-tab="login">
+
+                Login
+
+            </button>
+
+            <button class="tab" data-tab="signup">
+
+                Sign Up
+
+            </button>
+
+        </div>
+
+        <!--==============================
+                LOGIN
+        ==============================-->
+
+        <div class="auth-form active" id="login">
+
+            <div class="auth-header">
+
+                <span class="auth-badge">
+
+                    ✦ Premium Real Estate
+
+                </span>
+
+                <h2>
+
+                    Welcome Back
+
+                </h2>
+
+                <p>
+
+                    Sign in to access your premium property dashboard.
+
+                </p>
+
+            </div>
+
+            <!--==============================
+                    ROLE
+            ==============================-->
+
+            <div class="role-selection">
+
+                <label class="role-title">
+
+                    Select Your Role
+
+                </label>
+
+                <div class="role-grid">
+
+                    <!-- User -->
+
+                    <label class="role-card">
+
+                        <input
+                            type="radio"
+                            name="loginRole"
+                            value="user"
+                            checked>
+
+                        <div class="role-icon">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <h4>
+
+                            User
+
+                        </h4>
+
+                        <span>
+
+                            Buyer / Seller
+
+                        </span>
+
+                    </label>
+
+                    <!-- Admin -->
+
+                    <label class="role-card">
+
+                        <input
+                            type="radio"
+                            name="loginRole"
+                            value="admin">
+
+                        <div class="role-icon">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                        </div>
+
+                        <h4>
+
+                            Admin
+
+                        </h4>
+
+                        <span>
+
+                            Dashboard Access
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!--==============================
+                    EMAIL
+            ==============================-->
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email Address">
+
+            </div>
+
+            <!--==============================
+                    PASSWORD
+            ==============================-->
+
+            <div class="password-field">
+
+                <div class="input-group">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password">
+
+                </div>
+
+                <span
+                    class="eye"
+                    data-eye="loginPassword">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </span>
+
+            </div>
+
+            <div
+                class="password-hint"
+                id="loginHint">
+
+            </div>
+
+            <!--==============================
+                    OPTIONS
+            ==============================-->
+
+            <div class="row">
+
+                <label class="remember-label">
+
+                    <input
+                        type="checkbox"
+                        id="rememberMe">
+
+                    Remember Me
+
+                </label>
+
+                <a href="error.html">
+
+                    Forgot Password?
+
+                </a>
+
+            </div>
+
+            <!--==============================
+                    LOGIN BUTTON
+            ==============================-->
+
+            <button
+                class="btn-auth"
+                id="loginBtn"
+                type="button">
+
+                Sign In
+
+            </button>
+
+            <!--==============================
+                    DIVIDER
+            ==============================-->
+
+            <div class="divider">
+
+                <span>
+
+                    OR CONTINUE WITH
+
+                </span>
+
+            </div>
+
+            <!--==============================
+                    GOOGLE
+            ==============================-->
+
+            <button
+                class="google-btn"
+                onclick="window.location.href='error.html'">
+
+                <img
+                    src="https://www.svgrepo.com/show/475656/google-color.svg"
+                    width="20"
+                    alt="Google">
+
+                Continue with Google
+
+            </button>
+
+        </div>
+
+        <!--==============================
+                SIGNUP FORM
+                (Continue in Part 2)
+        ==============================-->
+
+        <div class="auth-form" id="signup">
+                <div class="auth-header">
+
+        <span class="auth-badge">
+
+            ✦ Join Stackly
+
+        </span>
+
+        <h2>
+
+            Create Account
+
+        </h2>
+
+        <p>
+
+            Register to discover premium properties and exclusive investment opportunities.
+
+        </p>
+
+    </div>
+
+    <!--==============================
+            ROLE
+    ==============================-->
+
+    <div class="role-selection">
+
+        <label class="role-title">
+
+            Select Your Role
+
+        </label>
+
+        <div class="role-grid">
+
+            <!-- User -->
+
+            <label class="role-card">
+
+                <input
+                    type="radio"
+                    name="signupRole"
+                    value="user"
+                    checked>
+
+                <div class="role-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <h4>
+
+                    User
+
+                </h4>
+
+                <span>
+
+                    Buyer / Seller
+
+                </span>
+
+            </label>
+
+            <!-- Admin -->
+
+            <label class="role-card">
+
+                <input
+                    type="radio"
+                    name="signupRole"
+                    value="admin">
+
+                <div class="role-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <h4>
+
+                    Admin
+
+                </h4>
+
+                <span>
+
+                    Dashboard Access
+
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <!--==============================
+            FULL NAME
+    ==============================-->
+
+    <div class="input-group">
+
+        <i class="fa-solid fa-user"></i>
+
+        <input
+            type="text"
+            id="signupName"
+            placeholder="Full Name"
+            oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')">
+
+    </div>
+
+    <!--==============================
+            EMAIL
+    ==============================-->
+
+    <div class="input-group">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <input
+            type="email"
+            id="signupEmail"
+            placeholder="Email Address">
+
+    </div>
+
+    <!--==============================
+            PASSWORD
+    ==============================-->
+
+    <div class="password-field">
+
+        <div class="input-group">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Password">
+
+        </div>
+
+        <span
+            class="eye"
+            data-eye="signupPassword">
+
+            <i class="fa-solid fa-eye"></i>
+
+        </span>
+
+    </div>
+
+    <!--==============================
+        CONFIRM PASSWORD
+    ==============================-->
+
+    <div class="password-field">
+
+        <div class="input-group">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <input
+                type="password"
+                id="signupConfirm"
+                placeholder="Confirm Password">
+
+        </div>
+
+        <span
+            class="eye"
+            data-eye="signupConfirm">
+
+            <i class="fa-solid fa-eye"></i>
+
+        </span>
+
+    </div>
+
+    <div
+        class="password-hint"
+        id="signupHint">
+
+    </div>
+
+    <!--==============================
+            TERMS
+       <!--==============================
+            TERMS
+    ==============================-->
+
+    <label class="terms">
+
+        <input
+            type="checkbox"
+            id="agreeTerms">
+
+        <span>
+
+            I agree to the
+            <a href="error.html">
+
+                Terms & Conditions
+
+            </a>
+
+        </span>
+
+    </label>
+
+    <!--==============================
+            SIGNUP BUTTON
+    ==============================-->
+
+    <button
+        class="btn-auth"
+        type="button">
+
+        Create Account
+
+    </button>
+
+    <!--==============================
+            DIVIDER
+    ==============================-->
+
+    <div class="divider">
+
+        <span>
+
+            OR CONTINUE WITH
+
+        </span>
+
+    </div>
+
+    <!--==============================
+            GOOGLE BUTTON
+    ==============================-->
+
+    <button
+        class="google-btn"
+        onclick="window.location.href='error.html'">
+
+        <img
+            src="https://www.svgrepo.com/show/475656/google-color.svg"
+            alt="Google"
+            width="20">
+
+        Continue with Google
+
+    </button>
+
+    <!--==============================
+            FOOTER TEXT
+    ==============================-->
+
+    <div class="auth-footer">
+
+        <p>
+
+            Already have an account?
+
+            <a
+                href="#"
+                class="switch-tab"
+                data-tab="login">
+
+                Login
+
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+  
+  <script src="auth.js"></script>
+</body>
+</html>
