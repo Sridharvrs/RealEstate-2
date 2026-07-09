@@ -1,294 +1,291 @@
-/*=========================================
-            ERROR HERO
-=========================================*/
+/* ===========================
+        GLOBAL
+=========================== */
 
-.error-hero{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#08111F;
+    color:#fff;
+    overflow:hidden;
+}
+
+/* ===========================
+        PAGE
+=========================== */
+
+.error-page{
 
     position:relative;
 
+    width:100%;
     min-height:100vh;
 
     display:flex;
-
+    justify-content:center;
     align-items:center;
 
-    justify-content:center;
-
-    padding:160px 0 100px;
+    padding:30px;
 
     overflow:hidden;
-
-    background:
-    radial-gradient(circle at top right,
-    rgba(212,175,55,.08),
-    transparent 35%),
-    radial-gradient(circle at bottom left,
-    rgba(255,255,255,.03),
-    transparent 40%),
-    #08111F;
-
 }
 
-/*=========================================
-            CONTAINER
-=========================================*/
+/* ===========================
+        GLOW
+=========================== */
 
-.error-hero .container{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    align-items:center;
-
-    gap:80px;
-
-}
-
-/*=========================================
-            CONTENT
-=========================================*/
-
-.error-content{
-
-    max-width:600px;
-
-}
-
-.error-content .section-tag{
-
-    margin-bottom:25px;
-
-}
-
-.error-content h1{
-
-    font-size:180px;
-
-    line-height:1;
-
-    font-weight:900;
-
-    color:#FFD76A;
-
-    margin-bottom:15px;
-
-    text-shadow:
-    0 10px 40px rgba(212,175,55,.25);
-
-}
-
-.error-content h2{
-
-    color:#FFFFFF;
-
-    font-size:46px;
-
-    margin-bottom:20px;
-
-}
-
-.error-content p{
-
-    color:#BFC7D5;
-
-    font-size:17px;
-
-    line-height:1.9;
-
-    margin-bottom:40px;
-
-}
-
-/*=========================================
-            BUTTONS
-=========================================*/
-
-.error-buttons{
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-.error-buttons a{
-
-    text-decoration:none;
-
-}
-
-/*=========================================
-            IMAGE
-=========================================*/
-
-.error-image{
-
-    position:relative;
-
-    text-align:center;
-
-}
-
-.error-image img{
-
-    width:100%;
-
-    max-width:600px;
-
-    border-radius:30px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-    0 30px 80px rgba(0,0,0,.4);
-
-    animation:floatImage 5s ease-in-out infinite;
-
-}
-
-/*=========================================
-            GOLD GLOW
-=========================================*/
-
-.error-image::before{
-
-    content:"";
+.glow{
 
     position:absolute;
 
-    width:320px;
-
-    height:320px;
-
     border-radius:50%;
+
+    filter:blur(100px);
+
+    z-index:0;
+}
+
+.glow-1{
+
+    width:450px;
+    height:450px;
+
+    top:-180px;
+    left:-180px;
+
+    background:rgba(212,175,55,.10);
+}
+
+.glow-2{
+
+    width:400px;
+    height:400px;
+
+    right:-150px;
+    bottom:-150px;
+
+    background:rgba(255,255,255,.05);
+}
+
+/* ===========================
+        CARD
+=========================== */
+
+.error-card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:700px;
+
+    text-align:center;
+
+    padding:70px 50px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
+}
+
+/* ===========================
+        BADGE
+=========================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:40px;
 
     background:rgba(212,175,55,.12);
 
-    filter:blur(90px);
+    border:1px solid rgba(212,175,55,.4);
 
-    top:50%;
+    color:#FFD76A;
 
-    left:50%;
+    font-size:14px;
 
-    transform:translate(-50%,-50%);
+    font-weight:700;
 
-    z-index:-1;
+    letter-spacing:1px;
 
+    margin-bottom:30px;
 }
 
-/*=========================================
-            FLOAT
-=========================================*/
+/* ===========================
+        404
+=========================== */
 
-@keyframes floatImage{
+.error-card h1{
 
-    0%{
+    font-size:140px;
 
-        transform:translateY(0);
+    color:#FFD76A;
 
+    line-height:1;
+
+    margin-bottom:15px;
+
+    text-shadow:0 10px 40px rgba(212,175,55,.3);
+}
+
+.error-card h2{
+
+    font-size:38px;
+
+    margin-bottom:20px;
+}
+
+.error-card p{
+
+    max-width:520px;
+
+    margin:auto;
+
+    color:#C8D0DB;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+}
+
+/* ===========================
+        BUTTONS
+=========================== */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+}
+
+.primary-btn{
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    color:#08111F;
+
+    background:linear-gradient(135deg,#FFD76A,#D4AF37);
+
+    transition:.35s;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+}
+
+.outline-btn{
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    color:#fff;
+
+    border:2px solid rgba(255,255,255,.15);
+
+    transition:.35s;
+}
+
+.outline-btn:hover{
+
+    background:#fff;
+
+    color:#08111F;
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .error-card{
+
+        padding:50px 30px;
     }
 
-    50%{
+    .error-card h1{
 
-        transform:translateY(-18px);
-
+        font-size:100px;
     }
 
-    100%{
+    .error-card h2{
 
-        transform:translateY(0);
+        font-size:30px;
+    }
 
+    .error-card p{
+
+        font-size:16px;
+    }
+
+    .buttons{
+
+        flex-direction:column;
+    }
+
+    .primary-btn,
+    .outline-btn{
+
+        width:100%;
     }
 
 }
 
-/*=========================================
-            RESPONSIVE
-=========================================*/
+@media(max-width:480px){
 
-@media(max-width:992px){
+    .error-card{
 
-.error-hero{
+        padding:40px 20px;
+    }
 
-padding:140px 0 80px;
+    .error-card h1{
 
-}
+        font-size:80px;
+    }
 
-.error-hero .container{
+    .error-card h2{
 
-grid-template-columns:1fr;
+        font-size:24px;
+    }
 
-text-align:center;
+    .error-card p{
 
-gap:60px;
-
-}
-
-.error-content{
-
-margin:auto;
-
-}
-
-.error-buttons{
-
-justify-content:center;
-
-}
-
-.error-content h1{
-
-font-size:140px;
-
-}
-
-.error-content h2{
-
-font-size:36px;
-
-}
-
-}
-
-@media(max-width:576px){
-
-.error-content h1{
-
-font-size:100px;
-
-}
-
-.error-content h2{
-
-font-size:28px;
-
-}
-
-.error-content p{
-
-font-size:15px;
-
-}
-
-.error-buttons{
-
-flex-direction:column;
-
-}
-
-.error-buttons a{
-
-width:100%;
-
-}
-
-.error-image img{
-
-max-width:100%;
-
-}
+        font-size:15px;
+    }
 
 }
