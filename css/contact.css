@@ -1,3 +1,16 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /*==================================================
             CONTACT HERO SECTION
 ==================================================*/
@@ -1828,5 +1841,297 @@ text-align:center;
 .footer-contact p:last-child{
 
     margin-bottom:0;
+
+}
+
+/* ======================== media querry ========================== */
+/*==================================================
+                TABLET
+==================================================*/
+
+@media (max-width: 992px){
+
+    section{
+        padding:80px 20px;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    /* Hero */
+
+    .contact-hero{
+        padding:140px 20px 80px;
+        background-attachment:scroll;
+    }
+
+    .contact-hero-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .contact-content{
+        text-align:center;
+    }
+
+    .contact-content h1{
+        font-size:52px;
+    }
+
+    .contact-content p{
+        font-size:17px;
+        margin:0 auto 35px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-contact-card{
+        max-width:700px;
+        margin:auto;
+    }
+
+    /* Contact Cards */
+
+    .contact-info-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:25px;
+    }
+
+    /* Contact Form */
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .contact-info-box{
+        max-width:700px;
+        margin:auto;
+    }
+
+    /* Footer */
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:35px;
+    }
+
+}
+
+/*==================================================
+                MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+    section{
+        padding:70px 20px;
+    }
+
+    .section-header{
+        margin-bottom:45px;
+    }
+
+    .section-header h2{
+        font-size:34px;
+    }
+
+    .section-header p{
+        font-size:15px;
+    }
+
+    /* Hero */
+
+    .contact-content h1{
+        font-size:40px;
+    }
+
+    .contact-content p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-btn,
+    .hero-outline-btn{
+        width:100%;
+    }
+
+    .hero-contact-card img{
+        height:280px;
+    }
+
+    .hero-card-content{
+        padding:25px;
+    }
+
+    .hero-card-content h3{
+        font-size:26px;
+    }
+
+    .hero-card-stats{
+        grid-template-columns:1fr;
+    }
+
+    /* Contact Cards */
+
+    .contact-info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-card{
+        padding:28px;
+    }
+
+    .info-card h3{
+        font-size:24px;
+    }
+
+    /* Contact Form */
+
+    .contact-form-box{
+        padding:28px;
+    }
+
+    .input-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-form-box button{
+        width:100%;
+    }
+
+    .contact-info-box img{
+        height:220px;
+    }
+
+    .info-content{
+        padding:25px;
+    }
+
+    .info-content h3{
+        font-size:24px;
+    }
+
+    .contact-detail{
+        gap:15px;
+    }
+
+    /* Footer */
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-bottom-links{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+}
+
+/*==================================================
+                SMALL MOBILE
+==================================================*/
+
+@media (max-width:480px){
+
+    .contact-hero{
+        padding:120px 18px 60px;
+    }
+
+    .contact-content h1{
+        font-size:32px;
+    }
+
+    .contact-content p{
+        font-size:15px;
+    }
+
+    .hero-contact-card img{
+        height:220px;
+    }
+
+    .hero-card-content{
+        padding:20px;
+    }
+
+    .hero-card-content h3{
+        font-size:22px;
+    }
+
+    .hero-card-content p{
+        font-size:14px;
+    }
+
+    .section-header h2{
+        font-size:28px;
+    }
+
+    .section-header p{
+        font-size:14px;
+    }
+
+    .info-card{
+        padding:22px;
+    }
+
+    .info-icon{
+        width:60px;
+        height:60px;
+    }
+
+    .info-icon i{
+        font-size:22px;
+    }
+
+    .info-card h3{
+        font-size:20px;
+    }
+
+    .contact-form-box{
+        padding:20px;
+    }
+
+    .contact-form-box input,
+    .contact-form-box select,
+    .contact-form-box textarea{
+        padding:15px;
+        font-size:14px;
+    }
+
+    .contact-detail{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .contact-detail i{
+        margin-bottom:10px;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .footer{
+        padding:50px 20px 25px;
+    }
+
+    .footer-grid h3{
+        font-size:20px;
+    }
 
 }

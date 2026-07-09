@@ -15,21 +15,75 @@
     
     <!-- ========= UNIQUE FLOATING PILL NAVBAR ========= -->
 <header class="nav-wrap">
-  <nav class="nav-pill">
-    <a href="index.html" class="brand">
-      <span class="brand-dot"></span>
-      <span class="brand-name">ESTELLA</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="properties.html">Properties</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="contact.html" class="nav-cta">Book a Tour →</a>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
+
+    <nav class="nav-pill">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-dot"></span>
+
+            <span class="brand-name">ESTELLA</span>
+
+        </a>
+
+        <!-- Desktop Menu -->
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="properties.html">Properties</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="about.html" class="active">About</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <a class="nav-cta" onclick="openAuth()">
+
+            Book a Tour →
+
+        </a>
+
+        <!-- Burger -->
+
+        <button class="burger" id="burger">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Home</a>
+
+        <a href="properties.html">Properties</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+        <button class="mobile-btn" onclick="openAuth()">
+
+            Book a Tour →
+
+        </button>
+
+    </div>
+
 </header>
 
 <!--=====================================
@@ -48,13 +102,13 @@
 
             <div class="about-content">
 
-                <span class="hero-badge">
+                <span class="hero-badge section-badge reveal-left">
 
                     ✦ About Stackly
 
                 </span>
 
-                <h1>
+                <h1 class="reveal-right">
 
                     Building Trust,
 
@@ -62,7 +116,7 @@
 
                 </h1>
 
-                <p>
+                <p class="reveal-up">
 
                     For over two decades, we've helped families,
                     investors, and businesses discover exceptional
@@ -74,13 +128,13 @@
 
                 <div class="hero-buttons">
 
-                    <a href="properties.html" class="hero-btn">
+                    <a href="" class="hero-btn reveal-pop">
 
                         Explore Properties
 
                     </a>
 
-                    <a href="contact.html" class="hero-outline-btn">
+                    <a href="" class="hero-outline-btn reveal-pop">
 
                         Contact Our Team
 
@@ -90,7 +144,7 @@
 
                 <!-- Company Stats -->
 
-                <div class="about-stats">
+                <div class="about-stats reveal-pop">
 
                     <div class="about-stat">
 
@@ -130,9 +184,9 @@
 
             <!-- Right Side -->
 
-            <div class="about-card">
+            <div class="about-card reveal-pop">
 
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80"
+                <img src="images/villa21.webp"
                     alt="Luxury Property">
 
                 <div class="card-overlay">
@@ -187,9 +241,9 @@
 
             <!-- Left Image -->
 
-            <div class="story-image">
+            <div class="story-image reveal-pop">
 
-                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0c?auto=format&fit=crop&w=1200&q=80"
+                <img src="images/villa22.webp"
                     alt="Luxury Property">
 
                 <div class="experience-badge">
@@ -206,13 +260,13 @@
 
             <div class="story-content">
 
-                <span class="section-badge">
+                <span class="section-badge reveal-left">
 
                     ✦ Our Journey
 
                 </span>
 
-                <h2>
+                <h2 class="reveal-right">
 
                     Building Trust,
 
@@ -220,7 +274,7 @@
 
                 </h2>
 
-                <p>
+                <p class="reveal-up">
 
                     Since our foundation, we've been committed to helping
                     families, investors, and businesses discover premium
@@ -230,7 +284,7 @@
 
                 </p>
 
-                <p>
+                <p class="reveal-left">
 
                     With decades of market expertise and a passion for
                     excellence, we've transformed thousands of property
@@ -241,7 +295,7 @@
 
                 <!-- Milestones -->
 
-                <div class="story-highlights">
+                <div class="story-highlights reveal-pop">
 
                     <div class="highlight">
 
@@ -271,7 +325,7 @@
 
                 <!-- Quote -->
 
-                <div class="founder-quote">
+                <div class="founder-quote reveal-pop">
 
                     <p>
 
@@ -283,7 +337,7 @@
 
                     <div class="quote-author">
 
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                        <img src="images/team3.webp"
                             alt="Founder">
 
                         <div>
@@ -316,15 +370,15 @@
 
         <div class="section-header">
 
-            <span class="section-badge">
+            <span class="section-badge reveal-left">
                 ✦ Our Purpose
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
                 Our Mission & Vision
             </h2>
 
-            <p>
+            <p reveal-up>
                 We believe exceptional real estate is built on trust,
                 innovation, and lasting relationships that create value
                 for every client.
@@ -336,7 +390,7 @@
 
             <!-- Mission -->
 
-            <div class="mission-card">
+            <div class="mission-card reveal-pop">
 
                 <div class="mv-icon">
                     🎯
@@ -369,7 +423,7 @@
 
             <!-- Vision -->
 
-            <div class="vision-card">
+            <div class="vision-card reveal-pop">
 
                 <div class="mv-icon">
                     🚀
@@ -416,19 +470,19 @@
 
         <div class="section-header">
 
-            <span class="section-badge">
+            <span class="section-badge reveal-left">
 
                 ✦ Our Foundation
 
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
 
                 Our Core Values
 
             </h2>
 
-            <p>
+            <p class="reveal-up">
 
                 Every decision we make is guided by principles that
                 build trust, inspire confidence, and create exceptional
@@ -442,7 +496,7 @@
 
             <!-- Value 1 -->
 
-            <div class="value-card">
+            <div class="value-card reveal-pop">
 
                 <div class="value-icon">
 
@@ -467,7 +521,7 @@
 
             <!-- Value 2 -->
 
-            <div class="value-card">
+            <div class="value-card reveal-pop">
 
                 <div class="value-icon">
 
@@ -492,7 +546,7 @@
 
             <!-- Value 3 -->
 
-            <div class="value-card">
+            <div class="value-card reveal-pop">
 
                 <div class="value-icon">
 
@@ -517,7 +571,7 @@
 
             <!-- Value 4 -->
 
-            <div class="value-card">
+            <div class="value-card reveal-pop">
 
                 <div class="value-icon">
 
@@ -542,7 +596,7 @@
 
             <!-- Value 5 -->
 
-            <div class="value-card">
+            <div class="value-card reveal-pop">
 
                 <div class="value-icon">
 
@@ -567,7 +621,7 @@
 
             <!-- Value 6 -->
 
-            <div class="value-card">
+            <div class="value-card reveal-pop">
 
                 <div class="value-icon">
 
@@ -606,19 +660,19 @@
 
         <div class="section-header">
 
-            <span class="section-badge">
+            <span class="section-badge reveal-left">
 
                 ✦ Leadership Team
 
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
 
                 Meet Our Leadership
 
             </h2>
 
-            <p>
+            <p class="reveal-up">
 
                 Visionary leaders with decades of experience,
                 dedicated to delivering excellence in luxury real estate.
@@ -631,11 +685,11 @@
 
             <!-- CEO -->
 
-            <div class="leader-card">
+            <div class="leader-card reveal-pop">
 
                 <div class="leader-image">
 
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+                    <img src="images/team5.webp"
                         alt="CEO">
 
                     <span class="leader-badge">
@@ -699,11 +753,11 @@
 
                     <div class="leader-social">
 
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
 
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="error.html"><i class="fab fa-twitter"></i></a>
 
-                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="error.html"><i class="fas fa-envelope"></i></a>
 
                     </div>
 
@@ -713,11 +767,11 @@
 
             <!-- Sales Director -->
 
-            <div class="leader-card">
+            <div class="leader-card reveal-pop">
 
                 <div class="leader-image">
 
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
+                    <img src="images/team2.webp"
                         alt="Sales Director">
 
                     <span class="leader-badge">
@@ -780,11 +834,11 @@
 
                     <div class="leader-social">
 
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
 
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="error.html"><i class="fab fa-twitter"></i></a>
 
-                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="error.html"><i class="fas fa-envelope"></i></a>
 
                     </div>
 
@@ -794,11 +848,11 @@
 
             <!-- Investment Head -->
 
-            <div class="leader-card">
+            <div class="leader-card reveal-pop">
 
                 <div class="leader-image">
 
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80"
+                    <img src="images/team6.webp"
                         alt="Investment">
 
                     <span class="leader-badge">
@@ -861,11 +915,11 @@
 
                     <div class="leader-social">
 
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
 
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="error.html"><i class="fab fa-twitter"></i></a>
 
-                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="error.html"><i class="fas fa-envelope"></i></a>
 
                     </div>
 
@@ -889,13 +943,13 @@
 
         <div class="section-header small-header">
 
-            <span class="section-badge">
+            <span class="section-badge reveal-left">
 
                 ✦ Our Achievements
 
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
 
                 Numbers That Speak for Themselves
 
@@ -903,7 +957,7 @@
 
         </div>
 
-        <div class="achievement-grid">
+        <div class="achievement-grid reveal-pop">
 
             <div class="achievement-card">
 
@@ -955,9 +1009,9 @@
 
             <!-- Left -->
 
-            <div class="trust-image">
+            <div class="trust-image reveal-pop">
 
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
+                <img src="images/villa25.webp"
                     alt="Luxury Home">
 
                 <div class="trust-badge">
@@ -974,19 +1028,19 @@
 
             <div class="trust-content">
 
-                <span class="section-badge">
+                <span class="section-badge reveal-left">
 
                     ✦ Why Choose Us
 
                 </span>
 
-                <h2>
+                <h2 class="reveal-right">
 
                     Why Clients Trust Us
 
                 </h2>
 
-                <p>
+                <p class="reveal-up">
 
                     Trust is earned through consistency, transparency,
                     and exceptional results. Our commitment to every
@@ -997,7 +1051,7 @@
 
                 <div class="trust-list">
 
-                    <div class="trust-item">
+                    <div class="trust-item reveal-pop">
 
                         <div class="trust-icon">
                             ✓
@@ -1018,7 +1072,7 @@
 
                     </div>
 
-                    <div class="trust-item">
+                    <div class="trust-item reveal-pop">
 
                         <div class="trust-icon">
                             ✓
@@ -1039,7 +1093,7 @@
 
                     </div>
 
-                    <div class="trust-item">
+                    <div class="trust-item reveal-pop">
 
                         <div class="trust-icon">
                             ✓
@@ -1060,7 +1114,7 @@
 
                     </div>
 
-                    <div class="trust-item">
+                    <div class="trust-item reveal-pop">
 
                         <div class="trust-icon">
                             ✓
@@ -1101,19 +1155,19 @@
 
         <div class="section-header">
 
-            <span class="section-badge">
+            <span class="section-badge reveal-left">
 
                 ✦ Trusted Partners
 
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
 
                 Our Partners & Brands
 
             </h2>
 
-            <p>
+            <p class="reveal-up">
 
                 We collaborate with leading developers, financial
                 institutions, legal advisors, and interior specialists
@@ -1125,9 +1179,9 @@
 
         <div class="partners-grid">
 
-            <div class="partner-card">
+            <div class="partner-card reveal-pop reveal-pop">
 
-                <img src="assets/partners/builder1.webp" alt="Luxury Builders">
+                <img src="images/team1.webp" alt="Luxury Builders">
 
                 <h3>Luxury Builders</h3>
 
@@ -1135,9 +1189,9 @@
 
             </div>
 
-            <div class="partner-card">
+            <div class="partner-card reveal-pop">
 
-                <img src="assets/partners/bank1.webp" alt="National Bank">
+                <img src="images/team2.webp" alt="National Bank">
 
                 <h3>National Bank</h3>
 
@@ -1145,9 +1199,9 @@
 
             </div>
 
-            <div class="partner-card">
+            <div class="partner-card reveal-pop">
 
-                <img src="assets/partners/legal.webp" alt="Legal Associates">
+                <img src="images/team3.webp" alt="Legal Associates">
 
                 <h3>Legal Associates</h3>
 
@@ -1155,9 +1209,9 @@
 
             </div>
 
-            <div class="partner-card">
+            <div class="partner-card reveal-pop">
 
-                <img src="assets/partners/interior.webp" alt="Luxury Interiors">
+                <img src="images/villa21.webp" alt="Luxury Interiors">
 
                 <h3>Luxury Interiors</h3>
 
@@ -1165,9 +1219,9 @@
 
             </div>
 
-            <div class="partner-card">
+            <div class="partner-card reveal-pop">
 
-                <img src="assets/partners/insurance.webp" alt="Secure Insurance">
+                <img src="images/villa28.webp" alt="Secure Insurance">
 
                 <h3>Secure Insurance</h3>
 
@@ -1175,9 +1229,9 @@
 
             </div>
 
-            <div class="partner-card">
+            <div class="partner-card reveal-pop">
 
-                <img src="assets/partners/smart-home.webp" alt="Smart Living">
+                <img src="images/villa30.webp" alt="Smart Living">
 
                 <h3>Smart Living</h3>
 
@@ -1203,19 +1257,19 @@
 
         <div class="cta-content">
 
-            <span class="section-badge">
+            <span class="section-badge reveal-left">
 
                 ✦ Let's Get Started
 
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
 
                 Find Your Dream Property With Confidence
 
             </h2>
 
-            <p>
+            <p class="reveal-up">
 
                 Whether you're searching for your forever home,
                 planning your next investment, or selling a luxury
@@ -1226,13 +1280,13 @@
 
             <div class="cta-buttons">
 
-                <a href="properties.html" class="cta-btn">
+                <a href="error.html" class="cta-btn reveal-pop">
 
                     Explore Properties
 
                 </a>
 
-                <a href="contact.html" class="cta-outline">
+                <a href="error.html" class="cta-outline reveal-pop">
 
                     Contact Our Experts
 
@@ -1257,10 +1311,10 @@
         <a href="index.html" class="footer-logo"><img src="assets/logo.webp" alt="Stackly"></a>
         <p>Stackly connects buyers, sellers and investors with premium real estate through trusted guidance and exceptional service.</p>
         <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="error.html"><i class="fab fa-instagram"></i></a>
+          <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="error.html"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
 
@@ -1278,11 +1332,11 @@
       <div class="footer-links">
         <h3>Services</h3>
         <ul>
-          <li><a href="#">Buy Property</a></li>
-          <li><a href="#">Sell Property</a></li>
-          <li><a href="#">Rent Property</a></li>
-          <li><a href="#">Commercial</a></li>
-          <li><a href="#">Investment</a></li>
+          <li><a href="error.html">Buy Property</a></li>
+          <li><a href="error.html">Sell Property</a></li>
+          <li><a href="error.html">Rent Property</a></li>
+          <li><a href="error.html">Commercial</a></li>
+          <li><a href="error.html">Investment</a></li>
         </ul>
       </div>
 
@@ -1307,14 +1361,23 @@
     <div class="footer-bottom">
       <p>© 2026 Stackly. All Rights Reserved.</p>
       <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Sitemap</a>
+        <a href="error.html">Privacy Policy</a>
+        <a href="error.html">Terms</a>
+        <a href="error.html">Sitemap</a>
         <a href="#top">Back To Top ↑</a>
       </div>
     </div>
   </div>
 </footer>
 
+<script>
+        fetch("auth/auth.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("auth-container").innerHTML = html;
+  });
+    </script>
+    <script src="auth/auth.js"></script>
+<script src="js/global.js"></script>
 </body>
 </html>

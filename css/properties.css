@@ -1,3 +1,16 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /*==================================================
             PROPERTIES HERO
 ===================================================*/
@@ -2174,5 +2187,220 @@ padding:22px;
     }
     .card-content h3{
         font-size:24px;
+    }
+}
+
+/* ===================================================================== */
+
+/* ===========================================
+        RESPONSIVE (WITHOUT NAVBAR)
+=========================================== */
+
+@media (max-width:1200px){
+
+    section{
+        padding:90px 30px;
+    }
+
+    .properties-content h1{
+        font-size:56px;
+    }
+
+    .properties-content p{
+        font-size:18px;
+    }
+
+    .hero-search,
+    .search-wrapper{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-search button,
+    .search-wrapper button{
+        grid-column:span 2;
+        height:58px;
+    }
+
+    .category-grid,
+    .comparison-grid,
+    .amenities-grid,
+    .investment-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .listing-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .location-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .location-card.large{
+        grid-column:span 2;
+    }
+
+    .map-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .map-box iframe{
+        height:500px;
+    }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:768px){
+
+    section{
+        padding:70px 20px;
+    }
+
+    .properties-hero{
+        padding:120px 20px 60px;
+    }
+
+    .properties-content h1,
+    .section-header h2{
+        font-size:38px;
+        line-height:1.3;
+    }
+
+    .properties-content p,
+    .section-header p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-btn,
+    .hero-btn-outline{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero-search,
+    .search-wrapper{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    .hero-search button,
+    .search-wrapper button{
+        grid-column:unset;
+        width:100%;
+    }
+
+    .listing-grid,
+    .comparison-grid,
+    .category-grid,
+    .location-grid,
+    .amenities-grid,
+    .investment-grid{
+        grid-template-columns:1fr;
+    }
+
+    .location-card,
+    .location-card.large{
+        grid-column:span 1;
+    }
+
+    .amenity-card:first-child{
+        grid-column:span 1;
+    }
+
+    .property-info,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .map-box iframe{
+        height:400px;
+    }
+
+    .nearby-content h3{
+        font-size:24px;
+    }
+
+    .nearby-content h4{
+        font-size:28px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:576px){
+
+    section{
+        padding:60px 15px;
+    }
+
+    .properties-hero{
+        padding:110px 15px 50px;
+    }
+
+    .properties-content h1,
+    .section-header h2{
+        font-size:30px;
+    }
+
+    .properties-content p,
+    .section-header p{
+        font-size:15px;
+    }
+
+    .hero-badge,
+    .section-badge{
+        font-size:12px;
+        padding:8px 16px;
+    }
+
+    .hero-btn,
+    .hero-btn-outline,
+    .compare-btn,
+    .browse-btn,
+    .location-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .listing-image,
+    .compare-image,
+    .category-card,
+    .location-card,
+    .amenity-image{
+        height:220px;
+    }
+
+    .listing-content,
+    .compare-content,
+    .amenity-content,
+    .nearby-content{
+        padding:20px;
+    }
+
+    .listing-content h3,
+    .compare-content h3{
+        font-size:26px;
+    }
+
+    .listing-content h4,
+    .compare-content h4{
+        font-size:21px;
+    }
+
+    .property-filter{
+        flex-direction:column;
+    }
+
+    .property-filter button{
+        width:100%;
+    }
+
+    .map-box iframe{
+        height:320px;
     }
 }

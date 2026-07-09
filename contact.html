@@ -15,21 +15,75 @@
     
     <!-- ========= UNIQUE FLOATING PILL NAVBAR ========= -->
 <header class="nav-wrap">
-  <nav class="nav-pill">
-    <a href="index.html" class="brand">
-      <span class="brand-dot"></span>
-      <span class="brand-name">ESTELLA</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="properties.html">Properties</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="contact.html" class="nav-cta">Book a Tour →</a>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
+
+    <nav class="nav-pill">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-dot"></span>
+
+            <span class="brand-name">ESTELLA</span>
+
+        </a>
+
+        <!-- Desktop Menu -->
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="properties.html">Properties</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="contact.html" class="active">Contact</a></li>
+
+        </ul>
+
+        <a class="nav-cta" onclick="openAuth()">
+
+            Book a Tour →
+
+        </a>
+
+        <!-- Burger -->
+
+        <button class="burger" id="burger">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Home</a>
+
+        <a href="properties.html">Properties</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+        <button class="mobile-btn" onclick="openAuth()">
+
+            Book a Tour →
+
+        </button>
+
+    </div>
+
 </header>
 
 <!--=====================================
@@ -48,13 +102,13 @@
 
             <div class="contact-content">
 
-                <span class="hero-badge">
+                <span class="hero-badge section-badge reveal-left">
 
                     ✦ Contact Stackly
 
                 </span>
 
-                <h1>
+                <h1 class="reveal-right">
 
                     Let's Turn Your
 
@@ -64,7 +118,7 @@
 
                 </h1>
 
-                <p>
+                <p class="reveal-up">
 
                     Whether you're buying your first home, selling a
                     luxury property, or planning your next investment,
@@ -75,13 +129,13 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#contact-form" class="hero-btn">
+                    <a href="error.html" class="hero-btn reveal-pop">
 
                         Book Consultation
 
                     </a>
 
-                    <a href="properties.html" class="hero-outline-btn">
+                    <a href="error.html" class="hero-outline-btn reveal-pop">
 
                         Explore Properties
 
@@ -91,7 +145,7 @@
 
                 <!-- Quick Contact -->
 
-                <div class="quick-contact">
+                <!-- <div class="quick-contact">
 
                     <div class="quick-card">
 
@@ -135,15 +189,15 @@
 
                     </div>
 
-                </div>
+                </div> -->
 
             </div>
 
             <!-- Right -->
 
-            <div class="hero-contact-card">
+            <div class="hero-contact-card reveal-pop">
 
-                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+                <img src="images/villa23.webp"
                     alt="Luxury Office">
 
                 <div class="hero-card-content">
@@ -215,15 +269,15 @@
 
         <div class="section-header">
 
-            <span class="section-badge">
+            <span class="section-badge reveal-left">
                 ✦ Get In Touch
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
                 Contact Information
             </h2>
 
-            <p>
+            <p class="reveal-up">
                 Whether you have a question about buying, selling, investing,
                 or simply want expert advice, our team is always ready to assist.
             </p>
@@ -234,7 +288,7 @@
 
             <!-- Office -->
 
-            <div class="info-card">
+            <div class="info-card reveal-pop">
 
                 <div class="info-icon">
 
@@ -250,7 +304,7 @@
                     India - 600001
                 </p>
 
-                <a href="#">
+                <a href="error.html">
                     Get Directions →
                 </a>
 
@@ -258,7 +312,7 @@
 
             <!-- Phone -->
 
-            <div class="info-card">
+            <div class="info-card reveal-pop">
 
                 <div class="info-icon">
 
@@ -282,7 +336,7 @@
 
             <!-- Email -->
 
-            <div class="info-card">
+            <div class="info-card reveal-pop">
 
                 <div class="info-icon">
 
@@ -306,7 +360,7 @@
 
             <!-- Working Hours -->
 
-            <div class="info-card">
+            <div class="info-card reveal-pop">
 
                 <div class="info-icon">
 
@@ -322,7 +376,7 @@
                     9:00 AM - 7:00 PM
                 </p>
 
-                <a href="#">
+                <a href="error.html">
                     Book Appointment →
                 </a>
 
@@ -340,19 +394,19 @@
 
         <div class="section-header">
 
-            <span class="section-badge">
+            <span class="section-badge reveal-left">
 
                 ✦ Get In Touch
 
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
 
                 Let's Start the Conversation
 
             </h2>
 
-            <p>
+            <p class="reveal-up">
 
                 Fill out the form below and one of our property experts
                 will contact you shortly.
@@ -365,7 +419,7 @@
 
             <!-- LEFT -->
 
-            <div class="contact-form-box">
+            <div class="contact-form-box reveal-pop">
 
                 <form>
 
@@ -439,9 +493,9 @@
 
             <!-- RIGHT -->
 
-            <div class="contact-info-box">
+            <div class="contact-info-box reveal-pop">
 
-                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+                <img src="images/villa28.webp"
                     alt="Office">
 
                 <div class="info-content">
@@ -531,13 +585,13 @@
 
                     <div class="social-icons">
 
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="error.html"><i class="fab fa-facebook-f"></i></a>
 
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="error.html"><i class="fab fa-instagram"></i></a>
 
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
 
-                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="error.html"><i class="fab fa-x-twitter"></i></a>
 
                     </div>
 
@@ -561,10 +615,10 @@
         <a href="index.html" class="footer-logo"><img src="assets/logo.webp" alt="Stackly"></a>
         <p>Stackly connects buyers, sellers and investors with premium real estate through trusted guidance and exceptional service.</p>
         <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="error.html"><i class="fab fa-instagram"></i></a>
+          <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="error.html"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
 
@@ -582,11 +636,11 @@
       <div class="footer-links">
         <h3>Services</h3>
         <ul>
-          <li><a href="#">Buy Property</a></li>
-          <li><a href="#">Sell Property</a></li>
-          <li><a href="#">Rent Property</a></li>
-          <li><a href="#">Commercial</a></li>
-          <li><a href="#">Investment</a></li>
+          <li><a href="error.html">Buy Property</a></li>
+          <li><a href="error.html">Sell Property</a></li>
+          <li><a href="error.html">Rent Property</a></li>
+          <li><a href="error.html">Commercial</a></li>
+          <li><a href="error.html">Investment</a></li>
         </ul>
       </div>
 
@@ -611,15 +665,23 @@
     <div class="footer-bottom">
       <p>© 2026 Stackly. All Rights Reserved.</p>
       <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Sitemap</a>
+        <a href="error.html">Privacy Policy</a>
+        <a href="error.html">Terms</a>
+        <a href="error.html">Sitemap</a>
         <a href="#top">Back To Top ↑</a>
       </div>
     </div>
   </div>
 </footer>
 
-
+<script>
+        fetch("auth/auth.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("auth-container").innerHTML = html;
+  });
+    </script>
+    <script src="auth/auth.js"></script>
+<script src="js/global.js"></script>
 </body>
 </html>

@@ -16,13 +16,20 @@ function initAuth() {
 
   // ================= OPEN MODAL =================
   window.openAuth = () => {
-  console.log("clicked");
-  document.getElementById("authModal").classList.remove("hidden");
+
+    modal.classList.remove("hidden");
+
+    document.body.style.overflow = "hidden";
+
 };
   // ================= CLOSE MODAL =================
-  document.getElementById("authClose").onclick = () => {
+document.getElementById("authClose").onclick = () => {
+
     modal.classList.add("hidden");
-  };
+
+    document.body.style.overflow = "";
+
+};
 
   // ================= TAB SWITCH =================
   document.querySelectorAll(".tab").forEach(tab => {
@@ -103,7 +110,9 @@ document.getElementById("loginBtn").addEventListener("click", () => {
 
     const email = document.getElementById("loginEmail").value.trim();
     const password = document.getElementById("loginPassword").value;
-    const role = document.getElementById("loginRole").value;
+    const role = document.querySelector(
+        'input[name="loginRole"]:checked'
+    ).value;
     const hint = document.getElementById("loginHint");
 
     // Check empty fields

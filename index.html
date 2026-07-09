@@ -18,21 +18,75 @@
 
     <!-- ========= UNIQUE FLOATING PILL NAVBAR ========= -->
 <header class="nav-wrap">
-  <nav class="nav-pill">
-    <a href="index.html" class="brand">
-      <span class="brand-dot"></span>
-      <span class="brand-name">ESTELLA</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="properties.html">Properties</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a class="nav-cta" onclick="openAuth()">Book a Tour →</a>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
+
+    <nav class="nav-pill">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-dot"></span>
+
+            <span class="brand-name">ESTELLA</span>
+
+        </a>
+
+        <!-- Desktop Menu -->
+
+        <ul class="nav-links">
+
+            <li><a href="index.html" class="active">Home</a></li>
+
+            <li><a href="properties.html">Properties</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <a class="nav-cta" onclick="openAuth()">
+
+            Book a Tour →
+
+        </a>
+
+        <!-- Burger -->
+
+        <button class="burger" id="burger">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Home</a>
+
+        <a href="properties.html">Properties</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+        <button class="mobile-btn" onclick="openAuth()">
+
+            Book a Tour →
+
+        </button>
+
+    </div>
+
 </header>
 
 <!-- section-1 -->
@@ -68,7 +122,7 @@
             <option>$1M+</option>
           </select>
         </div>
-        <button type="submit">Search homes</button>
+        <button type="submit" onclick="window.location.href = 'error.html'">Search homes</button>
       </form>
     </div>
   </section>
@@ -113,7 +167,7 @@
 
         <!-- Filter Buttons -->
 
-        <div class="property-filter">
+        <div class="property-filter reveal-left">
 
             <button class="active">
                 All
@@ -143,17 +197,17 @@
 
             <!-- CARD 1 -->
 
-            <div class="property-card">
+            <div class="property-card reveal-pop">
 
                 <div class="property-image">
 
-                    <img src="images/property-1.webp" alt="Luxury Villa">
+                    <img src="images/img-11.webp" alt="Luxury Villa">
 
                     <span class="property-badge">
                         Featured
                     </span>
 
-                    <button class="wishlist">
+                    <button class="wishlist" onclick="window.location.href = 'error.html'">
                         ❤
                     </button>
 
@@ -179,7 +233,7 @@
 
                     </div>
 
-                    <a href="#" class="property-btn">
+                    <a href="error.html" class="property-btn">
                         View Details →
                     </a>
 
@@ -189,17 +243,17 @@
 
             <!-- CARD 2 -->
 
-            <div class="property-card">
+            <div class="property-card reveal-pop">
 
                 <div class="property-image">
 
-                    <img src="images/property-2.webp" alt="Penthouse">
+                    <img src="images/img10.webp" alt="Penthouse">
 
                     <span class="property-badge">
                         New
                     </span>
 
-                    <button class="wishlist">
+                    <button class="wishlist" onclick="window.location.href = 'error.html'">
                         ❤
                     </button>
 
@@ -225,7 +279,7 @@
 
                     </div>
 
-                    <a href="#" class="property-btn">
+                    <a href="error.html" class="property-btn">
                         View Details →
                     </a>
 
@@ -235,17 +289,17 @@
 
             <!-- CARD 3 -->
 
-            <div class="property-card">
+            <div class="property-card reveal-pop">
 
                 <div class="property-image">
 
-                    <img src="images/property-3.webp" alt="Beach House">
+                    <img src="images/img13.webp" alt="Beach House">
 
                     <span class="property-badge">
                         Hot Deal
                     </span>
 
-                    <button class="wishlist">
+                    <button class="wishlist" onclick="window.location.href = 'error.html'">
                         ❤
                     </button>
 
@@ -271,7 +325,7 @@
 
                     </div>
 
-                    <a href="#" class="property-btn">
+                    <a href="error.html" class="property-btn">
                         View Details →
                     </a>
 
@@ -281,17 +335,17 @@
 
             <!-- CARD 4 -->
 
-            <div class="property-card">
+            <div class="property-card reveal-pop">
 
                 <div class="property-image">
 
-                    <img src="images/property-4.webp" alt="Apartment">
+                    <img src="images/img3.webp" alt="Apartment">
 
                     <span class="property-badge">
                         Sale
                     </span>
 
-                    <button class="wishlist">
+                    <button class="wishlist" onclick="window.location.href = 'error.html'">
                         ❤
                     </button>
 
@@ -317,7 +371,7 @@
 
                     </div>
 
-                    <a href="#" class="property-btn">
+                    <a href="error.html" class="property-btn">
                         View Details →
                     </a>
 
@@ -327,17 +381,17 @@
 
             <!-- CARD 5 -->
 
-            <div class="property-card">
+            <div class="property-card reveal-pop">
 
                 <div class="property-image">
 
-                    <img src="images/property-5.webp" alt="Farm House">
+                    <img src="images/villa20.webp" alt="Farm House">
 
                     <span class="property-badge">
                         Luxury
                     </span>
 
-                    <button class="wishlist">
+                    <button class="wishlist" onclick="window.location.href = 'error.html'">
                         ❤
                     </button>
 
@@ -363,7 +417,7 @@
 
                     </div>
 
-                    <a href="#" class="property-btn">
+                    <a href="error.html" class="property-btn">
                         View Details →
                     </a>
 
@@ -373,17 +427,17 @@
 
             <!-- CARD 6 -->
 
-            <div class="property-card">
+            <div class="property-card reveal-pop">
 
                 <div class="property-image">
 
-                    <img src="images/property-6.webp" alt="Smart Home">
+                    <img src="images/villa21.webp" alt="Smart Home">
 
                     <span class="property-badge">
                         Premium
                     </span>
 
-                    <button class="wishlist">
+                    <button class="wishlist" onclick="window.location.href = 'error.html'">
                         ❤
                     </button>
 
@@ -409,7 +463,7 @@
 
                     </div>
 
-                    <a href="#" class="property-btn">
+                    <a href="error.html" class="property-btn">
                         View Details →
                     </a>
 
@@ -423,7 +477,7 @@
 
         <div class="property-footer">
 
-            <a href="#" class="load-btn">
+            <a href="error.html" class="load-btn">
 
                 Browse All Properties →
 
@@ -450,16 +504,16 @@
 
             <div class="why-content">
 
-                <span class="section-badge">
+                <span class="section-badge reveal-right">
                     Why Choose Us
                 </span>
 
-                <h2>
+                <h2 class="reveal-left">
                     Experience Luxury Living with
                     <span>Trusted Real Estate Experts</span>
                 </h2>
 
-                <p class="why-description">
+                <p class="why-description reveal-up">
 
                     We don't simply help you buy a property—we help you
                     discover the perfect place to build your future.
@@ -475,7 +529,7 @@
 
                     <!-- Card -->
 
-                    <div class="why-card">
+                    <div class="why-card reveal-pop">
 
                         <div class="why-icon">
                             🏠
@@ -499,7 +553,7 @@
 
                     <!-- Card -->
 
-                    <div class="why-card">
+                    <div class="why-card reveal-pop">
 
                         <div class="why-icon">
                             👨‍💼
@@ -523,7 +577,7 @@
 
                     <!-- Card -->
 
-                    <div class="why-card">
+                    <div class="why-card reveal-pop">
 
                         <div class="why-icon">
                             📍
@@ -547,7 +601,7 @@
 
                     <!-- Card -->
 
-                    <div class="why-card">
+                    <div class="why-card reveal-pop">
 
                         <div class="why-icon">
                             📑
@@ -571,7 +625,7 @@
 
                 </div>
 
-                <a href="#" class="why-btn">
+                <a href="error.html" class="why-btn">
 
                     Explore More →
 
@@ -581,9 +635,9 @@
 
             <!-- RIGHT -->
 
-            <div class="why-image">
+            <div class="why-image reveal-pop">
 
-                <img src="images/why-us.webp" alt="Luxury Property">
+                <img src="images/villa22.webp" alt="Luxury Property">
 
                 <!-- Floating Card -->
 
@@ -627,9 +681,9 @@
 <section class="property-category">
 
     <div class="category-header">
-        <span>Property Categories</span>
-        <h2>Explore Properties by Category</h2>
-        <p>
+        <span class="reveal-left">Property Categories</span>
+        <h2 class="reveal-right">Explore Properties by Category</h2>
+        <p class="reveal-up">
             Discover exceptional properties designed for every lifestyle,
             from luxury villas to modern urban apartments.
         </p>
@@ -638,93 +692,93 @@
 
     <div class="category-grid">
 
-        <div class="category-card">
+        <div class="category-card reveal-pop">
 
             <img 
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+            src="images/villa23.webp"
             alt="Luxury Villa">
 
             <div class="category-overlay">
                 <h3>Luxury Villas</h3>
                 <p>120+ Properties</p>
-                <a href="#">Explore →</a>
+                <a href="error.html">Explore →</a>
             </div>
 
         </div>
 
 
 
-        <div class="category-card">
+        <div class="category-card reveal-pop">
 
             <img 
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+            src="images/villa24.webp"
             alt="Premium Apartments">
 
             <div class="category-overlay">
                 <h3>Premium Apartments</h3>
                 <p>250+ Properties</p>
-                <a href="#">Explore →</a>
+                <a href="error.html">Explore →</a>
             </div>
 
         </div>
 
 
 
-        <div class="category-card">
+        <div class="category-card reveal-pop">
 
             <img 
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
+            src="images/villa25.webp"
             alt="Penthouse">
 
             <div class="category-overlay">
                 <h3>Penthouse Collection</h3>
                 <p>80+ Properties</p>
-                <a href="#">Explore →</a>
+                <a href="error.html">Explore →</a>
             </div>
 
         </div>
 
 
 
-        <div class="category-card">
+        <div class="category-card reveal-pop">
 
             <img 
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+            src="images/villa26.webp"
             alt="Commercial Space">
 
             <div class="category-overlay">
                 <h3>Commercial Spaces</h3>
                 <p>90+ Properties</p>
-                <a href="#">Explore →</a>
+                <a href="error.html">Explore →</a>
             </div>
 
         </div>
 
-        <div class="category-card">
+        <div class="category-card reveal-pop">
 
             <img 
-            src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80"
+            src="images/villa27.webp"
             alt="Smart Homes">
 
             <div class="category-overlay">
                 <h3>Smart Homes</h3>
                 <p>60+ Properties</p>
-                <a href="#">Explore →</a>
+                <a href="error.html">Explore →</a>
             </div>
 
         </div>
 
 
-        <div class="category-card">
+        <div class="category-card reveal-pop">
 
             <img 
-            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+            src="images/villa28.webp"
             alt="Beach House">
 
             <div class="category-overlay">
                 <h3>Beach Houses</h3>
                 <p>45+ Properties</p>
-                <a href="#">Explore →</a>
+                <a href="error.html">Explore →</a>
             </div>
 
         </div>
@@ -739,13 +793,13 @@
 
     <div class="agents-header">
 
-        <span>Our Team</span>
+        <span class="reveal-left">Our Team</span>
 
-        <h2>
+        <h2 class="reveal-right">
             Meet Our Expert Agents
         </h2>
 
-        <p>
+        <p class="reveal-up">
             Our experienced property consultants are dedicated to
             helping you find the perfect home and investment opportunity.
         </p>
@@ -757,11 +811,11 @@
     <div class="agents-grid">
 
 
-        <div class="agent-card">
+        <div class="agent-card reveal-pop">
 
             <div class="agent-image">
 
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+                <img src="images/villa29.webp"
                 alt="Agent">
 
             </div>
@@ -789,12 +843,12 @@
 
                 <div class="agent-actions">
 
-                    <a href="#">
+                    <a href="error.html">
                         View Profile
                     </a>
 
 
-                    <a href="#">
+                    <a href="error.html">
                         Contact
                     </a>
 
@@ -809,12 +863,12 @@
 
 
 
-        <div class="agent-card">
+        <div class="agent-card reveal-pop">
 
 
             <div class="agent-image">
 
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+                <img src="images/villa30.webp"
                 alt="Agent">
 
             </div>
@@ -844,11 +898,11 @@
 
                 <div class="agent-actions">
 
-                    <a href="#">
+                    <a href="error.html">
                         View Profile
                     </a>
 
-                    <a href="#">
+                    <a href="error.html">
                         Contact
                     </a>
 
@@ -866,12 +920,12 @@
 
 
 
-        <div class="agent-card">
+        <div class="agent-card reveal-pop">
 
 
             <div class="agent-image">
 
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
+                <img src="images/villa31.webp"
                 alt="Agent">
 
             </div>
@@ -902,11 +956,11 @@
 
                 <div class="agent-actions">
 
-                    <a href="#">
+                    <a href="error.html">
                         View Profile
                     </a>
 
-                    <a href="#">
+                    <a href="error.html">
                         Contact
                     </a>
 
@@ -929,11 +983,11 @@
 
     <div class="process-header">
 
-        <span>How It Works</span>
+        <span class="reveal-left">How It Works</span>
 
-        <h2>Property Buying Process Timeline</h2>
+        <h2 class="reveal-right">Property Buying Process Timeline</h2>
 
-        <p>
+        <p class="reveal-up">
             A simple and transparent journey designed to help you
             find, purchase, and own your dream property effortlessly.
         </p>
@@ -945,7 +999,7 @@
     <div class="timeline">
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal-left">
 
             <div class="timeline-number">
                 01
@@ -967,7 +1021,7 @@
 
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal-right">
 
             <div class="timeline-number">
                 02
@@ -990,7 +1044,7 @@
 
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal-left">
 
             <div class="timeline-number">
                 03
@@ -1013,7 +1067,7 @@
 
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal-right">
 
             <div class="timeline-number">
                 04
@@ -1036,7 +1090,7 @@
 
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal-left">
 
             <div class="timeline-number">
                 05
@@ -1059,7 +1113,7 @@
 
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal-right">
 
             <div class="timeline-number">
                 06
@@ -1089,11 +1143,11 @@
 
     <div class="amenities-header">
 
-        <span>Luxury Living</span>
+        <span class="reveal-left">Luxury Living</span>
 
-        <h2>Premium Amenities</h2>
+        <h2 class="reveal-right">Premium Amenities</h2>
 
-        <p>
+        <p class="reveal-up">
             Experience world-class facilities designed to provide
             comfort, convenience, and an elevated lifestyle.
         </p>
@@ -1105,7 +1159,7 @@
     <div class="amenities-grid">
 
 
-        <div class="amenity-card">
+        <div class="amenity-card reveal-pop">
 
             <div class="amenity-icon">
                 🏊
@@ -1123,7 +1177,7 @@
 
 
 
-        <div class="amenity-card">
+        <div class="amenity-card reveal-pop">
 
             <div class="amenity-icon">
                 🏋️
@@ -1141,7 +1195,7 @@
 
 
 
-        <div class="amenity-card">
+        <div class="amenity-card reveal-pop">
 
             <div class="amenity-icon">
                 🔐
@@ -1159,7 +1213,7 @@
 
 
 
-        <div class="amenity-card">
+        <div class="amenity-card reveal-pop">
 
             <div class="amenity-icon">
                 🏡
@@ -1177,7 +1231,7 @@
 
 
 
-        <div class="amenity-card">
+        <div class="amenity-card reveal-pop">
 
             <div class="amenity-icon">
                 🌿
@@ -1195,7 +1249,7 @@
 
 
 
-        <div class="amenity-card">
+        <div class="amenity-card reveal-pop">
 
             <div class="amenity-icon">
                 🚗
@@ -1229,16 +1283,16 @@
 
         <div class="dream-content">
 
-            <span class="dream-tag">
+            <span class="dream-tag reveal-left">
                 ✦ Exclusive Collection
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
                 Discover The Home You've
                 <span>Always Dreamed Of</span>
             </h2>
 
-            <p>
+            <p class="reveal-up">
 
                 From luxurious waterfront villas and modern penthouses
                 to elegant family residences, we offer exceptional
@@ -1249,13 +1303,13 @@
 
             <div class="dream-buttons">
 
-                <a href="#" class="btn-primary">
+                <a href="error.html" class="btn-primary reveal-pop">
 
                     Explore Properties
 
                 </a>
 
-                <a href="#" class="btn-secondary">
+                <a href="error.html" class="btn-secondary reveal-pop">
 
                     Schedule Visit
 
@@ -1267,7 +1321,7 @@
 
         <!-- STATS -->
 
-        <div class="dream-stats">
+        <div class="dream-stats reveal-pop">
 
             <div class="dream-stat">
 
@@ -1320,19 +1374,19 @@
 
         <div class="section-heading">
 
-            <span class="section-tag">
+            <span class="section-tag reveal-left">
 
                 ★ Client Reviews
 
             </span>
 
-            <h2>
+            <h2 class="reveal-right">
 
                 What Our Clients Say
 
             </h2>
 
-            <p>
+            <p class="reveal-up">
 
                 Trusted by hundreds of families and investors for
                 delivering exceptional real estate experiences.
@@ -1347,7 +1401,7 @@
 
             <!-- ========================= -->
 
-            <div class="testimonial-feature">
+            <div class="testimonial-feature reveal-pop">
 
                 <div class="quote-icon">
 
@@ -1365,7 +1419,7 @@
 
                 <div class="client">
 
-                    <img src="images/client1.webp" alt="">
+                    <img src="images/team1.webp" alt="">
 
                     <div>
 
@@ -1387,7 +1441,7 @@
 
             <!-- ========================= -->
 
-            <div class="testimonial-column">
+            <div class="testimonial-column reveal-pop">
 
                 <!-- Card -->
 
@@ -1409,7 +1463,7 @@
 
                     <div class="client">
 
-                        <img src="images/client2.webp" alt="">
+                        <img src="images/team2.webp" alt="">
 
                         <div>
 
@@ -1448,7 +1502,7 @@
 
                     <div class="client">
 
-                        <img src="images/client3.webp" alt="">
+                        <img src="images/team3.webp" alt="">
 
                         <div>
 
@@ -1474,7 +1528,7 @@
 
         <!-- Bottom Statistics -->
 
-        <div class="testimonial-stats">
+        <div class="testimonial-stats reveal-pop">
 
             <div>
 
@@ -1525,10 +1579,10 @@
         <a href="index.html" class="footer-logo"><img src="assets/logo.webp" alt="Stackly"></a>
         <p>Stackly connects buyers, sellers and investors with premium real estate through trusted guidance and exceptional service.</p>
         <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="error.html"><i class="fab fa-instagram"></i></a>
+          <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="error.html"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
 
@@ -1546,11 +1600,11 @@
       <div class="footer-links">
         <h3>Services</h3>
         <ul>
-          <li><a href="#">Buy Property</a></li>
-          <li><a href="#">Sell Property</a></li>
-          <li><a href="#">Rent Property</a></li>
-          <li><a href="#">Commercial</a></li>
-          <li><a href="#">Investment</a></li>
+          <li><a href="error.html">Buy Property</a></li>
+          <li><a href="error.html">Sell Property</a></li>
+          <li><a href="error.html">Rent Property</a></li>
+          <li><a href="error.html">Commercial</a></li>
+          <li><a href="error.html">Investment</a></li>
         </ul>
       </div>
 
@@ -1575,9 +1629,9 @@
     <div class="footer-bottom">
       <p>© 2026 Stackly. All Rights Reserved.</p>
       <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Sitemap</a>
+        <a href="error.html">Privacy Policy</a>
+        <a href="error.html">Terms</a>
+        <a href="error.html">Sitemap</a>
         <a href="#top">Back To Top ↑</a>
       </div>
     </div>
@@ -1592,6 +1646,7 @@
   });
     </script>
     <script src="auth/auth.js"></script>
+    <script src="js/global.js"></script>
     
 </body>
 </html>

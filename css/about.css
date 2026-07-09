@@ -1,3 +1,16 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /*==================================================
                 ABOUT HERO SECTION
 ==================================================*/
@@ -21,7 +34,7 @@
     rgba(5,12,24,.82),
     rgba(5,12,24,.82)
     ),
-    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=80");
+    url("images/villa22.webp");
 
     background-size:cover;
 
@@ -2853,5 +2866,212 @@ font-size:34px;
 font-size:16px;
 
 }
+
+}
+
+/* ==========================================
+        RESPONSIVE (WITHOUT NAVBAR)
+========================================== */
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .container{
+        width:90%;
+    }
+
+    .about-hero-grid,
+    .story-grid,
+    .trust-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .about-card,
+    .story-image,
+    .trust-image{
+        max-width:700px;
+        margin:auto;
+    }
+
+    .mission-grid{
+        grid-template-columns:1fr;
+    }
+
+    .values-grid,
+    .partners-grid,
+    .leadership-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .achievement-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-content,
+    .story-content,
+    .trust-content{
+        text-align:center;
+    }
+
+    .quote-author{
+        justify-content:center;
+    }
+
+    .story-highlights{
+        max-width:700px;
+        margin:40px auto;
+    }
+
+}
+
+/* Tablet */
+@media (max-width:768px){
+
+    section{
+        padding:80px 20px;
+    }
+
+    .about-hero{
+        min-height:auto;
+        padding:120px 20px 80px;
+        background-attachment:scroll;
+    }
+
+    .about-content h1,
+    .story-content h2,
+    .trust-content h2,
+    .section-header h2,
+    .cta-content h2{
+        font-size:38px;
+        line-height:1.3;
+    }
+
+    .about-content p,
+    .story-content p,
+    .trust-content p,
+    .section-header p,
+    .cta-content p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .hero-buttons,
+    .cta-buttons{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-btn,
+    .hero-outline-btn,
+    .cta-btn,
+    .cta-outline{
+        width:100%;
+        text-align:center;
+    }
+
+    .about-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .story-highlights{
+        grid-template-columns:1fr;
+    }
+
+    .values-grid,
+    .partners-grid,
+    .leadership-grid,
+    .achievement-grid{
+        grid-template-columns:1fr;
+    }
+
+    .leader-stats{
+        grid-template-columns:1fr;
+    }
+
+    .about-card img,
+    .story-image img,
+    .trust-image img{
+        height:420px;
+    }
+
+    .experience-badge,
+    .trust-badge{
+        left:20px;
+        bottom:20px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    section{
+        padding:60px 15px;
+    }
+
+    .about-content h1,
+    .story-content h2,
+    .trust-content h2,
+    .section-header h2,
+    .cta-content h2{
+        font-size:30px;
+    }
+
+    .about-content p,
+    .story-content p,
+    .trust-content p,
+    .section-header p,
+    .cta-content p{
+        font-size:15px;
+    }
+
+    .about-stats{
+        grid-template-columns:1fr;
+    }
+
+    .about-stat,
+    .highlight,
+    .mission-card,
+    .vision-card,
+    .value-card,
+    .leader-card,
+    .partner-card,
+    .achievement-card,
+    .trust-item{
+        padding:20px;
+    }
+
+    .about-card img,
+    .story-image img,
+    .trust-image img{
+        height:300px;
+    }
+
+    .leader-image{
+        height:280px;
+    }
+
+    .quote-author{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .trust-item{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .trust-icon{
+        margin-bottom:10px;
+    }
+
+    .cta-btn,
+    .cta-outline,
+    .hero-btn,
+    .hero-outline-btn{
+        padding:15px 20px;
+    }
 
 }

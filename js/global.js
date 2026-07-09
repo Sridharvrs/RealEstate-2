@@ -1,41 +1,88 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-// ==============================================
-/* ===========================================
-        UNIVERSAL SCROLL REVEAL
-=========================================== */
+    /*==============================
+            MOBILE MENU
+    ==============================*/
 
-document.addEventListener("DOMContentLoaded",()=>{
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-const items=document.querySelectorAll(
-".reveal-left,.reveal-right,.reveal-up,.reveal-pop"
-);
+    if (burger && mobileMenu) {
 
-items.forEach((el,index)=>{
+        burger.addEventListener("click", () => {
 
-if(el.classList.contains("reveal-pop")){
-el.style.setProperty("--delay",index%6);
-}
+            burger.classList.toggle("active");
 
-});
+            mobileMenu.classList.toggle("active");
 
-const observer=new IntersectionObserver((entries)=>{
+            document.body.classList.toggle("menu-open");
 
-entries.forEach(entry=>{
+        });
 
-if(entry.isIntersecting){
+        document.querySelectorAll(".mobile-menu a").forEach(link => {
 
-entry.target.classList.add("active");
+            link.addEventListener("click", () => {
 
-observer.unobserve(entry.target);
+                burger.classList.remove("active");
 
-}
+                mobileMenu.classList.remove("active");
 
-});
+                document.body.classList.remove("menu-open");
 
-},{
-threshold:.15
-});
+            });
 
-items.forEach(el=>observer.observe(el));
+        });
+
+        window.addEventListener("resize", () => {
+
+            if (window.innerWidth > 992) {
+
+                burger.classList.remove("active");
+
+                mobileMenu.classList.remove("active");
+
+                document.body.classList.remove("menu-open");
+
+            }
+
+        });
+
+    }
+
+    /*==============================
+            SCROLL REVEAL
+    ==============================*/
+
+    const items = document.querySelectorAll(
+        ".reveal-left,.reveal-right,.reveal-up,.reveal-pop"
+    );
+
+    items.forEach((el, index) => {
+
+        if (el.classList.contains("reveal-pop")) {
+            el.style.setProperty("--delay", index % 6);
+        }
+
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    items.forEach(el => observer.observe(el));
 
 });

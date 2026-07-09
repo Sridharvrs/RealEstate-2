@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Dashboard — Regalia Estates</title>
+<meta name="description" content="Regalia Estates admin dashboard — manage listings, users, agents, transactions and reports." />
+<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">R</div>
+      <div>
+        <div class="brand-name">Regalia<span>Estates</span></div>
+        <div class="brand-tag">Control Center</div>
+      </div>
+    </div>
+    <div class="role-badge">⚡ Admin Console</div>
+
+    <nav class="nav">
+      <!-- Module 1: Analytics -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">📊</span><span class="label">Analytics</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="a-overview" class="active">Business Overview</a>
+          <a href="dashboarderror.html" data-panel="a-sales">Sales Performance</a>
+          <a href="dashboarderror.html" data-panel="a-traffic">Site Traffic</a>
+        </div>
+      </div>
+      <!-- Module 2: Property Management -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">🏘️</span><span class="label">Properties</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="a-listings">All Listings</a>
+          <a href="dashboarderror.html" data-panel="a-addprop">Add Property</a>
+          <a href="dashboarderror.html" data-panel="a-approvals">Pending Approvals</a>
+        </div>
+      </div>
+      <!-- Module 3: Users & Agents -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">👥</span><span class="label">Users & Agents</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="a-users">Registered Users</a>
+          <a href="dashboarderror.html" data-panel="a-agents">Agent Roster</a>
+          <a href="dashboarderror.html" data-panel="a-roles">Roles & Access</a>
+        </div>
+      </div>
+      <!-- Module 4: Transactions -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">💰</span><span class="label">Transactions</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="a-payments">Payments Ledger</a>
+          <a href="dashboarderror.html" data-panel="a-commissions">Agent Commissions</a>
+          <a href="dashboarderror.html" data-panel="a-refunds">Refund Requests</a>
+        </div>
+      </div>
+      <!-- Module 5: Reports -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">📑</span><span class="label">Reports</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="a-monthly">Monthly Reports</a>
+          <a href="dashboarderror.html" data-panel="a-regional">Regional Insights</a>
+          <a href="dashboarderror.html" data-panel="a-export">Export Center</a>
+        </div>
+      </div>
+      <!-- Module 6: System -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">🛠️</span><span class="label">System Settings</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="a-general">General Config</a>
+          <a href="dashboarderror.html" data-panel="a-audit">Audit Log</a>
+          <a href="dashboarderror.html" data-panel="a-integrations">Integrations</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <div class="sidebar-footer">© 2026 Regalia Estates<br /><a href="user-dashboard.html" style="color:#c9a84c;">Switch to User →</a></div> -->
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger">☰</button>
+      <div class="search-box">🔍 <input type="text" placeholder="Search listings, users, transactions..." /></div>
+      <div class="topbar-actions">
+        <button class="icon-btn" data-toast="12 pending approvals need review">🔔<span class="dot"></span></button>
+        <button class="icon-btn" data-toast="Opening admin inbox...">✉️</button>
+        <div class="user-chip">
+          <div class="avatar">AV</div>
+          <div class="meta"><div class="name">Amelia Vance</div><div class="role">Super Admin</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="page-head">
+        <div>
+          <h1 id="page-title">Business Overview</h1>
+          <div class="breadcrumb" id="crumb">Dashboard / Analytics / <b>Business Overview</b></div>
+        </div>
+        <button class="btn btn-gold" data-toast="Opening new listing form...">+ New Listing</button>
+      </div>
+
+      <!-- ========== MODULE 1: ANALYTICS ========== -->
+      <section class="panel active" id="a-overview">
+        <div class="grid grid-4">
+          <div class="stat-card navy"><div class="stat-icon">💵</div><div class="stat-value" data-count="4.8" data-prefix="$" data-suffix="M">0</div><div class="stat-label">Revenue (YTD)</div><div class="stat-trend trend-up">▲ 18.2% vs last year</div></div>
+          <div class="stat-card"><div class="stat-icon">🏘️</div><div class="stat-value" data-count="1284">0</div><div class="stat-label">Active Listings</div><div class="stat-trend trend-up">▲ 46 this month</div></div>
+          <div class="stat-card"><div class="stat-icon">🤝</div><div class="stat-value" data-count="93">0</div><div class="stat-label">Deals Closed (Q2)</div><div class="stat-trend trend-up">▲ 12.5%</div></div>
+          <div class="stat-card"><div class="stat-icon">👥</div><div class="stat-value" data-count="8412">0</div><div class="stat-label">Registered Users</div><div class="stat-trend trend-up">▲ 312 this month</div></div>
+        </div>
+
+        <div class="grid grid-2-1 mt">
+          <div class="card">
+            <div class="card-title">Monthly Revenue ($k) <a href="dashboarderror.html" class="link">2026</a></div>
+            <div class="bar-chart">
+              <div class="bar-col"><div class="bar" data-h="52"></div><div class="bar-label">Jan</div></div>
+              <div class="bar-col"><div class="bar gold" data-h="64"></div><div class="bar-label">Feb</div></div>
+              <div class="bar-col"><div class="bar" data-h="48"></div><div class="bar-label">Mar</div></div>
+              <div class="bar-col"><div class="bar gold" data-h="82"></div><div class="bar-label">Apr</div></div>
+              <div class="bar-col"><div class="bar" data-h="71"></div><div class="bar-label">May</div></div>
+              <div class="bar-col"><div class="bar gold" data-h="95"></div><div class="bar-label">Jun</div></div>
+              <div class="bar-col"><div class="bar" data-h="60"></div><div class="bar-label">Jul</div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Portfolio Mix</div>
+            <div class="donut" data-center="1,284"></div>
+            <ul class="legend">
+              <li><span class="sw" style="background:#c9a84c"></span> Residential — 62%</li>
+              <li><span class="sw" style="background:#0f1b3d"></span> Commercial — 24%</li>
+              <li><span class="sw" style="background:#cfd6e2"></span> Land / Plots — 14%</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid grid-2 mt">
+          <div class="card">
+            <div class="card-title">Top Performing Agents</div>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Agent</th><th>Deals</th><th>Volume</th><th>Target</th></tr></thead>
+              <tbody>
+                <tr><td><b>Sofia Martinez</b></td><td>21</td><td class="gold-text"><b>$1.42M</b></td><td style="min-width:120px;"><div class="progress"><span data-w="94"></span></div></td></tr>
+                <tr><td><b>Daniel Kim</b></td><td>17</td><td class="gold-text"><b>$1.08M</b></td><td><div class="progress"><span data-w="78"></span></div></td></tr>
+                <tr><td><b>Priya Nair</b></td><td>14</td><td class="gold-text"><b>$0.93M</b></td><td><div class="progress"><span data-w="65"></span></div></td></tr>
+                <tr><td><b>Marcus Webb</b></td><td>11</td><td class="gold-text"><b>$0.71M</b></td><td><div class="progress"><span data-w="52"></span></div></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Live Operations Feed</div>
+            <ul class="timeline">
+              <li><div class="tl-dot">🆕</div><div class="tl-body"><b>New listing submitted — "Harborview Duplex"</b><span>2 min ago · awaiting approval</span></div></li>
+              <li><div class="tl-dot">💳</div><div class="tl-body"><b>Payment received $15,000</b><span>18 min ago · TXN-88291 · reservation deposit</span></div></li>
+              <li><div class="tl-dot">🤝</div><div class="tl-body"><b>Deal closed — Willow Creek Villa</b><span>1 hr ago · Sofia Martinez · $629,500</span></div></li>
+              <li><div class="tl-dot">⚠️</div><div class="tl-body"><b>Refund request flagged for review</b><span>3 hrs ago · TXN-86712 · $15,000</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-sales">
+        <div class="grid grid-3">
+          <div class="stat-card"><div class="stat-icon">📈</div><div class="stat-value" data-count="93">0</div><div class="stat-label">Units Sold (Q2)</div><div class="stat-trend trend-up">▲ 12.5% QoQ</div></div>
+          <div class="stat-card"><div class="stat-icon">⏱️</div><div class="stat-value" data-count="34" data-suffix=" days">0</div><div class="stat-label">Avg. Time to Close</div><div class="stat-trend trend-up">▼ 6 days faster</div></div>
+          <div class="stat-card"><div class="stat-icon">💎</div><div class="stat-value" data-count="712" data-prefix="$" data-suffix="k">0</div><div class="stat-label">Avg. Sale Price</div><div class="stat-trend trend-up">▲ 4.1%</div></div>
+        </div>
+        <div class="card mt">
+          <div class="card-title">Sales Pipeline</div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Stage</th><th>Deals</th><th>Value</th><th>Conversion</th></tr></thead>
+            <tbody>
+              <tr><td><b>Enquiry</b></td><td>486</td><td class="gold-text"><b>$212M est.</b></td><td style="min-width:140px;"><div class="progress navy"><span data-w="100"></span></div></td></tr>
+              <tr><td><b>Site Visit</b></td><td>241</td><td class="gold-text"><b>$118M est.</b></td><td><div class="progress navy"><span data-w="50"></span></div></td></tr>
+              <tr><td><b>Negotiation</b></td><td>88</td><td class="gold-text"><b>$54M est.</b></td><td><div class="progress navy"><span data-w="18"></span></div></td></tr>
+              <tr><td><b>Agreement</b></td><td>41</td><td class="gold-text"><b>$29M</b></td><td><div class="progress"><span data-w="9"></span></div></td></tr>
+              <tr><td><b>Closed</b></td><td>29</td><td class="gold-text"><b>$21M</b></td><td><div class="progress"><span data-w="6"></span></div></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-traffic">
+        <div class="grid grid-4">
+          <div class="stat-card"><div class="stat-icon">🌐</div><div class="stat-value" data-count="182" data-suffix="k">0</div><div class="stat-label">Monthly Visitors</div><div class="stat-trend trend-up">▲ 9.4%</div></div>
+          <div class="stat-card"><div class="stat-icon">🔍</div><div class="stat-value" data-count="64" data-suffix="k">0</div><div class="stat-label">Property Searches</div><div class="stat-trend trend-up">▲ 6.1%</div></div>
+          <div class="stat-card"><div class="stat-icon">📞</div><div class="stat-value" data-count="3120">0</div><div class="stat-label">Enquiries</div><div class="stat-trend trend-up">▲ 14%</div></div>
+          <div class="stat-card"><div class="stat-icon">🎯</div><div class="stat-value" data-count="4.2" data-suffix="%">0</div><div class="stat-label">Conversion Rate</div><div class="stat-trend trend-down">▼ 0.3%</div></div>
+        </div>
+        <div class="card mt">
+          <div class="card-title">Weekly Traffic (visits, thousands)</div>
+          <div class="bar-chart">
+            <div class="bar-col"><div class="bar" data-h="40"></div><div class="bar-label">Mon</div></div>
+            <div class="bar-col"><div class="bar" data-h="55"></div><div class="bar-label">Tue</div></div>
+            <div class="bar-col"><div class="bar gold" data-h="72"></div><div class="bar-label">Wed</div></div>
+            <div class="bar-col"><div class="bar" data-h="60"></div><div class="bar-label">Thu</div></div>
+            <div class="bar-col"><div class="bar gold" data-h="88"></div><div class="bar-label">Fri</div></div>
+            <div class="bar-col"><div class="bar gold" data-h="96"></div><div class="bar-label">Sat</div></div>
+            <div class="bar-col"><div class="bar" data-h="66"></div><div class="bar-label">Sun</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 2: PROPERTIES ========== -->
+      <section class="panel" id="a-listings">
+        <div class="card">
+          <div class="card-title">All Listings <span class="badge badge-gold">1,284 total</span></div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>ID</th><th>Property</th><th>Type</th><th>Price</th><th>Agent</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody>
+              <tr><td>#P-1042</td><td><b>Skyline Penthouse</b><br /><span class="muted">Marina District</span></td><td>Penthouse</td><td class="gold-text"><b>$845,000</b></td><td>Sofia M.</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening editor..." onclick="window.location.href = 'dashboarderror.html'">Edit</button> <button class="btn btn-outline btn-sm" data-toast="Listing unpublished" onclick="window.location.href = 'dashboarderror.html'">Hide</button></td></tr>
+              <tr><td>#P-1038</td><td><b>Willow Creek Villa</b><br /><span class="muted">Northside</span></td><td>Villa</td><td class="gold-text"><b>$629,500</b></td><td>Daniel K.</td><td><span class="badge badge-navy">Sold</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening archive..." onclick="window.location.href = 'dashboarderror.html'">Archive</button></td></tr>
+              <tr><td>#P-1035</td><td><b>Aurora Apartments 12B</b><br /><span class="muted">Riverside Blvd</span></td><td>Apartment</td><td class="gold-text"><b>$412,000</b></td><td>Daniel K.</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening editor..." onclick="window.location.href = 'dashboarderror.html'">Edit</button> <button class="btn btn-outline btn-sm" data-toast="Listing unpublished" onclick="window.location.href = 'dashboarderror.html'">Hide</button></td></tr>
+              <tr><td>#P-1029</td><td><b>The Obsidian Loft</b><br /><span class="muted">Financial District</span></td><td>Loft</td><td class="gold-text"><b>$1,150,000</b></td><td>Priya N.</td><td><span class="badge badge-amber">Under Offer</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening editor..." onclick="window.location.href = 'dashboarderror.html'">Edit</button></td></tr>
+              <tr><td>#P-1024</td><td><b>Maple Grove Cottage</b><br /><span class="muted">Greenfield</span></td><td>Cottage</td><td class="gold-text"><b>$385,000</b></td><td>Marcus W.</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening editor..." onclick="window.location.href = 'dashboarderror.html'">Edit</button> <button class="btn btn-outline btn-sm" data-toast="Listing unpublished" onclick="window.location.href = 'dashboarderror.html'">Hide</button></td></tr>
+              <tr><td>#P-1018</td><td><b>Seabreeze Residence</b><br /><span class="muted">Coastal Drive</span></td><td>Villa</td><td class="gold-text"><b>$975,000</b></td><td>Sofia M.</td><td><span class="badge badge-red">Expired</span></td><td><button class="btn btn-gold btn-sm" data-toast="Listing renewed ✓" onclick="window.location.href = 'dashboarderror.html'">Renew</button></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-addprop">
+        <div class="card" style="max-width:860px;">
+          <div class="card-title">Add New Property</div>
+          <div class="form-grid">
+            <div class="form-group full"><label>Property Title</label><input type="text" placeholder="e.g. Harborview Duplex" /></div>
+            <div class="form-group"><label>Type</label><select><option>Apartment</option><option>Villa</option><option>Penthouse</option><option>Cottage</option><option>Commercial</option><option>Land / Plot</option></select></div>
+            <div class="form-group"><label>Listing Status</label><select><option>Draft</option><option>Active</option><option>Featured</option></select></div>
+            <div class="form-group"><label>Price ($)</label><input type="number" placeholder="650000" /></div>
+            <div class="form-group"><label>Area (sq ft)</label><input type="number" placeholder="2100" /></div>
+            <div class="form-group"><label>Bedrooms</label><select><option>Studio</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+            <div class="form-group"><label>Bathrooms</label><select><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+            <div class="form-group full"><label>Address</label><input type="text" placeholder="Street, District, City" /></div>
+            <div class="form-group"><label>Assigned Agent</label><select><option>Sofia Martinez</option><option>Daniel Kim</option><option>Priya Nair</option><option>Marcus Webb</option></select></div>
+            <div class="form-group"><label>Year Built</label><input type="number" placeholder="2021" /></div>
+            <div class="form-group full"><label>Description</label><textarea rows="4" placeholder="Highlight key features, amenities, and neighbourhood..."></textarea></div>
+            <div class="form-group full"><label>Photos</label><input type="file" multiple /></div>
+            <div class="form-group full"><button class="btn btn-gold" data-toast="Property saved as draft ✓" onclick="window.location.href = 'dashboarderror.html'">Save Property</button> <button class="btn btn-outline" data-toast="Draft discarded" onclick="window.location.href = 'dashboarderror.html'">Discard</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-approvals">
+        <div class="card">
+          <div class="card-title">Pending Approvals <span class="badge badge-amber">4 waiting</span></div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Submitted</th><th>Property</th><th>Submitted By</th><th>Price</th><th>Checks</th><th>Decision</th></tr></thead>
+            <tbody>
+              <tr><td>Today</td><td><b>Harborview Duplex</b></td><td>Agent · Priya N.</td><td class="gold-text"><b>$720,000</b></td><td><span class="badge badge-green">Docs ✓</span> <span class="badge badge-amber">Photos ⏳</span></td><td><button class="btn btn-gold btn-sm" data-toast="Listing approved ✓">Approve</button> <button class="btn btn-outline btn-sm" data-toast="Listing rejected">Reject</button></td></tr>
+              <tr><td>Yesterday</td><td><b>Sunstone Plot 7</b></td><td>Owner · R. Alvarez</td><td class="gold-text"><b>$190,000</b></td><td><span class="badge badge-amber">Docs ⏳</span></td><td><button class="btn btn-gold btn-sm" data-toast="Listing approved ✓">Approve</button> <button class="btn btn-outline btn-sm" data-toast="Listing rejected">Reject</button></td></tr>
+              <tr><td>Jul 06</td><td><b>Kingsway Office Suite</b></td><td>Agent · Marcus W.</td><td class="gold-text"><b>$1,320,000</b></td><td><span class="badge badge-green">Docs ✓</span> <span class="badge badge-green">Photos ✓</span></td><td><button class="btn btn-gold btn-sm" data-toast="Listing approved ✓">Approve</button> <button class="btn btn-outline btn-sm" data-toast="Listing rejected">Reject</button></td></tr>
+              <tr><td>Jul 05</td><td><b>Elm Street Townhouse</b></td><td>Owner · T. Osei</td><td class="gold-text"><b>$455,000</b></td><td><span class="badge badge-red">Docs ✗</span></td><td><button class="btn btn-outline btn-sm" data-toast="Revision requested">Request Docs</button></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 3: USERS & AGENTS ========== -->
+      <section class="panel" id="a-users">
+        <div class="grid grid-3">
+          <div class="stat-card"><div class="stat-icon">👥</div><div class="stat-value" data-count="8412">0</div><div class="stat-label">Total Users</div></div>
+          <div class="stat-card"><div class="stat-icon">⭐</div><div class="stat-value" data-count="1130">0</div><div class="stat-label">Premium Members</div></div>
+          <div class="stat-card"><div class="stat-icon">🆕</div><div class="stat-value" data-count="312">0</div><div class="stat-label">New This Month</div></div>
+        </div>
+        <div class="card mt">
+          <div class="card-title">Registered Users</div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>User</th><th>Email</th><th>Plan</th><th>Joined</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody>
+              <tr><td><b>James Turner</b></td><td>james.turner@email.com</td><td><span class="badge badge-gold">Premium</span></td><td>Mar 2024</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening user profile..." onclick="window.location.href = 'dashboarderror.html'">View</button> <button class="btn btn-outline btn-sm" data-toast="User suspended" onclick="window.location.href = 'dashboarderror.html'">Suspend</button></td></tr>
+              <tr><td><b>Elena Rossi</b></td><td>elena.rossi@email.com</td><td><span class="badge badge-navy">Free</span></td><td>Jan 2026</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening user profile..." onclick="window.location.href = 'dashboarderror.html'">View</button> <button class="btn btn-outline btn-sm" data-toast="User suspended" onclick="window.location.href = 'dashboarderror.html'">Suspend</button></td></tr>
+              <tr><td><b>Omar Haddad</b></td><td>omar.h@email.com</td><td><span class="badge badge-gold">Premium</span></td><td>Nov 2025</td><td><span class="badge badge-amber">Unverified</span></td><td><button class="btn btn-gold btn-sm" data-toast="Verification email sent ✓" onclick="window.location.href = 'dashboarderror.html'">Verify</button></td></tr>
+              <tr><td><b>Mia Chen</b></td><td>mia.chen@email.com</td><td><span class="badge badge-navy">Free</span></td><td>Jun 2026</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening user profile..." onclick="window.location.href = 'dashboarderror.html'">View</button> <button class="btn btn-outline btn-sm" data-toast="User suspended" onclick="window.location.href = 'dashboarderror.html'">Suspend</button></td></tr>
+              <tr><td><b>Lucas Meyer</b></td><td>l.meyer@email.com</td><td><span class="badge badge-navy">Free</span></td><td>Feb 2025</td><td><span class="badge badge-red">Suspended</span></td><td><button class="btn btn-gold btn-sm" data-toast="User reactivated ✓" onclick="window.location.href = 'dashboarderror.html'">Reactivate</button></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-agents">
+        <div class="grid grid-3">
+          <div class="card" style="text-align:center;"><div class="avatar" style="width:72px;height:72px;font-size:24px;margin:0 auto 12px;">SM</div><b>Sofia Martinez</b><div class="muted">Senior Property Advisor</div><div style="margin:8px 0;color:#c9a84c;">★ 4.9 · 21 deals YTD</div><div class="progress"><span data-w="94"></span></div><div class="muted" style="margin-top:6px;">94% of annual target</div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Opening agent profile..." onclick="window.location.href = 'dashboarderror.html'">Profile</button> <button class="btn btn-outline btn-sm" data-toast="Assigning leads..." onclick="window.location.href = 'dashboarderror.html'">Assign Leads</button></div>
+          <div class="card" style="text-align:center;"><div class="avatar" style="width:72px;height:72px;font-size:24px;margin:0 auto 12px;">DK</div><b>Daniel Kim</b><div class="muted">Residential Specialist</div><div style="margin:8px 0;color:#c9a84c;">★ 4.7 · 17 deals YTD</div><div class="progress"><span data-w="78"></span></div><div class="muted" style="margin-top:6px;">78% of annual target</div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Opening agent profile..." onclick="window.location.href = 'dashboarderror.html'">Profile</button> <button class="btn btn-outline btn-sm" data-toast="Assigning leads..." onclick="window.location.href = 'dashboarderror.html'">Assign Leads</button></div>
+          <div class="card" style="text-align:center;"><div class="avatar" style="width:72px;height:72px;font-size:24px;margin:0 auto 12px;">PN</div><b>Priya Nair</b><div class="muted">Commercial Lead</div><div style="margin:8px 0;color:#c9a84c;">★ 4.8 · 14 deals YTD</div><div class="progress"><span data-w="65"></span></div><div class="muted" style="margin-top:6px;">65% of annual target</div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Opening agent profile..." onclick="window.location.href = 'dashboarderror.html'">Profile</button> <button class="btn btn-outline btn-sm" data-toast="Assigning leads..." onclick="window.location.href = 'dashboarderror.html'">Assign Leads</button></div>
+          <div class="card" style="text-align:center;"><div class="avatar" style="width:72px;height:72px;font-size:24px;margin:0 auto 12px;">MW</div><b>Marcus Webb</b><div class="muted">Suburban Specialist</div><div style="margin:8px 0;color:#c9a84c;">★ 4.5 · 11 deals YTD</div><div class="progress"><span data-w="52"></span></div><div class="muted" style="margin-top:6px;">52% of annual target</div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Opening agent profile..." onclick="window.location.href = 'dashboarderror.html'">Profile</button> <button class="btn btn-outline btn-sm" data-toast="Assigning leads..." onclick="window.location.href = 'dashboarderror.html'">Assign Leads</button></div>
+          <div class="card" style="text-align:center;display:grid;place-items:center;border:2px dashed #cfd6e2;background:transparent;box-shadow:none;"><div><div style="font-size:32px;color:#c9a84c;">+</div><b>Onboard New Agent</b><div class="muted">Create agent account & assign region</div><div class="mt"><button class="btn btn-gold btn-sm" data-toast="Opening onboarding wizard..." onclick="window.location.href = 'dashboarderror.html'">Start</button></div></div></div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-roles">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">Roles & Permissions</div>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Role</th><th>Members</th><th>Access Level</th></tr></thead>
+              <tbody>
+                <tr><td><b>Super Admin</b></td><td>2</td><td><span class="badge badge-gold">Full access</span></td></tr>
+                <tr><td><b>Manager</b></td><td>6</td><td><span class="badge badge-navy">Listings + Reports</span></td></tr>
+                <tr><td><b>Agent</b></td><td>34</td><td><span class="badge badge-navy">Own listings + leads</span></td></tr>
+                <tr><td><b>Finance</b></td><td>4</td><td><span class="badge badge-navy">Transactions only</span></td></tr>
+                <tr><td><b>Support</b></td><td>9</td><td><span class="badge badge-navy">Tickets + users (read)</span></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Grant Access</div>
+            <div class="form-grid">
+              <div class="form-group full"><label>Staff Email</label><input type="email" placeholder="name@regalia-estates.com" /></div>
+              <div class="form-group full"><label>Role</label><select><option>Manager</option><option>Agent</option><option>Finance</option><option>Support</option></select></div>
+              <div class="form-group full"><label>Region Scope</label><select><option>All regions</option><option>Marina District</option><option>Northside</option><option>Coastal Drive</option></select></div>
+              <div class="form-group full"><button class="btn btn-gold" data-toast="Invitation sent ✓" onclick="window.location.href = 'dashboarderror.html'">Send Invite</button></div>
+            </div>
+            <div class="divider"></div>
+            <div class="muted">⚠️ Role changes are recorded in the audit log and require Super Admin approval.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 4: TRANSACTIONS ========== -->
+      <section class="panel" id="a-payments">
+        <div class="grid grid-3">
+          <div class="stat-card"><div class="stat-icon">💳</div><div class="stat-value" data-count="486" data-prefix="$" data-suffix="k">0</div><div class="stat-label">Collected (30 days)</div></div>
+          <div class="stat-card"><div class="stat-icon">⏳</div><div class="stat-value" data-count="112" data-prefix="$" data-suffix="k">0</div><div class="stat-label">Pending Settlements</div></div>
+          <div class="stat-card"><div class="stat-icon">↩️</div><div class="stat-value" data-count="18" data-prefix="$" data-suffix="k">0</div><div class="stat-label">Refunded (30 days)</div></div>
+        </div>
+        <div class="card mt">
+          <div class="card-title">Payments Ledger</div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Date</th><th>Transaction</th><th>Payer</th><th>Amount</th><th>Method</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Jul 08</td><td><b>TXN-88291</b> · Reservation deposit</td><td>Elena Rossi</td><td class="gold-text"><b>$15,000</b></td><td>Bank transfer</td><td><span class="badge badge-green">Settled</span></td></tr>
+              <tr><td>Jul 07</td><td><b>TXN-88213</b> · Booking advance</td><td>James Turner</td><td class="gold-text"><b>$2,500</b></td><td>Visa •• 4821</td><td><span class="badge badge-green">Settled</span></td></tr>
+              <tr><td>Jul 07</td><td><b>TXN-88190</b> · Legal fee</td><td>Omar Haddad</td><td class="gold-text"><b>$3,950</b></td><td>Master •• 1077</td><td><span class="badge badge-amber">Processing</span></td></tr>
+              <tr><td>Jul 06</td><td><b>TXN-88102</b> · Final settlement</td><td>Mia Chen</td><td class="gold-text"><b>$88,400</b></td><td>Bank transfer</td><td><span class="badge badge-green">Settled</span></td></tr>
+              <tr><td>Jul 05</td><td><b>TXN-88044</b> · Reservation deposit</td><td>Lucas Meyer</td><td class="gold-text"><b>$15,000</b></td><td>Visa •• 2210</td><td><span class="badge badge-red">Chargeback</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-commissions">
+        <div class="card">
+          <div class="card-title">Agent Commission Payouts — Q2 2026</div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Agent</th><th>Closed Volume</th><th>Rate</th><th>Commission</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td><b>Sofia Martinez</b></td><td>$1,420,000</td><td>2.5%</td><td class="gold-text"><b>$35,500</b></td><td><span class="badge badge-green">Paid</span></td><td><button class="btn btn-outline btn-sm" data-toast="Downloading statement...">Statement</button></td></tr>
+              <tr><td><b>Daniel Kim</b></td><td>$1,080,000</td><td>2.5%</td><td class="gold-text"><b>$27,000</b></td><td><span class="badge badge-amber">Scheduled Jul 15</span></td><td><button class="btn btn-gold btn-sm" data-toast="Payout released ✓">Release Now</button></td></tr>
+              <tr><td><b>Priya Nair</b></td><td>$930,000</td><td>2.8%</td><td class="gold-text"><b>$26,040</b></td><td><span class="badge badge-amber">Scheduled Jul 15</span></td><td><button class="btn btn-gold btn-sm" data-toast="Payout released ✓">Release Now</button></td></tr>
+              <tr><td><b>Marcus Webb</b></td><td>$710,000</td><td>2.5%</td><td class="gold-text"><b>$17,750</b></td><td><span class="badge badge-red">On Hold</span></td><td><button class="btn btn-outline btn-sm" data-toast="Opening dispute case...">Review</button></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-refunds">
+        <div class="card">
+          <div class="card-title">Refund Requests <span class="badge badge-amber">2 pending</span></div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Request</th><th>User</th><th>Reason</th><th>Amount</th><th>Status</th><th>Decision</th></tr></thead>
+            <tbody>
+              <tr><td><b>#RF-104</b><br /><span class="muted">Jul 06</span></td><td>Lucas Meyer</td><td>Duplicate charge on reservation deposit</td><td class="gold-text"><b>$15,000</b></td><td><span class="badge badge-amber">Pending</span></td><td><button class="btn btn-gold btn-sm" data-toast="Refund approved ✓">Approve</button> <button class="btn btn-outline btn-sm" data-toast="Refund declined">Decline</button></td></tr>
+              <tr><td><b>#RF-103</b><br /><span class="muted">Jul 04</span></td><td>Omar Haddad</td><td>Visit cancelled — advance refundable per policy</td><td class="gold-text"><b>$2,500</b></td><td><span class="badge badge-amber">Pending</span></td><td><button class="btn btn-gold btn-sm" data-toast="Refund approved ✓">Approve</button> <button class="btn btn-outline btn-sm" data-toast="Refund declined">Decline</button></td></tr>
+              <tr><td><b>#RF-101</b><br /><span class="muted">Jun 29</span></td><td>Mia Chen</td><td>Overpayment on legal fee invoice</td><td class="gold-text"><b>$450</b></td><td><span class="badge badge-green">Refunded</span></td><td><button class="btn btn-outline btn-sm" data-toast="Downloading receipt...">Receipt</button></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 5: REPORTS ========== -->
+      <section class="panel" id="a-monthly">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">June 2026 — Executive Summary</div>
+            <div class="setting-row"><div><b>Total revenue</b><span>All fees, deposits and settlements</span></div><b class="gold-text">$948,200</b></div>
+            <div class="setting-row"><div><b>Deals closed</b><span>Residential 24 · Commercial 5</span></div><b>29</b></div>
+            <div class="setting-row"><div><b>New listings</b><span>Approved and published</span></div><b>46</b></div>
+            <div class="setting-row"><div><b>New users</b><span>Sign-ups incl. 38 premium upgrades</span></div><b>312</b></div>
+            <div class="setting-row"><div><b>Avg. listing age</b><span>Days on market before sale</span></div><b>34 days</b></div>
+            <div class="mt"><button class="btn btn-navy" data-toast="Generating PDF report..." onclick="window.location.href = 'dashboarderror.html'">📄 Download Full Report</button></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Month-over-Month Growth</div>
+            <div class="muted" style="margin-bottom:8px;">Revenue</div>
+            <div class="progress"><span data-w="82"></span></div>
+            <div class="muted" style="margin:12px 0 8px;">Deals closed</div>
+            <div class="progress"><span data-w="68"></span></div>
+            <div class="muted" style="margin:12px 0 8px;">New listings</div>
+            <div class="progress navy"><span data-w="74"></span></div>
+            <div class="muted" style="margin:12px 0 8px;">User growth</div>
+            <div class="progress navy"><span data-w="59"></span></div>
+            <div class="divider"></div>
+            <div class="muted">📈 Revenue is pacing 18.2% ahead of last year. Strongest segment: waterfront residential.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-regional">
+        <div class="card">
+          <div class="card-title">Regional Performance</div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Region</th><th>Listings</th><th>Avg. Price</th><th>Deals (Q2)</th><th>Demand Index</th></tr></thead>
+            <tbody>
+              <tr><td><b>Marina District</b></td><td>312</td><td class="gold-text"><b>$812k</b></td><td>31</td><td style="min-width:140px;"><div class="progress"><span data-w="92"></span></div></td></tr>
+              <tr><td><b>Northside</b></td><td>264</td><td class="gold-text"><b>$548k</b></td><td>24</td><td><div class="progress"><span data-w="76"></span></div></td></tr>
+              <tr><td><b>Financial District</b></td><td>198</td><td class="gold-text"><b>$1.02M</b></td><td>14</td><td><div class="progress navy"><span data-w="64"></span></div></td></tr>
+              <tr><td><b>Coastal Drive</b></td><td>171</td><td class="gold-text"><b>$934k</b></td><td>12</td><td><div class="progress navy"><span data-w="58"></span></div></td></tr>
+              <tr><td><b>Greenfield Suburb</b></td><td>339</td><td class="gold-text"><b>$402k</b></td><td>12</td><td><div class="progress navy"><span data-w="45"></span></div></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-export">
+        <div class="grid grid-3">
+          <div class="card" style="text-align:center;"><div class="stat-icon" style="margin:0 auto 12px;">📊</div><b>Sales Report</b><div class="muted" style="margin:6px 0 14px;">Deals, pipeline & agent performance</div><button class="btn btn-navy btn-sm" data-toast="Exporting sales report (CSV)..." onclick="window.location.href = 'dashboarderror.html'">Export CSV</button> <button class="btn btn-outline btn-sm" data-toast="Exporting sales report (PDF)..." onclick="window.location.href = 'dashboarderror.html'">PDF</button></div>
+          <div class="card" style="text-align:center;"><div class="stat-icon" style="margin:0 auto 12px;">💰</div><b>Financial Ledger</b><div class="muted" style="margin:6px 0 14px;">All transactions, refunds & payouts</div><button class="btn btn-navy btn-sm" data-toast="Exporting ledger (CSV)..." onclick="window.location.href = 'dashboarderror.html'">Export CSV</button> <button class="btn btn-outline btn-sm" data-toast="Exporting ledger (PDF)..." onclick="window.location.href = 'dashboarderror.html'">PDF</button></div>
+          <div class="card" style="text-align:center;"><div class="stat-icon" style="margin:0 auto 12px;">👥</div><b>User Analytics</b><div class="muted" style="margin:6px 0 14px;">Sign-ups, engagement & conversion</div><button class="btn btn-navy btn-sm" data-toast="Exporting user analytics (CSV)..." onclick="window.location.href = 'dashboarderror.html'">Export CSV</button> <button class="btn btn-outline btn-sm" data-toast="Exporting user analytics (PDF)..." onclick="window.location.href = 'dashboarderror.html'">PDF</button></div>
+        </div>
+        <div class="card mt">
+          <div class="card-title">Scheduled Exports</div>
+          <div class="setting-row"><div><b>Weekly sales digest → leadership@regalia.com</b><span>Every Monday 08:00</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+          <div class="setting-row"><div><b>Monthly ledger → finance@regalia.com</b><span>1st of each month</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+          <div class="setting-row"><div><b>Quarterly board pack → board@regalia.com</b><span>End of quarter</span></div><label class="switch"><input type="checkbox" /><span class="slider-t"></span></label></div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 6: SYSTEM ========== -->
+      <section class="panel" id="a-general">
+        <div class="card" style="max-width:760px;">
+          <div class="card-title">General Configuration</div>
+          <div class="form-grid">
+            <div class="form-group"><label>Company Name</label><input type="text" value="Regalia Estates Ltd." /></div>
+            <div class="form-group"><label>Support Email</label><input type="email" value="support@regalia-estates.com" /></div>
+            <div class="form-group"><label>Default Currency</label><select><option>USD $</option><option>EUR €</option><option>GBP £</option></select></div>
+            <div class="form-group"><label>Default Commission Rate</label><input type="text" value="2.5%" /></div>
+          </div>
+          <div class="divider"></div>
+          <div class="setting-row"><div><b>Auto-approve agent listings</b><span>Skip manual review for verified agents</span></div><label class="switch"><input type="checkbox" /><span class="slider-t"></span></label></div>
+          <div class="setting-row"><div><b>Maintenance mode</b><span>Show maintenance page to visitors</span></div><label class="switch"><input type="checkbox" /><span class="slider-t"></span></label></div>
+          <div class="setting-row"><div><b>Public price history</b><span>Show past prices on listing pages</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+          <div class="mt"><button class="btn btn-gold" data-toast="Configuration saved ✓" onclick="window.location.href = 'dashboarderror.html'">Save Configuration</button></div>
+        </div>
+      </section>
+
+      <section class="panel" id="a-audit">
+        <div class="card">
+          <div class="card-title">Audit Log <span class="badge badge-navy">Last 24 hours</span></div>
+          <ul class="timeline">
+            <li><div class="tl-dot">🔐</div><div class="tl-body"><b>Amelia Vance approved listing #P-1051</b><span>Today 10:02 · IP 82.14.xx.xx</span></div></li>
+            <li><div class="tl-dot">💳</div><div class="tl-body"><b>Finance released commission payout — Sofia M.</b><span>Today 09:31 · $35,500 · dual-approved</span></div></li>
+            <li><div class="tl-dot">👤</div><div class="tl-body"><b>Manager R. Ito suspended user account #U-7723</b><span>Today 08:47 · reason: fraudulent enquiry pattern</span></div></li>
+            <li><div class="tl-dot">⚙️</div><div class="tl-body"><b>Commission rate updated 2.4% → 2.5%</b><span>Yesterday 17:20 · by Amelia Vance</span></div></li>
+            <li><div class="tl-dot">🔑</div><div class="tl-body"><b>New Finance role granted to k.osei@regalia.com</b><span>Yesterday 15:04 · approved by Super Admin</span></div></li>
+            <li><div class="tl-dot">🗑️</div><div class="tl-body"><b>Listing #P-0994 archived (expired 90+ days)</b><span>Yesterday 11:12 · automated policy</span></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="a-integrations">
+        <div class="grid grid-3">
+          <div class="card"><div class="card-title" style="margin-bottom:8px;">💳 Payment Gateway</div><div class="muted">Card payments, deposits & settlements</div><div class="divider"></div><div class="setting-row" style="padding:6px 0;border:none;"><span class="badge badge-green">Connected</span><button class="btn btn-outline btn-sm" data-toast="Opening gateway settings..." onclick="window.location.href = 'dashboarderror.html'">Configure</button></div></div>
+          <div class="card"><div class="card-title" style="margin-bottom:8px;">🗺️ Maps & Geocoding</div><div class="muted">Listing maps and location search</div><div class="divider"></div><div class="setting-row" style="padding:6px 0;border:none;"><span class="badge badge-green">Connected</span><button class="btn btn-outline btn-sm" data-toast="Opening maps settings..." onclick="window.location.href = 'dashboarderror.html'">Configure</button></div></div>
+          <div class="card"><div class="card-title" style="margin-bottom:8px;">📧 Email Service</div><div class="muted">Transactional & marketing email</div><div class="divider"></div><div class="setting-row" style="padding:6px 0;border:none;"><span class="badge badge-green">Connected</span><button class="btn btn-outline btn-sm" data-toast="Opening email settings..." onclick="window.location.href = 'dashboarderror.html'">Configure</button></div></div>
+          <div class="card"><div class="card-title" style="margin-bottom:8px;">📱 SMS Notifications</div><div class="muted">Visit reminders and OTP delivery</div><div class="divider"></div><div class="setting-row" style="padding:6px 0;border:none;"><span class="badge badge-amber">Setup needed</span><button class="btn btn-gold btn-sm" data-toast="Starting SMS setup..." onclick="window.location.href = 'dashboarderror.html'">Connect</button></div></div>
+          <div class="card"><div class="card-title" style="margin-bottom:8px;">📈 CRM Sync</div><div class="muted">Lead sync with external CRM</div><div class="divider"></div><div class="setting-row" style="padding:6px 0;border:none;"><span class="badge badge-red">Disconnected</span><button class="btn btn-gold btn-sm" data-toast="Starting CRM connection..." onclick="window.location.href = 'dashboarderror.html'">Connect</button></div></div>
+          <div class="card"><div class="card-title" style="margin-bottom:8px;">🏦 e-Signature</div><div class="muted">Digital signing for agreements</div><div class="divider"></div><div class="setting-row" style="padding:6px 0;border:none;"><span class="badge badge-green">Connected</span><button class="btn btn-outline btn-sm" data-toast="Opening e-sign settings..." onclick="window.location.href = 'dashboarderror.html'">Configure</button></div></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

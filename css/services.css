@@ -1,3 +1,16 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /*==================================================
             SERVICES HERO
 ==================================================*/
@@ -1583,4 +1596,219 @@ font-size:14px;
     .tech-content h3{
         font-size:24px;
     }
+}
+
+
+/* =============================================================== */
+/* ===========================================
+        RESPONSIVE (WITHOUT NAVBAR)
+=========================================== */
+
+/* ============ Laptop ============ */
+
+@media (max-width:1200px){
+
+    section{
+        padding:90px 30px;
+    }
+
+    .services-hero-grid,
+    .expertise-wrapper{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .consult-card{
+        max-width:700px;
+        margin:auto;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .hero-content p{
+        margin-inline:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .services-grid,
+    .experts-grid,
+    .packages-grid,
+    .technology-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-card:first-child{
+        grid-column:span 1;
+    }
+
+    .timeline{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .timeline::before{
+        display:none;
+    }
+
+}
+
+/* ============ Tablet ============ */
+
+@media (max-width:768px){
+
+    section{
+        padding:70px 20px;
+    }
+
+    .services-hero{
+        padding:120px 20px 70px;
+    }
+
+    .hero-content h1,
+    .section-header h2{
+        font-size:38px;
+        line-height:1.3;
+    }
+
+    .hero-content p,
+    .section-header p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-btn,
+    .hero-outline-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero-stats,
+    .why-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .services-grid,
+    .experts-grid,
+    .packages-grid,
+    .technology-grid,
+    .timeline{
+        grid-template-columns:1fr;
+    }
+
+    .service-image,
+    .expert-image,
+    .tech-image{
+        height:230px;
+    }
+
+    .package-card{
+        padding:30px 24px;
+    }
+
+    .expertise-stats{
+        grid-template-columns:1fr;
+    }
+
+    .consult-card{
+        padding:28px;
+    }
+
+}
+
+/* ============ Mobile ============ */
+
+@media (max-width:576px){
+
+    section{
+        padding:60px 15px;
+    }
+
+    .services-hero{
+        padding:110px 15px 60px;
+    }
+
+    .hero-content h1,
+    .section-header h2{
+        font-size:30px;
+    }
+
+    .hero-content p,
+    .section-header p{
+        font-size:15px;
+    }
+
+    .hero-badge,
+    .section-badge{
+        font-size:12px;
+        padding:8px 16px;
+    }
+
+    .hero-stats,
+    .why-stats{
+        grid-template-columns:1fr;
+    }
+
+    .consult-card,
+    .service-content,
+    .expert-content,
+    .tech-content,
+    .expertise-content,
+    .expertise-info{
+        padding:20px;
+    }
+
+    .service-content h3,
+    .expert-content h3,
+    .tech-content h3,
+    .package-card h3{
+        font-size:24px;
+    }
+
+    .package-price{
+        font-size:40px;
+    }
+
+    .timeline-item{
+        padding:24px 18px;
+    }
+
+    .timeline-icon{
+        width:65px;
+        height:65px;
+        font-size:24px;
+    }
+
+    .timeline-item h3{
+        font-size:20px;
+    }
+
+    .expert-info{
+        flex-direction:column;
+    }
+
+    .expert-social{
+        justify-content:center;
+    }
+
+    .hero-btn,
+    .hero-outline-btn,
+    .package-card a{
+        width:100%;
+    }
+
 }

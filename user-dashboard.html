@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>User Dashboard — Regalia Estates</title>
+<meta name="description" content="Regalia Estates user dashboard — manage saved properties, appointments, payments and messages." />
+<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">R</div>
+      <div>
+        <div class="brand-name">Regalia<span>Estates</span></div>
+        <div class="brand-tag">Luxury Living</div>
+      </div>
+    </div>
+    <div class="role-badge">★ User Portal</div>
+
+    <nav class="nav">
+      <!-- Module 1: Overview -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">🏠</span><span class="label">Overview</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="u-overview" class="active">My Summary</a>
+          <a href="dashboarderror.html" data-panel="u-activity">Recent Activity</a>
+          <a href="dashboarderror.html" data-panel="u-notifications">Notifications</a>
+        </div>
+      </div>
+      <!-- Module 2: Properties -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">🏘️</span><span class="label">My Properties</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="u-saved">Saved Properties</a>
+          <a href="dashboarderror.html" data-panel="u-viewed">Recently Viewed</a>
+          <a href="dashboarderror.html" data-panel="u-alerts">Search Alerts</a>
+        </div>
+      </div>
+      <!-- Module 3: Appointments -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">📅</span><span class="label">Appointments</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="u-upcoming">Upcoming Visits</a>
+          <a href="dashboarderror.html" data-panel="u-history">Visit History</a>
+          <a href="dashboarderror.html" data-panel="u-book">Book a Visit</a>
+        </div>
+      </div>
+      <!-- Module 4: Payments -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">💳</span><span class="label">Payments</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="u-invoices">Invoices</a>
+          <a href="dashboarderror.html" data-panel="u-transactions">Transactions</a>
+          <a href="dashboarderror.html" data-panel="u-emi">EMI Calculator</a>
+        </div>
+      </div>
+      <!-- Module 5: Messages -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">✉️</span><span class="label">Messages</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="u-inbox">Inbox</a>
+          <a href="dashboarderror.html" data-panel="u-agents">My Agents</a>
+          <a href="dashboarderror.html" data-panel="u-support">Support Tickets</a>
+        </div>
+      </div>
+      <!-- Module 6: Profile -->
+      <div class="nav-module">
+        <button class="nav-module-btn"><span class="icon">⚙️</span><span class="label">Profile & Settings</span><span class="chev">▶</span></button>
+        <div class="nav-sections">
+          <a href="dashboarderror.html" data-panel="u-profile">Personal Details</a>
+          <a href="dashboarderror.html" data-panel="u-security">Security</a>
+          <a href="dashboarderror.html" data-panel="u-preferences">Preferences</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <div class="sidebar-footer">© 2026 Regalia Estates<br /><a href="admin-dashboard.html" style="color:#c9a84c;">Switch to Admin →</a></div> -->
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger">☰</button>
+      <div class="search-box">🔍 <input type="text" placeholder="Search properties, invoices, agents..." /></div>
+      <div class="topbar-actions">
+        <button class="icon-btn" data-toast="No new notifications 🎉">🔔<span class="dot"></span></button>
+        <button class="icon-btn" data-toast="Opening messages...">✉️</button>
+        <div class="user-chip">
+          <div class="avatar">JT</div>
+          <div class="meta"><div class="name">James Turner</div><div class="role">Premium Member</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="page-head">
+        <div>
+          <h1 id="page-title">My Summary</h1>
+          <div class="breadcrumb" id="crumb">Dashboard / Overview / <b>My Summary</b></div>
+        </div>
+        <button class="btn btn-gold" data-toast="Redirecting to property listings...">+ Browse Properties</button>
+      </div>
+
+      <!-- ========== MODULE 1: OVERVIEW ========== -->
+      <section class="panel active" id="u-overview">
+        <div class="grid grid-4">
+          <div class="stat-card navy"><div class="stat-icon">💾</div><div class="stat-value" data-count="24">0</div><div class="stat-label">Saved Properties</div><div class="stat-trend trend-up">▲ 4 this week</div></div>
+          <div class="stat-card"><div class="stat-icon">📅</div><div class="stat-value" data-count="3">0</div><div class="stat-label">Upcoming Visits</div><div class="stat-trend trend-up">Next: Fri 10:30 AM</div></div>
+          <div class="stat-card"><div class="stat-icon">💰</div><div class="stat-value" data-count="12400" data-prefix="$">0</div><div class="stat-label">Pending Payments</div><div class="stat-trend trend-down">Due 15 Jul</div></div>
+          <div class="stat-card"><div class="stat-icon">✉️</div><div class="stat-value" data-count="7">0</div><div class="stat-label">Unread Messages</div><div class="stat-trend trend-up">▲ 2 today</div></div>
+        </div>
+
+        <div class="grid grid-2-1 mt">
+          <div class="card">
+            <div class="card-title">Property Search Activity <a href="dashboarderror.html" class="link">Last 7 months</a></div>
+            <div class="bar-chart">
+              <div class="bar-col"><div class="bar" data-h="45"></div><div class="bar-label">Jan</div></div>
+              <div class="bar-col"><div class="bar gold" data-h="62"></div><div class="bar-label">Feb</div></div>
+              <div class="bar-col"><div class="bar" data-h="38"></div><div class="bar-label">Mar</div></div>
+              <div class="bar-col"><div class="bar gold" data-h="78"></div><div class="bar-label">Apr</div></div>
+              <div class="bar-col"><div class="bar" data-h="55"></div><div class="bar-label">May</div></div>
+              <div class="bar-col"><div class="bar gold" data-h="90"></div><div class="bar-label">Jun</div></div>
+              <div class="bar-col"><div class="bar" data-h="70"></div><div class="bar-label">Jul</div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Budget Match</div>
+            <div class="donut" data-center="62%"></div>
+            <ul class="legend">
+              <li><span class="sw" style="background:#c9a84c"></span> Within budget — 62%</li>
+              <li><span class="sw" style="background:#0f1b3d"></span> Slightly above — 24%</li>
+              <li><span class="sw" style="background:#cfd6e2"></span> Out of range — 14%</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mt">
+          <div class="card-title">Recommended For You <a href="dashboarderror.html" class="link">View all →</a></div>
+          <div class="grid grid-3">
+            <div class="prop-card"><div class="prop-img">🏙️<span class="tag">NEW</span></div><div class="prop-body"><div class="prop-price">$845,000</div><div class="prop-name">Skyline Penthouse</div><div class="prop-loc">📍 Downtown, Marina District</div><div class="prop-meta"><span>🛏 3 Beds</span><span>🛁 2 Baths</span><span>📐 2,100 sqft</span></div></div></div>
+            <div class="prop-card"><div class="prop-img">🏡<span class="tag">HOT</span></div><div class="prop-body"><div class="prop-price">$629,500</div><div class="prop-name">Willow Creek Villa</div><div class="prop-loc">📍 Northside, Oak Avenue</div><div class="prop-meta"><span>🛏 4 Beds</span><span>🛁 3 Baths</span><span>📐 2,800 sqft</span></div></div></div>
+            <div class="prop-card"><div class="prop-img">🏢<span class="tag">-5%</span></div><div class="prop-body"><div class="prop-price">$412,000</div><div class="prop-name">Aurora Apartments 12B</div><div class="prop-loc">📍 Riverside Boulevard</div><div class="prop-meta"><span>🛏 2 Beds</span><span>🛁 2 Baths</span><span>📐 1,350 sqft</span></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-activity">
+        <div class="card">
+          <div class="card-title">Recent Activity</div>
+          <ul class="timeline">
+            <li><div class="tl-dot">👁️</div><div class="tl-body"><b>Viewed "Skyline Penthouse"</b><span>Today, 09:42 AM — viewed 4 photos and floor plan</span></div></li>
+            <li><div class="tl-dot">💾</div><div class="tl-body"><b>Saved "Willow Creek Villa" to favourites</b><span>Yesterday, 06:15 PM</span></div></li>
+            <li><div class="tl-dot">📅</div><div class="tl-body"><b>Booked a site visit — Aurora Apartments</b><span>Yesterday, 02:30 PM — confirmed by agent Sofia M.</span></div></li>
+            <li><div class="tl-dot">💳</div><div class="tl-body"><b>Paid booking advance $2,500</b><span>Jul 05 — Invoice #INV-2216</span></div></li>
+            <li><div class="tl-dot">✉️</div><div class="tl-body"><b>Message from agent Daniel K.</b><span>Jul 04 — "The seller accepted your offer terms..."</span></div></li>
+            <li><div class="tl-dot">🔔</div><div class="tl-body"><b>Price drop alert — Aurora Apartments 12B</b><span>Jul 03 — price reduced by 5% ($21,700)</span></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="u-notifications">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">Unread Notifications <span class="badge badge-gold">7 new</span></div>
+            <ul class="timeline">
+              <li><div class="tl-dot">📉</div><div class="tl-body"><b>Price drop on a saved property</b><span>Aurora Apartments 12B is now $412,000</span></div></li>
+              <li><div class="tl-dot">📅</div><div class="tl-body"><b>Visit reminder</b><span>Skyline Penthouse — Friday 10:30 AM</span></div></li>
+              <li><div class="tl-dot">🏦</div><div class="tl-body"><b>Loan pre-approval update</b><span>Your application moved to verification stage</span></div></li>
+              <li><div class="tl-dot">🆕</div><div class="tl-body"><b>3 new matches for "Marina 3BHK"</b><span>Based on your saved search alert</span></div></li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-title">Notification Settings</div>
+            <div class="setting-row"><div><b>Price drop alerts</b><span>Notify when saved properties change price</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+            <div class="setting-row"><div><b>New listing matches</b><span>Alert for new properties matching my searches</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+            <div class="setting-row"><div><b>Visit reminders</b><span>Remind me 24h and 1h before appointments</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+            <div class="setting-row"><div><b>Marketing emails</b><span>Newsletters and market reports</span></div><label class="switch"><input type="checkbox" /><span class="slider-t"></span></label></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 2: PROPERTIES ========== -->
+      <section class="panel" id="u-saved">
+        <div class="grid grid-3">
+          <div class="prop-card"><div class="prop-img">🏙️<span class="tag">SAVED</span></div><div class="prop-body"><div class="prop-price">$845,000</div><div class="prop-name">Skyline Penthouse</div><div class="prop-loc">📍 Downtown, Marina District</div><div class="prop-meta"><span>🛏 3</span><span>🛁 2</span><span>📐 2,100 sqft</span></div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Visit request sent!">Book Visit</button> <button class="btn btn-outline btn-sm" data-toast="Removed from saved">Remove</button></div></div>
+          <div class="prop-card"><div class="prop-img">🏡<span class="tag">SAVED</span></div><div class="prop-body"><div class="prop-price">$629,500</div><div class="prop-name">Willow Creek Villa</div><div class="prop-loc">📍 Northside, Oak Avenue</div><div class="prop-meta"><span>🛏 4</span><span>🛁 3</span><span>📐 2,800 sqft</span></div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Visit request sent!">Book Visit</button> <button class="btn btn-outline btn-sm" data-toast="Removed from saved">Remove</button></div></div>
+          <div class="prop-card"><div class="prop-img">🏢<span class="tag">SAVED</span></div><div class="prop-body"><div class="prop-price">$412,000</div><div class="prop-name">Aurora Apartments 12B</div><div class="prop-loc">📍 Riverside Boulevard</div><div class="prop-meta"><span>🛏 2</span><span>🛁 2</span><span>📐 1,350 sqft</span></div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Visit request sent!">Book Visit</button> <button class="btn btn-outline btn-sm" data-toast="Removed from saved">Remove</button></div></div>
+          <div class="prop-card"><div class="prop-img">🌆<span class="tag">SAVED</span></div><div class="prop-body"><div class="prop-price">$1,150,000</div><div class="prop-name">The Obsidian Loft</div><div class="prop-loc">📍 Financial District</div><div class="prop-meta"><span>🛏 3</span><span>🛁 3</span><span>📐 2,650 sqft</span></div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Visit request sent!">Book Visit</button> <button class="btn btn-outline btn-sm" data-toast="Removed from saved">Remove</button></div></div>
+          <div class="prop-card"><div class="prop-img">🏠<span class="tag">SAVED</span></div><div class="prop-body"><div class="prop-price">$385,000</div><div class="prop-name">Maple Grove Cottage</div><div class="prop-loc">📍 Greenfield Suburb</div><div class="prop-meta"><span>🛏 2</span><span>🛁 1</span><span>📐 1,100 sqft</span></div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Visit request sent!">Book Visit</button> <button class="btn btn-outline btn-sm" data-toast="Removed from saved">Remove</button></div></div>
+          <div class="prop-card"><div class="prop-img">🏖️<span class="tag">SAVED</span></div><div class="prop-body"><div class="prop-price">$975,000</div><div class="prop-name">Seabreeze Residence</div><div class="prop-loc">📍 Coastal Drive</div><div class="prop-meta"><span>🛏 4</span><span>🛁 4</span><span>📐 3,200 sqft</span></div><div class="divider"></div><button class="btn btn-navy btn-sm" data-toast="Visit request sent!">Book Visit</button> <button class="btn btn-outline btn-sm" data-toast="Removed from saved">Remove</button></div></div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-viewed">
+        <div class="card">
+          <div class="card-title">Recently Viewed Properties</div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Property</th><th>Location</th><th>Price</th><th>Viewed</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td><b>Skyline Penthouse</b></td><td>Marina District</td><td class="gold-text"><b>$845,000</b></td><td>Today 09:42</td><td><span class="badge badge-green">Available</span></td><td><button class="btn btn-outline btn-sm" data-toast="Saved!">♡ Save</button></td></tr>
+                <tr><td><b>Cedar Heights 4A</b></td><td>Hillview Park</td><td class="gold-text"><b>$520,000</b></td><td>Yesterday</td><td><span class="badge badge-amber">Under Offer</span></td><td><button class="btn btn-outline btn-sm" data-toast="Saved!">♡ Save</button></td></tr>
+                <tr><td><b>The Obsidian Loft</b></td><td>Financial District</td><td class="gold-text"><b>$1,150,000</b></td><td>Jul 06</td><td><span class="badge badge-green">Available</span></td><td><button class="btn btn-outline btn-sm" data-toast="Saved!">♡ Save</button></td></tr>
+                <tr><td><b>Rosewood Terrace</b></td><td>Old Town</td><td class="gold-text"><b>$468,000</b></td><td>Jul 05</td><td><span class="badge badge-red">Sold</span></td><td><button class="btn btn-outline btn-sm" data-toast="Property sold">View</button></td></tr>
+                <tr><td><b>Seabreeze Residence</b></td><td>Coastal Drive</td><td class="gold-text"><b>$975,000</b></td><td>Jul 04</td><td><span class="badge badge-green">Available</span></td><td><button class="btn btn-outline btn-sm" data-toast="Saved!">♡ Save</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-alerts">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">Active Search Alerts <span class="badge badge-gold">3 active</span></div>
+            <div class="setting-row"><div><b>Marina 3BHK under $900k</b><span>3 bed · Marina District · max $900,000 — 3 new matches</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+            <div class="setting-row"><div><b>Suburban villas with garden</b><span>4+ bed · Northside · garden — 1 new match</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+            <div class="setting-row"><div><b>Investment studios downtown</b><span>Studio/1 bed · Downtown · max $350,000</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Create New Alert</div>
+            <div class="form-grid">
+              <div class="form-group"><label>Location</label><select><option>Marina District</option><option>Northside</option><option>Downtown</option><option>Coastal Drive</option></select></div>
+              <div class="form-group"><label>Property Type</label><select><option>Apartment</option><option>Villa</option><option>Penthouse</option><option>Cottage</option></select></div>
+              <div class="form-group"><label>Min Budget</label><input type="text" placeholder="$300,000" /></div>
+              <div class="form-group"><label>Max Budget</label><input type="text" placeholder="$900,000" /></div>
+              <div class="form-group full"><button class="btn btn-gold" data-toast="Search alert created ✓" onclick="window.location.href = 'dashboarderror.html'">Create Alert</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 3: APPOINTMENTS ========== -->
+      <section class="panel" id="u-upcoming">
+        <div class="card">
+          <div class="card-title">Upcoming Site Visits <span class="badge badge-gold">3 scheduled</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Property</th><th>Date & Time</th><th>Agent</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td><b>Skyline Penthouse</b><br /><span class="muted">Marina District</span></td><td>Fri, Jul 10 · 10:30 AM</td><td>Sofia Martinez</td><td><span class="badge badge-green">Confirmed</span></td><td><button class="btn btn-outline btn-sm" data-toast="Reschedule request sent">Reschedule</button></td></tr>
+                <tr><td><b>Aurora Apartments 12B</b><br /><span class="muted">Riverside Blvd</span></td><td>Sat, Jul 11 · 02:00 PM</td><td>Daniel Kim</td><td><span class="badge badge-amber">Pending</span></td><td><button class="btn btn-outline btn-sm" data-toast="Visit cancelled">Cancel</button></td></tr>
+                <tr><td><b>Seabreeze Residence</b><br /><span class="muted">Coastal Drive</span></td><td>Tue, Jul 14 · 11:00 AM</td><td>Sofia Martinez</td><td><span class="badge badge-green">Confirmed</span></td><td><button class="btn btn-outline btn-sm" data-toast="Reschedule request sent">Reschedule</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-history">
+        <div class="card">
+          <div class="card-title">Visit History</div>
+          <ul class="timeline">
+            <li><div class="tl-dot">✅</div><div class="tl-body"><b>Willow Creek Villa — completed</b><span>Jul 02 · with Daniel Kim · You rated ★★★★★</span></div></li>
+            <li><div class="tl-dot">✅</div><div class="tl-body"><b>Cedar Heights 4A — completed</b><span>Jun 28 · with Sofia Martinez · You rated ★★★★☆</span></div></li>
+            <li><div class="tl-dot">❌</div><div class="tl-body"><b>Rosewood Terrace — cancelled</b><span>Jun 20 · cancelled by seller (property sold)</span></div></li>
+            <li><div class="tl-dot">✅</div><div class="tl-body"><b>Maple Grove Cottage — completed</b><span>Jun 12 · with Daniel Kim · You rated ★★★☆☆</span></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="u-book">
+        <div class="card" style="max-width:760px;">
+          <div class="card-title">Book a New Site Visit</div>
+          <div class="form-grid">
+            <div class="form-group full"><label>Property</label><select><option>Skyline Penthouse — Marina District</option><option>The Obsidian Loft — Financial District</option><option>Maple Grove Cottage — Greenfield</option></select></div>
+            <div class="form-group"><label>Preferred Date</label><input type="date" /></div>
+            <div class="form-group"><label>Preferred Time</label><select><option>10:00 AM</option><option>11:30 AM</option><option>02:00 PM</option><option>04:30 PM</option></select></div>
+            <div class="form-group"><label>Visit Type</label><select><option>In-person visit</option><option>Video tour</option></select></div>
+            <div class="form-group"><label>Preferred Agent</label><select><option>Any available</option><option>Sofia Martinez</option><option>Daniel Kim</option></select></div>
+            <div class="form-group full"><label>Notes for the agent</label><textarea rows="3" placeholder="e.g. I'd like to see the parking area and rooftop as well."></textarea></div>
+            <div class="form-group full"><button class="btn btn-gold" data-toast="Visit request submitted ✓" onclick="window.location.href = 'dashboarderror.html'">Request Visit</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 4: PAYMENTS ========== -->
+      <section class="panel" id="u-invoices">
+        <div class="grid grid-3">
+          <div class="stat-card"><div class="stat-icon">🧾</div><div class="stat-value" data-count="2">0</div><div class="stat-label">Open Invoices</div></div>
+          <div class="stat-card"><div class="stat-icon">⏳</div><div class="stat-value" data-count="12400" data-prefix="$">0</div><div class="stat-label">Amount Due</div></div>
+          <div class="stat-card"><div class="stat-icon">✅</div><div class="stat-value" data-count="18300" data-prefix="$">0</div><div class="stat-label">Paid This Year</div></div>
+        </div>
+        <div class="card mt">
+          <div class="card-title">All Invoices</div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Invoice</th><th>Description</th><th>Amount</th><th>Due Date</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td><b>#INV-2231</b></td><td>Booking advance — Skyline Penthouse</td><td class="gold-text"><b>$8,450</b></td><td>Jul 15, 2026</td><td><span class="badge badge-amber">Pending</span></td><td><button class="btn btn-gold btn-sm" data-toast="Redirecting to payment...">Pay Now</button></td></tr>
+                <tr><td><b>#INV-2228</b></td><td>Legal documentation fee</td><td class="gold-text"><b>$3,950</b></td><td>Jul 20, 2026</td><td><span class="badge badge-amber">Pending</span></td><td><button class="btn btn-gold btn-sm" data-toast="Redirecting to payment...">Pay Now</button></td></tr>
+                <tr><td><b>#INV-2216</b></td><td>Booking advance — Aurora Apartments</td><td class="gold-text"><b>$2,500</b></td><td>Jul 05, 2026</td><td><span class="badge badge-green">Paid</span></td><td><button class="btn btn-outline btn-sm" data-toast="Downloading receipt...">Receipt</button></td></tr>
+                <tr><td><b>#INV-2190</b></td><td>Property valuation service</td><td class="gold-text"><b>$450</b></td><td>Jun 18, 2026</td><td><span class="badge badge-green">Paid</span></td><td><button class="btn btn-outline btn-sm" data-toast="Downloading receipt...">Receipt</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-transactions">
+        <div class="card">
+          <div class="card-title">Transaction History</div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Date</th><th>Reference</th><th>Method</th><th>Amount</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Jul 05, 2026</td><td>TXN-88213 · Booking advance</td><td>💳 Visa •• 4821</td><td class="gold-text"><b>$2,500</b></td><td><span class="badge badge-green">Success</span></td></tr>
+                <tr><td>Jun 18, 2026</td><td>TXN-87540 · Valuation fee</td><td>🏦 Bank transfer</td><td class="gold-text"><b>$450</b></td><td><span class="badge badge-green">Success</span></td></tr>
+                <tr><td>Jun 02, 2026</td><td>TXN-86934 · Reservation deposit</td><td>💳 Visa •• 4821</td><td class="gold-text"><b>$15,000</b></td><td><span class="badge badge-green">Success</span></td></tr>
+                <tr><td>May 27, 2026</td><td>TXN-86712 · Reservation deposit</td><td>💳 Master •• 9330</td><td class="gold-text"><b>$15,000</b></td><td><span class="badge badge-red">Failed</span></td></tr>
+                <tr><td>May 12, 2026</td><td>TXN-85980 · Membership upgrade</td><td>💳 Visa •• 4821</td><td class="gold-text"><b>$350</b></td><td><span class="badge badge-green">Success</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-emi">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">EMI / Mortgage Calculator</div>
+            <div class="form-grid">
+              <div class="form-group full"><label>Property Price</label><input type="number" id="emi-price" value="845000" /></div>
+              <div class="form-group"><label>Down Payment ($)</label><input type="number" id="emi-down" value="169000" /></div>
+              <div class="form-group"><label>Interest Rate (% p.a.)</label><input type="number" id="emi-rate" value="6.5" step="0.1" /></div>
+              <div class="form-group full"><label>Loan Tenure (years)</label><input type="number" id="emi-years" value="25" /></div>
+              <div class="form-group full"><button class="btn btn-gold" id="emi-calc" onclick="window.location.href = 'dashboarderror.html'">Calculate EMI</button></div>
+            </div>
+          </div>
+          <div class="card" style="display:flex;flex-direction:column;justify-content:center;text-align:center;">
+            <div class="muted">Estimated Monthly Payment</div>
+            <div style="font-size:42px;font-weight:800;color:#c9a84c;margin:10px 0;" id="emi-result">$4,565</div>
+            <div class="muted" id="emi-detail">Loan amount $676,000 · 25 years @ 6.5%</div>
+            <div class="divider"></div>
+            <div class="muted">💡 Tip: increasing your down payment by 5% lowers your EMI by roughly $285/month.</div>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var btn = document.getElementById("emi-calc");
+            btn.addEventListener("click", function () {
+              var price = +document.getElementById("emi-price").value || 0;
+              var down = +document.getElementById("emi-down").value || 0;
+              var rate = (+document.getElementById("emi-rate").value || 0) / 1200;
+              var n = (+document.getElementById("emi-years").value || 1) * 12;
+              var P = Math.max(price - down, 0);
+              var emi = rate ? (P * rate * Math.pow(1 + rate, n)) / (Math.pow(1 + rate, n) - 1) : P / n;
+              document.getElementById("emi-result").textContent = "$" + Math.round(emi).toLocaleString();
+              document.getElementById("emi-detail").textContent =
+                "Loan amount $" + P.toLocaleString() + " · " + (n / 12) + " years @ " + (rate * 1200).toFixed(1) + "%";
+            });
+          });
+        </script>
+      </section>
+
+      <!-- ========== MODULE 5: MESSAGES ========== -->
+      <section class="panel" id="u-inbox">
+        <div class="card">
+          <div class="card-title">Inbox <span class="badge badge-gold">7 unread</span></div>
+          <div class="msg-item unread"><div class="avatar">SM</div><div class="msg-body"><b>Sofia Martinez</b><p>Great news! The seller is open to negotiating on the Skyline Penthouse. Would you...</p></div><div class="msg-time">09:12 AM</div></div>
+          <div class="msg-item unread"><div class="avatar">DK</div><div class="msg-body"><b>Daniel Kim</b><p>Your visit to Aurora Apartments is pending confirmation. The owner suggested...</p></div><div class="msg-time">Yesterday</div></div>
+          <div class="msg-item"><div class="avatar">RE</div><div class="msg-body"><b>Regalia Finance Desk</b><p>Your pre-approval documents have been received and are under review...</p></div><div class="msg-time">Jul 05</div></div>
+          <div class="msg-item"><div class="avatar">SM</div><div class="msg-body"><b>Sofia Martinez</b><p>Attaching the floor plans for Seabreeze Residence as requested...</p></div><div class="msg-time">Jul 04</div></div>
+          <div class="msg-item"><div class="avatar">LG</div><div class="msg-body"><b>Legal Team — Grace L.</b><p>The draft sale agreement for review. Please check clauses 4.2 and 7.1...</p></div><div class="msg-time">Jul 02</div></div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-agents">
+        <div class="grid grid-3">
+          <div class="card" style="text-align:center;">
+            <div class="avatar" style="width:72px;height:72px;font-size:24px;margin:0 auto 12px;">SM</div>
+            <b>Sofia Martinez</b><div class="muted">Senior Property Advisor</div>
+            <div style="margin:8px 0;color:#c9a84c;">★★★★★ <span class="muted">4.9 · 214 deals</span></div>
+            <div class="divider"></div>
+            <button class="btn btn-navy btn-sm" data-toast="Opening chat with Sofia..." onclick="window.location.href = 'dashboarderror.html'">Message</button>
+            <button class="btn btn-outline btn-sm" data-toast="Calling agent..." onclick="window.location.href = 'dashboarderror.html'">Call</button>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="avatar" style="width:72px;height:72px;font-size:24px;margin:0 auto 12px;">DK</div>
+            <b>Daniel Kim</b><div class="muted">Residential Specialist</div>
+            <div style="margin:8px 0;color:#c9a84c;">★★★★☆ <span class="muted">4.7 · 168 deals</span></div>
+            <div class="divider"></div>
+            <button class="btn btn-navy btn-sm" data-toast="Opening chat with Daniel..." onclick="window.location.href = 'dashboarderror.html'">Message</button>
+            <button class="btn btn-outline btn-sm" data-toast="Calling agent..." onclick="window.location.href = 'dashboarderror.html'">Call</button>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="avatar" style="width:72px;height:72px;font-size:24px;margin:0 auto 12px;">GL</div>
+            <b>Grace Lee</b><div class="muted">Legal Consultant</div>
+            <div style="margin:8px 0;color:#c9a84c;">★★★★★ <span class="muted">5.0 · 96 cases</span></div>
+            <div class="divider"></div>
+            <button class="btn btn-navy btn-sm" data-toast="Opening chat with Grace..." onclick="window.location.href = 'dashboarderror.html'">Message</button>
+            <button class="btn btn-outline btn-sm" data-toast="Calling consultant..." onclick="window.location.href = 'dashboarderror.html'">Call</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-support">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">My Support Tickets</div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Ticket</th><th>Subject</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td><b>#TK-482</b></td><td>Refund status for failed transaction</td><td><span class="badge badge-amber">In Progress</span></td></tr>
+                  <tr><td><b>#TK-471</b></td><td>Update phone number on documents</td><td><span class="badge badge-green">Resolved</span></td></tr>
+                  <tr><td><b>#TK-455</b></td><td>Access to virtual tour not working</td><td><span class="badge badge-green">Resolved</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Raise a New Ticket</div>
+            <div class="form-grid">
+              <div class="form-group full"><label>Category</label><select><option>Payments & Refunds</option><option>Account & Profile</option><option>Property Listing Issue</option><option>Other</option></select></div>
+              <div class="form-group full"><label>Subject</label><input type="text" placeholder="Brief summary of the issue" /></div>
+              <div class="form-group full"><label>Description</label><textarea rows="4" placeholder="Describe your issue in detail..."></textarea></div>
+              <div class="form-group full"><button class="btn btn-gold" data-toast="Ticket submitted ✓ Our team will reply within 24h" onclick="window.location.href = 'dashboarderror.html'">Submit Ticket</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MODULE 6: PROFILE ========== -->
+      <section class="panel" id="u-profile">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">Personal Details</div>
+            <div class="form-grid">
+              <div class="form-group"><label>First Name</label><input type="text" value="James" /></div>
+              <div class="form-group"><label>Last Name</label><input type="text" value="Turner" /></div>
+              <div class="form-group"><label>Email</label><input type="email" value="james.turner@email.com" /></div>
+              <div class="form-group"><label>Phone</label><input type="tel" value="+1 555 014 2298" /></div>
+              <div class="form-group full"><label>Address</label><input type="text" value="44 Harbor Lane, Marina District" /></div>
+              <div class="form-group full"><button class="btn btn-gold" data-toast="Profile updated ✓" onclick="window.location.href = 'dashboarderror.html'">Save Changes</button></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Membership</div>
+            <div style="background:linear-gradient(135deg,#0f1b3d,#1e3a5f);border-radius:14px;padding:24px;color:#fff;border:1px solid #c9a84c;">
+              <div style="color:#f0d78c;font-size:12px;letter-spacing:2px;">REGALIA PREMIUM</div>
+              <div style="font-size:22px;font-weight:800;margin:8px 0;">James Turner</div>
+              <div style="font-size:13px;color:#cfd6e2;">Member since March 2024 · ID #RG-10482</div>
+            </div>
+            <div class="mt">
+              <div class="muted" style="margin-bottom:6px;">Profile completeness — 85%</div>
+              <div class="progress"><span data-w="85"></span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="setting-row"><div><b>Priority visit slots</b><span>Included with Premium</span></div><span class="badge badge-green">Active</span></div>
+            <div class="setting-row"><div><b>Dedicated legal desk</b><span>Included with Premium</span></div><span class="badge badge-green">Active</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-security">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">Change Password</div>
+            <div class="form-grid">
+              <div class="form-group full"><label>Current Password</label><input type="password" placeholder="••••••••" /></div>
+              <div class="form-group"><label>New Password</label><input type="password" placeholder="••••••••" /></div>
+              <div class="form-group"><label>Confirm New Password</label><input type="password" placeholder="••••••••" /></div>
+              <div class="form-group full"><button class="btn btn-navy" data-toast="Password updated ✓" onclick="window.location.href = 'dashboarderror.html'">Update Password</button></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Security Options</div>
+            <div class="setting-row"><div><b>Two-factor authentication</b><span>Extra code on every sign-in</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+            <div class="setting-row"><div><b>Login alerts</b><span>Email me on new device sign-ins</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+            <div class="setting-row"><div><b>Biometric unlock (app)</b><span>Face / fingerprint on mobile</span></div><label class="switch"><input type="checkbox" /><span class="slider-t"></span></label></div>
+            <div class="divider"></div>
+            <div class="card-title" style="font-size:14px;">Recent Logins</div>
+            <ul class="timeline">
+              <li><div class="tl-dot">💻</div><div class="tl-body"><b>Chrome · Windows</b><span>Today 08:55 · Marina District</span></div></li>
+              <li><div class="tl-dot">📱</div><div class="tl-body"><b>Regalia App · iPhone</b><span>Yesterday 21:14</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="u-preferences">
+        <div class="card" style="max-width:720px;">
+          <div class="card-title">Preferences</div>
+          <div class="setting-row"><div><b>Preferred currency</b><span>Shown across prices and invoices</span></div><select style="padding:8px 12px;border-radius:8px;border:1.5px solid #cfd6e2;"><option>USD $</option><option>EUR €</option><option>GBP £</option></select></div>
+          <div class="setting-row"><div><b>Measurement units</b><span>Area display in listings</span></div><select style="padding:8px 12px;border-radius:8px;border:1.5px solid #cfd6e2;"><option>sq ft</option><option>sq m</option></select></div>
+          <div class="setting-row"><div><b>Weekly market digest</b><span>Price trends in your saved areas</span></div><label class="switch"><input type="checkbox" checked /><span class="slider-t"></span></label></div>
+          <div class="setting-row"><div><b>Show sold properties</b><span>Include sold listings in search results</span></div><label class="switch"><input type="checkbox" /><span class="slider-t"></span></label></div>
+          <div class="mt"><button class="btn btn-gold" data-toast="Preferences saved ✓" onclick="window.location.href = 'dashboarderror.html'">Save Preferences</button></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
