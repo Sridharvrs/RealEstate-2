@@ -1,73 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="auth/auth.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="auth/auth.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div id="auth-container"></div>
 
     <!-- ========= UNIQUE FLOATING PILL NAVBAR ========= -->
-<header class="nav-wrap">
-
-    <nav class="nav-pill">
-
+    <header class="nav-wrap">
+      <nav class="nav-pill">
         <a href="index.html" class="brand">
-
-            <img src="images/logo-image.webp" alt="Stackly" class="brand-logo">
-
+          <img src="images/logo.webp" alt="Stackly" class="brand-logo" />
         </a>
 
         <!-- Desktop Menu -->
 
         <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
 
-            <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
 
-            <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
 
-            <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
 
-            <li><a href="about.html">About</a></li>
-
-            <li><a href="contact.html">Contact</a></li>
-
+          <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <a class="nav-cta" onclick="openAuth()">
-
-            Book a Tour →
-
-        </a>
+        <a class="nav-cta" onclick="openAuth()"> Book a Tour → </a>
 
         <!-- Burger -->
 
         <button class="burger" id="burger">
+          <span></span>
 
-            <span></span>
+          <span></span>
 
-            <span></span>
-
-            <span></span>
-
+          <span></span>
         </button>
+      </nav>
 
-    </nav>
+      <!-- Mobile Menu -->
 
-    <!-- Mobile Menu -->
-
-    <div class="mobile-menu" id="mobileMenu">
-
-        <a href="index.html">Home</a>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="active">Home</a>
 
         <a href="properties.html">Properties</a>
 
@@ -77,75 +62,78 @@
 
         <a href="contact.html">Contact</a>
 
-        <button class="mobile-btn" onclick="openAuth()">
-            Book a Tour →
-        </button>
+        <button class="mobile-btn" onclick="openAuth()">Book a Tour →</button>
 
-<div class="mobile-contact">
+        <div class="mobile-contact">
+          <h5>Contact</h5>
 
-    <h5>Contact</h5>
+          <a href="tel:+919876543210">
+            <i class="fa-solid fa-phone"></i>
+            +91 98765 43210
+          </a>
 
-    <a href="tel:+919876543210">
-        <i class="fa-solid fa-phone"></i>
-        +91 98765 43210
-    </a>
+          <a href="mailto:info@estella.com">
+            <i class="fa-solid fa-envelope"></i>
+            info@estella.com
+          </a>
 
-    <a href="mailto:info@estella.com">
-        <i class="fa-solid fa-envelope"></i>
-        info@estella.com
-    </a>
-
-    <p>
-        <i class="fa-solid fa-location-dot"></i>
-        Chennai, Tamil Nadu
-    </p>
-
-</div>
-
-    </div>
-
-</header>
-
-<!-- section-1 -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="hero__content">
-      <p class="eyebrow reveal-left">Est. attention to detail</p>
-      <h1 class="reveal-right">Property, <em>precisely</em> observed.</h1>
-      <p class="hero__sub reveal-up">We look longer, harder, closer &mdash; so the home you choose has nothing left to discover after you move in.</p>
-
-      <form class="search reveal-pop" id="searchForm">
-        <div class="search__field">
-          <label for="loc">Location</label>
-          <input type="text" id="loc" placeholder="City, neighbourhood, postcode">
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Chennai, Tamil Nadu
+          </p>
         </div>
-        <div class="search__field">
-          <label for="type">Type</label>
-          <select id="type">
-            <option>Any type</option>
-            <option>House</option>
-            <option>Apartment</option>
-            <option>Loft</option>
-            <option>Land</option>
-          </select>
-        </div>
-        <div class="search__field">
-          <label for="budget">Budget</label>
-          <select id="budget">
-            <option>Any budget</option>
-            <option>Under $300k</option>
-            <option>$300k &ndash; $600k</option>
-            <option>$600k &ndash; $1M</option>
-            <option>$1M+</option>
-          </select>
-        </div>
-        <button type="submit" onclick="window.location.href = 'error.html'">Search homes</button>
-      </form>
-    </div>
-  </section>
+      </div>
+    </header>
 
-<!-- section-2 -->
-  <!-- <section class="stats">
+    <!-- section-1 -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow reveal-left">Est. attention to detail</p>
+        <h1 class="reveal-right">Property, <em>precisely</em> observed.</h1>
+        <p class="hero__sub reveal-up">
+          We look longer, harder, closer &mdash; so the home you choose has
+          nothing left to discover after you move in.
+        </p>
+
+        <form class="search reveal-pop" id="searchForm">
+          <div class="search__field">
+            <label for="loc">Location</label>
+            <input
+              type="text"
+              id="loc"
+              placeholder="City, neighbourhood, postcode"
+            />
+          </div>
+          <div class="search__field">
+            <label for="type">Type</label>
+            <select id="type">
+              <option>Any type</option>
+              <option>House</option>
+              <option>Apartment</option>
+              <option>Loft</option>
+              <option>Land</option>
+            </select>
+          </div>
+          <div class="search__field">
+            <label for="budget">Budget</label>
+            <select id="budget">
+              <option>Any budget</option>
+              <option>Under $300k</option>
+              <option>$300k &ndash; $600k</option>
+              <option>$600k &ndash; $1M</option>
+              <option>$1M+</option>
+            </select>
+          </div>
+          <button type="submit" onclick="window.location.href = 'error.html'">
+            Search homes
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- section-2 -->
+    <!-- <section class="stats">
     <div class="stats__grid">
       <div class="stat"><span class="stat__num" data-target="412">0</span><span class="stat__label">Homes sold this year</span></div>
       <div class="stat"><span class="stat__num" data-target="98">0</span><span class="stat__label">Client satisfaction %</span></div>
@@ -154,1516 +142,1011 @@
     </div>
   </section> -->
 
-<!-- section-3 -->
-<!-- ===========================
+    <!-- section-3 -->
+    <!-- ===========================
      Featured Luxury Properties
 ============================ -->
 
-<section class="featured-properties">
-
-    <div class="container">
-
+    <section class="featured-properties">
+      <div class="container">
         <!-- Heading -->
 
         <div class="section-header">
+          <span class="section-tag reveal-left"> Premium Collection </span>
 
-            <span class="section-tag reveal-left">
-                Premium Collection
-            </span>
+          <h2 class="reveal-right">Featured Luxury Properties</h2>
 
-            <h2 class="reveal-right">
-                Featured Luxury Properties
-            </h2>
-
-            <p class="reveal-up">
-                Discover our handpicked collection of premium homes,
-                apartments, and villas designed for luxurious living.
-            </p>
-
+          <p class="reveal-up">
+            Discover our handpicked collection of premium homes, apartments, and
+            villas designed for luxurious living.
+          </p>
         </div>
 
         <!-- Filter Buttons -->
 
         <div class="property-filter reveal-left">
+          <button class="active">All</button>
 
-            <button class="active">
-                All
-            </button>
+          <button>Villas</button>
 
-            <button>
-                Villas
-            </button>
+          <button>Apartments</button>
 
-            <button>
-                Apartments
-            </button>
+          <button>Penthouses</button>
 
-            <button>
-                Penthouses
-            </button>
-
-            <button>
-                Commercial
-            </button>
-
+          <button>Commercial</button>
         </div>
 
         <!-- Property Grid -->
 
         <div class="property-grid">
+          <!-- CARD 1 -->
 
-            <!-- CARD 1 -->
+          <div class="property-card reveal-pop">
+            <div class="property-image">
+              <img src="images/img-11.webp" alt="Luxury Villa" />
 
-            <div class="property-card reveal-pop">
+              <span class="property-badge"> Featured </span>
 
-                <div class="property-image">
-
-                    <img src="images/img-11.webp" alt="Luxury Villa">
-
-                    <span class="property-badge">
-                        Featured
-                    </span>
-
-                    <button class="wishlist" onclick="window.location.href = 'error.html'">
-                        ❤
-                    </button>
-
-                </div>
-
-                <div class="property-content">
-
-                    <h3>$1,250,000</h3>
-
-                    <h4>Modern Glass Villa</h4>
-
-                    <p class="location">
-                        📍 Beverly Hills, California
-                    </p>
-
-                    <div class="property-info">
-
-                        <span>🛏 5 Beds</span>
-
-                        <span>🛁 4 Baths</span>
-
-                        <span>📐 5200 sqft</span>
-
-                    </div>
-
-                    <a href="error.html" class="property-btn">
-                        View Details →
-                    </a>
-
-                </div>
-
+              <button
+                class="wishlist"
+                onclick="window.location.href = 'error.html'"
+              >
+                ❤
+              </button>
             </div>
 
-            <!-- CARD 2 -->
+            <div class="property-content">
+              <h3>$1,250,000</h3>
 
-            <div class="property-card reveal-pop">
+              <h4>Modern Glass Villa</h4>
 
-                <div class="property-image">
+              <p class="location">📍 Beverly Hills, California</p>
 
-                    <img src="images/img10.webp" alt="Penthouse">
+              <div class="property-info">
+                <span>🛏 5 Beds</span>
 
-                    <span class="property-badge">
-                        New
-                    </span>
+                <span>🛁 4 Baths</span>
 
-                    <button class="wishlist" onclick="window.location.href = 'error.html'">
-                        ❤
-                    </button>
+                <span>📐 5200 sqft</span>
+              </div>
 
-                </div>
+              <a href="error.html" class="property-btn"> View Details → </a>
+            </div>
+          </div>
 
-                <div class="property-content">
+          <!-- CARD 2 -->
 
-                    <h3>$2,850,000</h3>
+          <div class="property-card reveal-pop">
+            <div class="property-image">
+              <img src="images/img10.webp" alt="Penthouse" />
 
-                    <h4>Luxury Penthouse</h4>
+              <span class="property-badge"> New </span>
 
-                    <p class="location">
-                        📍 Manhattan, New York
-                    </p>
-
-                    <div class="property-info">
-
-                        <span>🛏 4 Beds</span>
-
-                        <span>🛁 3 Baths</span>
-
-                        <span>📐 4200 sqft</span>
-
-                    </div>
-
-                    <a href="error.html" class="property-btn">
-                        View Details →
-                    </a>
-
-                </div>
-
+              <button
+                class="wishlist"
+                onclick="window.location.href = 'error.html'"
+              >
+                ❤
+              </button>
             </div>
 
-            <!-- CARD 3 -->
+            <div class="property-content">
+              <h3>$2,850,000</h3>
 
-            <div class="property-card reveal-pop">
+              <h4>Luxury Penthouse</h4>
 
-                <div class="property-image">
+              <p class="location">📍 Manhattan, New York</p>
 
-                    <img src="images/img13.webp" alt="Beach House">
+              <div class="property-info">
+                <span>🛏 4 Beds</span>
 
-                    <span class="property-badge">
-                        Hot Deal
-                    </span>
+                <span>🛁 3 Baths</span>
 
-                    <button class="wishlist" onclick="window.location.href = 'error.html'">
-                        ❤
-                    </button>
+                <span>📐 4200 sqft</span>
+              </div>
 
-                </div>
+              <a href="error.html" class="property-btn"> View Details → </a>
+            </div>
+          </div>
 
-                <div class="property-content">
+          <!-- CARD 3 -->
 
-                    <h3>$3,900,000</h3>
+          <div class="property-card reveal-pop">
+            <div class="property-image">
+              <img src="images/img13.webp" alt="Beach House" />
 
-                    <h4>Beachfront Mansion</h4>
+              <span class="property-badge"> Hot Deal </span>
 
-                    <p class="location">
-                        📍 Malibu, California
-                    </p>
-
-                    <div class="property-info">
-
-                        <span>🛏 6 Beds</span>
-
-                        <span>🛁 6 Baths</span>
-
-                        <span>📐 6900 sqft</span>
-
-                    </div>
-
-                    <a href="error.html" class="property-btn">
-                        View Details →
-                    </a>
-
-                </div>
-
+              <button
+                class="wishlist"
+                onclick="window.location.href = 'error.html'"
+              >
+                ❤
+              </button>
             </div>
 
-            <!-- CARD 4 -->
+            <div class="property-content">
+              <h3>$3,900,000</h3>
 
-            <div class="property-card reveal-pop">
+              <h4>Beachfront Mansion</h4>
 
-                <div class="property-image">
+              <p class="location">📍 Malibu, California</p>
 
-                    <img src="images/img3.webp" alt="Apartment">
+              <div class="property-info">
+                <span>🛏 6 Beds</span>
 
-                    <span class="property-badge">
-                        Sale
-                    </span>
+                <span>🛁 6 Baths</span>
 
-                    <button class="wishlist" onclick="window.location.href = 'error.html'">
-                        ❤
-                    </button>
+                <span>📐 6900 sqft</span>
+              </div>
 
-                </div>
+              <a href="error.html" class="property-btn"> View Details → </a>
+            </div>
+          </div>
 
-                <div class="property-content">
+          <!-- CARD 4 -->
 
-                    <h3>$890,000</h3>
+          <div class="property-card reveal-pop">
+            <div class="property-image">
+              <img src="images/img3.webp" alt="Apartment" />
 
-                    <h4>Skyline Apartment</h4>
+              <span class="property-badge"> Sale </span>
 
-                    <p class="location">
-                        📍 Dubai Marina
-                    </p>
-
-                    <div class="property-info">
-
-                        <span>🛏 3 Beds</span>
-
-                        <span>🛁 2 Baths</span>
-
-                        <span>📐 2200 sqft</span>
-
-                    </div>
-
-                    <a href="error.html" class="property-btn">
-                        View Details →
-                    </a>
-
-                </div>
-
+              <button
+                class="wishlist"
+                onclick="window.location.href = 'error.html'"
+              >
+                ❤
+              </button>
             </div>
 
-            <!-- CARD 5 -->
+            <div class="property-content">
+              <h3>$890,000</h3>
 
-            <div class="property-card reveal-pop">
+              <h4>Skyline Apartment</h4>
 
-                <div class="property-image">
+              <p class="location">📍 Dubai Marina</p>
 
-                    <img src="images/villa20.webp" alt="Farm House">
+              <div class="property-info">
+                <span>🛏 3 Beds</span>
 
-                    <span class="property-badge">
-                        Luxury
-                    </span>
+                <span>🛁 2 Baths</span>
 
-                    <button class="wishlist" onclick="window.location.href = 'error.html'">
-                        ❤
-                    </button>
+                <span>📐 2200 sqft</span>
+              </div>
 
-                </div>
+              <a href="error.html" class="property-btn"> View Details → </a>
+            </div>
+          </div>
 
-                <div class="property-content">
+          <!-- CARD 5 -->
 
-                    <h3>$1,850,000</h3>
+          <div class="property-card reveal-pop">
+            <div class="property-image">
+              <img src="images/villa20.webp" alt="Farm House" />
 
-                    <h4>Hill View Estate</h4>
+              <span class="property-badge"> Luxury </span>
 
-                    <p class="location">
-                        📍 Aspen, Colorado
-                    </p>
-
-                    <div class="property-info">
-
-                        <span>🛏 5 Beds</span>
-
-                        <span>🛁 5 Baths</span>
-
-                        <span>📐 5600 sqft</span>
-
-                    </div>
-
-                    <a href="error.html" class="property-btn">
-                        View Details →
-                    </a>
-
-                </div>
-
+              <button
+                class="wishlist"
+                onclick="window.location.href = 'error.html'"
+              >
+                ❤
+              </button>
             </div>
 
-            <!-- CARD 6 -->
+            <div class="property-content">
+              <h3>$1,850,000</h3>
 
-            <div class="property-card reveal-pop">
+              <h4>Hill View Estate</h4>
 
-                <div class="property-image">
+              <p class="location">📍 Aspen, Colorado</p>
 
-                    <img src="images/villa21.webp" alt="Smart Home">
+              <div class="property-info">
+                <span>🛏 5 Beds</span>
 
-                    <span class="property-badge">
-                        Premium
-                    </span>
+                <span>🛁 5 Baths</span>
 
-                    <button class="wishlist" onclick="window.location.href = 'error.html'">
-                        ❤
-                    </button>
+                <span>📐 5600 sqft</span>
+              </div>
 
-                </div>
-
-                <div class="property-content">
-
-                    <h3>$1,420,000</h3>
-
-                    <h4>Smart Family Home</h4>
-
-                    <p class="location">
-                        📍 Miami, Florida
-                    </p>
-
-                    <div class="property-info">
-
-                        <span>🛏 4 Beds</span>
-
-                        <span>🛁 3 Baths</span>
-
-                        <span>📐 4100 sqft</span>
-
-                    </div>
-
-                    <a href="error.html" class="property-btn">
-                        View Details →
-                    </a>
-
-                </div>
-
+              <a href="error.html" class="property-btn"> View Details → </a>
             </div>
+          </div>
+
+          <!-- CARD 6 -->
+
+          <div class="property-card reveal-pop">
+            <div class="property-image">
+              <img src="images/villa21.webp" alt="Smart Home" />
+
+              <span class="property-badge"> Premium </span>
+
+              <button
+                class="wishlist"
+                onclick="window.location.href = 'error.html'"
+              >
+                ❤
+              </button>
+            </div>
+
+            <div class="property-content">
+              <h3>$1,420,000</h3>
+
+              <h4>Smart Family Home</h4>
+
+              <p class="location">📍 Miami, Florida</p>
+
+              <div class="property-info">
+                <span>🛏 4 Beds</span>
+
+                <span>🛁 3 Baths</span>
+
+                <span>📐 4100 sqft</span>
+              </div>
+
+              <a href="error.html" class="property-btn"> View Details → </a>
+            </div>
+          </div>
 
         </div>
 
         <!-- Button -->
 
         <div class="property-footer">
-
-            <a href="error.html" class="load-btn">
-
-                Browse All Properties →
-
-            </a>
-
+          <a href="error.html" class="load-btn"> Browse All Properties → </a>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- section-4 -->
+    <!-- ========================================= -->
+    <!--            WHY CHOOSE US                  -->
+    <!-- ========================================= -->
 
-</section>
-
-<!-- section-4 -->
-<!-- ========================================= -->
-<!--            WHY CHOOSE US                  -->
-<!-- ========================================= -->
-
-<section class="why-section">
-
-    <div class="container">
-
+    <section class="why-section">
+      <div class="container">
         <div class="why-grid">
+          <!-- LEFT -->
 
-            <!-- LEFT -->
+          <div class="why-content">
+            <span class="section-badge reveal-right"> Why Choose Us </span>
 
-            <div class="why-content">
+            <h2 class="reveal-left">
+              Experience Luxury Living with
+              <span>Trusted Real Estate Experts</span>
+            </h2>
 
-                <span class="section-badge reveal-right">
-                    Why Choose Us
-                </span>
+            <p class="why-description reveal-up">
+              We don't simply help you buy a property—we help you discover the
+              perfect place to build your future. Our team combines market
+              expertise, transparency, and personalized service to deliver an
+              exceptional real estate experience.
+            </p>
 
-                <h2 class="reveal-left">
-                    Experience Luxury Living with
-                    <span>Trusted Real Estate Experts</span>
-                </h2>
+            <!-- FEATURES -->
 
-                <p class="why-description reveal-up">
+            <div class="why-cards">
+              <!-- Card -->
 
-                    We don't simply help you buy a property—we help you
-                    discover the perfect place to build your future.
-                    Our team combines market expertise, transparency,
-                    and personalized service to deliver an exceptional
-                    real estate experience.
+              <div class="why-card reveal-pop">
+                <div class="why-icon">🏠</div>
 
-                </p>
+                <div>
+                  <h3>Verified Properties</h3>
 
-                <!-- FEATURES -->
-
-                <div class="why-cards">
-
-                    <!-- Card -->
-
-                    <div class="why-card reveal-pop">
-
-                        <div class="why-icon">
-                            🏠
-                        </div>
-
-                        <div>
-
-                            <h3>Verified Properties</h3>
-
-                            <p>
-
-                                Every listing is carefully verified
-                                to ensure complete legal transparency
-                                and quality.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Card -->
-
-                    <div class="why-card reveal-pop">
-
-                        <div class="why-icon">
-                            👨‍💼
-                        </div>
-
-                        <div>
-
-                            <h3>Expert Advisors</h3>
-
-                            <p>
-
-                                Our experienced consultants guide
-                                you through every step of buying
-                                your dream property.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Card -->
-
-                    <div class="why-card reveal-pop">
-
-                        <div class="why-icon">
-                            📍
-                        </div>
-
-                        <div>
-
-                            <h3>Prime Locations</h3>
-
-                            <p>
-
-                                Explore premium homes in highly
-                                desirable neighbourhoods with
-                                excellent connectivity.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Card -->
-
-                    <div class="why-card reveal-pop">
-
-                        <div class="why-icon">
-                            📑
-                        </div>
-
-                        <div>
-
-                            <h3>Transparent Process</h3>
-
-                            <p>
-
-                                From paperwork to possession,
-                                every transaction is handled
-                                honestly and professionally.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
+                  <p>
+                    Every listing is carefully verified to ensure complete legal
+                    transparency and quality.
+                  </p>
                 </div>
+              </div>
 
-                <a href="error.html" class="why-btn">
+              <!-- Card -->
 
-                    Explore More →
+              <div class="why-card reveal-pop">
+                <div class="why-icon">👨‍💼</div>
 
-                </a>
+                <div>
+                  <h3>Expert Advisors</h3>
 
+                  <p>
+                    Our experienced consultants guide you through every step of
+                    buying your dream property.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card -->
+
+              <div class="why-card reveal-pop">
+                <div class="why-icon">📍</div>
+
+                <div>
+                  <h3>Prime Locations</h3>
+
+                  <p>
+                    Explore premium homes in highly desirable neighbourhoods
+                    with excellent connectivity.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card -->
+
+              <div class="why-card reveal-pop">
+                <div class="why-icon">📑</div>
+
+                <div>
+                  <h3>Transparent Process</h3>
+
+                  <p>
+                    From paperwork to possession, every transaction is handled
+                    honestly and professionally.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <!-- RIGHT -->
+            <a href="error.html" class="why-btn"> Explore More → </a>
+          </div>
 
-            <div class="why-image reveal-pop">
+          <!-- RIGHT -->
 
-                <img src="images/villa22.webp" alt="Luxury Property">
+          <div class="why-image reveal-pop">
+            <img src="images/villa22.webp" alt="Luxury Property" />
 
-                <!-- Floating Card -->
+            <!-- Floating Card -->
 
-                <div class="floating-card card-one">
+            <div class="floating-card card-one">
+              <h3>500+</h3>
 
-                    <h3>500+</h3>
-
-                    <p>Luxury Homes Sold</p>
-
-                </div>
-
-                <!-- Floating Card -->
-
-                <div class="floating-card card-two">
-
-                    <h3>98%</h3>
-
-                    <p>Happy Clients</p>
-
-                </div>
-
-                <!-- Floating Card -->
-
-                <div class="floating-card card-three">
-
-                    <h3>25+</h3>
-
-                    <p>Years Experience</p>
-
-                </div>
-
+              <p>Luxury Homes Sold</p>
             </div>
 
+            <!-- Floating Card -->
+
+            <div class="floating-card card-two">
+              <h3>98%</h3>
+
+              <p>Happy Clients</p>
+            </div>
+
+            <!-- Floating Card -->
+
+            <div class="floating-card card-three">
+              <h3>25+</h3>
+
+              <p>Years Experience</p>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- section-5 -->
-<section class="property-category">
-
-    <div class="category-header">
+    <!-- section-5 -->
+    <section class="property-category">
+      <div class="category-header">
         <span class="reveal-left">Property Categories</span>
         <h2 class="reveal-right">Explore Properties by Category</h2>
         <p class="reveal-up">
-            Discover exceptional properties designed for every lifestyle,
-            from luxury villas to modern urban apartments.
+          Discover exceptional properties designed for every lifestyle, from
+          luxury villas to modern urban apartments.
         </p>
-    </div>
+      </div>
 
-
-    <div class="category-grid">
-
+      <div class="category-grid">
         <div class="category-card reveal-pop">
+          <img src="images/villa23.webp" alt="Luxury Villa" />
 
-            <img 
-            src="images/villa23.webp"
-            alt="Luxury Villa">
-
-            <div class="category-overlay">
-                <h3>Luxury Villas</h3>
-                <p>120+ Properties</p>
-                <a href="error.html">Explore →</a>
-            </div>
-
-        </div>
-
-
-
-        <div class="category-card reveal-pop">
-
-            <img 
-            src="images/villa24.webp"
-            alt="Premium Apartments">
-
-            <div class="category-overlay">
-                <h3>Premium Apartments</h3>
-                <p>250+ Properties</p>
-                <a href="error.html">Explore →</a>
-            </div>
-
-        </div>
-
-
-
-        <div class="category-card reveal-pop">
-
-            <img 
-            src="images/villa25.webp"
-            alt="Penthouse">
-
-            <div class="category-overlay">
-                <h3>Penthouse Collection</h3>
-                <p>80+ Properties</p>
-                <a href="error.html">Explore →</a>
-            </div>
-
-        </div>
-
-
-
-        <div class="category-card reveal-pop">
-
-            <img 
-            src="images/villa26.webp"
-            alt="Commercial Space">
-
-            <div class="category-overlay">
-                <h3>Commercial Spaces</h3>
-                <p>90+ Properties</p>
-                <a href="error.html">Explore →</a>
-            </div>
-
+          <div class="category-overlay">
+            <h3>Luxury Villas</h3>
+            <p>120+ Properties</p>
+            <a href="error.html">Explore →</a>
+          </div>
         </div>
 
         <div class="category-card reveal-pop">
+          <img src="images/villa24.webp" alt="Premium Apartments" />
 
-            <img 
-            src="images/villa27.webp"
-            alt="Smart Homes">
-
-            <div class="category-overlay">
-                <h3>Smart Homes</h3>
-                <p>60+ Properties</p>
-                <a href="error.html">Explore →</a>
-            </div>
-
+          <div class="category-overlay">
+            <h3>Premium Apartments</h3>
+            <p>250+ Properties</p>
+            <a href="error.html">Explore →</a>
+          </div>
         </div>
-
 
         <div class="category-card reveal-pop">
+          <img src="images/villa25.webp" alt="Penthouse" />
 
-            <img 
-            src="images/villa28.webp"
-            alt="Beach House">
-
-            <div class="category-overlay">
-                <h3>Beach Houses</h3>
-                <p>45+ Properties</p>
-                <a href="error.html">Explore →</a>
-            </div>
-
+          <div class="category-overlay">
+            <h3>Penthouse Collection</h3>
+            <p>80+ Properties</p>
+            <a href="error.html">Explore →</a>
+          </div>
         </div>
 
+        <div class="category-card reveal-pop">
+          <img src="images/villa26.webp" alt="Commercial Space" />
 
-    </div>
+          <div class="category-overlay">
+            <h3>Commercial Spaces</h3>
+            <p>90+ Properties</p>
+            <a href="error.html">Explore →</a>
+          </div>
+        </div>
 
-</section>
+        <div class="category-card reveal-pop">
+          <img src="images/villa27.webp" alt="Smart Homes" />
 
-<!-- section-6 -->
-<section class="agents-section">
+          <div class="category-overlay">
+            <h3>Smart Homes</h3>
+            <p>60+ Properties</p>
+            <a href="error.html">Explore →</a>
+          </div>
+        </div>
 
-    <div class="agents-header">
+        <div class="category-card reveal-pop">
+          <img src="images/villa28.webp" alt="Beach House" />
 
+          <div class="category-overlay">
+            <h3>Beach Houses</h3>
+            <p>45+ Properties</p>
+            <a href="error.html">Explore →</a>
+          </div>
+        </div>
+
+        <div class="category-card reveal-pop">
+          <img src="images/villa23.webp" alt="Luxury Villa" />
+
+          <div class="category-overlay">
+            <h3>Luxury Villas</h3>
+            <p>120+ Properties</p>
+            <a href="error.html">Explore →</a>
+          </div>
+        </div>
+
+        <div class="category-card reveal-pop">
+          <img src="images/villa25.webp" alt="Penthouse" />
+
+          <div class="category-overlay">
+            <h3>Penthouse Collection</h3>
+            <p>80+ Properties</p>
+            <a href="error.html">Explore →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- section-6 -->
+    <section class="agents-section">
+      <div class="agents-header">
         <span class="reveal-left">Our Team</span>
 
-        <h2 class="reveal-right">
-            Meet Our Expert Agents
-        </h2>
+        <h2 class="reveal-right">Meet Our Expert Agents</h2>
 
         <p class="reveal-up">
-            Our experienced property consultants are dedicated to
-            helping you find the perfect home and investment opportunity.
+          Our experienced property consultants are dedicated to helping you find
+          the perfect home and investment opportunity.
         </p>
+      </div>
 
-    </div>
-
-
-
-    <div class="agents-grid">
-
-
+      <div class="agents-grid">
         <div class="agent-card reveal-pop">
+          <div class="agent-image">
+            <img src="images/villa29.webp" alt="Agent" />
+          </div>
 
-            <div class="agent-image">
+          <div class="agent-info">
+            <h3>Michael Anderson</h3>
 
-                <img src="images/villa29.webp"
-                alt="Agent">
+            <p>Luxury Property Consultant</p>
 
+            <div class="agent-meta">
+              <span> ⭐ 4.9 Rating </span>
+
+              <span> 10+ Years </span>
             </div>
 
+            <div class="agent-actions">
+              <a href="error.html"> View Profile </a>
 
-            <div class="agent-info">
-
-                <h3>Michael Anderson</h3>
-
-                <p>Luxury Property Consultant</p>
-
-
-                <div class="agent-meta">
-
-                    <span>
-                        ⭐ 4.9 Rating
-                    </span>
-
-                    <span>
-                        10+ Years
-                    </span>
-
-                </div>
-
-
-                <div class="agent-actions">
-
-                    <a href="error.html">
-                        View Profile
-                    </a>
-
-
-                    <a href="error.html">
-                        Contact
-                    </a>
-
-                </div>
-
-
+              <a href="error.html"> Contact </a>
             </div>
-
+          </div>
         </div>
 
-
-
-
-
         <div class="agent-card reveal-pop">
+          <div class="agent-image">
+            <img src="images/villa30.webp" alt="Agent" />
+          </div>
 
+          <div class="agent-info">
+            <h3>Sophia Williams</h3>
 
-            <div class="agent-image">
+            <p>Residential Specialist</p>
 
-                <img src="images/villa30.webp"
-                alt="Agent">
+            <div class="agent-meta">
+              <span> ⭐ 4.8 Rating </span>
 
+              <span> 8+ Years </span>
             </div>
 
+            <div class="agent-actions">
+              <a href="error.html"> View Profile </a>
 
-
-            <div class="agent-info">
-
-                <h3>Sophia Williams</h3>
-
-                <p>Residential Specialist</p>
-
-
-                <div class="agent-meta">
-
-                    <span>
-                        ⭐ 4.8 Rating
-                    </span>
-
-                    <span>
-                        8+ Years
-                    </span>
-
-                </div>
-
-
-
-                <div class="agent-actions">
-
-                    <a href="error.html">
-                        View Profile
-                    </a>
-
-                    <a href="error.html">
-                        Contact
-                    </a>
-
-                </div>
-
-
+              <a href="error.html"> Contact </a>
             </div>
-
-
+          </div>
         </div>
 
-
-
-
-
-
-
         <div class="agent-card reveal-pop">
+          <div class="agent-image">
+            <img src="images/villa31.webp" alt="Agent" />
+          </div>
 
+          <div class="agent-info">
+            <h3>David Carter</h3>
 
-            <div class="agent-image">
+            <p>Investment Advisor</p>
 
-                <img src="images/villa31.webp"
-                alt="Agent">
+            <div class="agent-meta">
+              <span> ⭐ 5.0 Rating </span>
 
+              <span> 12+ Years </span>
             </div>
 
+            <div class="agent-actions">
+              <a href="error.html"> View Profile </a>
 
-
-            <div class="agent-info">
-
-                <h3>David Carter</h3>
-
-                <p>Investment Advisor</p>
-
-
-                <div class="agent-meta">
-
-                    <span>
-                        ⭐ 5.0 Rating
-                    </span>
-
-
-                    <span>
-                        12+ Years
-                    </span>
-
-                </div>
-
-
-
-                <div class="agent-actions">
-
-                    <a href="error.html">
-                        View Profile
-                    </a>
-
-                    <a href="error.html">
-                        Contact
-                    </a>
-
-                </div>
-
-
+              <a href="error.html"> Contact </a>
             </div>
-
-
+          </div>
         </div>
+      </div>
+    </section>
 
-
-    </div>
-
-
-</section>
-
-<!-- section-7 -->
-<section class="buying-process">
-
-    <div class="process-header">
-
+    <!-- section-7 -->
+    <section class="buying-process">
+      <div class="process-header">
         <span class="reveal-left">How It Works</span>
 
         <h2 class="reveal-right">Property Buying Process Timeline</h2>
 
         <p class="reveal-up">
-            A simple and transparent journey designed to help you
-            find, purchase, and own your dream property effortlessly.
+          A simple and transparent journey designed to help you find, purchase,
+          and own your dream property effortlessly.
         </p>
+      </div>
 
-    </div>
-
-
-
-    <div class="timeline">
-
-
+      <div class="timeline">
         <div class="timeline-item reveal-left">
+          <div class="timeline-number">01</div>
 
-            <div class="timeline-number">
-                01
-            </div>
+          <div class="timeline-content">
+            <h3>Property Search</h3>
 
-            <div class="timeline-content">
-
-                <h3>Property Search</h3>
-
-                <p>
-                    Explore thousands of verified properties
-                    based on your location, budget, and lifestyle.
-                </p>
-
-            </div>
-
+            <p>
+              Explore thousands of verified properties based on your location,
+              budget, and lifestyle.
+            </p>
+          </div>
         </div>
-
-
-
 
         <div class="timeline-item reveal-right">
+          <div class="timeline-number">02</div>
 
-            <div class="timeline-number">
-                02
-            </div>
+          <div class="timeline-content">
+            <h3>Expert Consultation</h3>
 
-            <div class="timeline-content">
-
-                <h3>Expert Consultation</h3>
-
-                <p>
-                    Connect with our experienced agents for
-                    personalized property recommendations.
-                </p>
-
-            </div>
-
+            <p>
+              Connect with our experienced agents for personalized property
+              recommendations.
+            </p>
+          </div>
         </div>
-
-
-
-
 
         <div class="timeline-item reveal-left">
+          <div class="timeline-number">03</div>
 
-            <div class="timeline-number">
-                03
-            </div>
+          <div class="timeline-content">
+            <h3>Property Visit</h3>
 
-            <div class="timeline-content">
-
-                <h3>Property Visit</h3>
-
-                <p>
-                    Schedule private tours and experience
-                    your shortlisted properties firsthand.
-                </p>
-
-            </div>
-
+            <p>
+              Schedule private tours and experience your shortlisted properties
+              firsthand.
+            </p>
+          </div>
         </div>
-
-
-
-
 
         <div class="timeline-item reveal-right">
+          <div class="timeline-number">04</div>
 
-            <div class="timeline-number">
-                04
-            </div>
+          <div class="timeline-content">
+            <h3>Negotiation & Approval</h3>
 
-            <div class="timeline-content">
-
-                <h3>Negotiation & Approval</h3>
-
-                <p>
-                    Our experts help you negotiate the best
-                    deal and complete necessary approvals.
-                </p>
-
-            </div>
-
+            <p>
+              Our experts help you negotiate the best deal and complete
+              necessary approvals.
+            </p>
+          </div>
         </div>
-
-
-
-
 
         <div class="timeline-item reveal-left">
+          <div class="timeline-number">05</div>
 
-            <div class="timeline-number">
-                05
-            </div>
+          <div class="timeline-content">
+            <h3>Documentation</h3>
 
-            <div class="timeline-content">
-
-                <h3>Documentation</h3>
-
-                <p>
-                    Complete legal paperwork with our
-                    professional assistance.
-                </p>
-
-            </div>
-
+            <p>Complete legal paperwork with our professional assistance.</p>
+          </div>
         </div>
-
-
-
-
 
         <div class="timeline-item reveal-right">
+          <div class="timeline-number">06</div>
 
-            <div class="timeline-number">
-                06
-            </div>
+          <div class="timeline-content">
+            <h3>Move Into Your Dream Home</h3>
 
-            <div class="timeline-content">
-
-                <h3>Move Into Your Dream Home</h3>
-
-                <p>
-                    Receive your keys and begin your
-                    new journey with confidence.
-                </p>
-
-            </div>
-
+            <p>Receive your keys and begin your new journey with confidence.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-
-    </div>
-
-
-</section>
-
-<!-- section-8 -->
-<section class="amenities-section">
-
-    <div class="amenities-header">
-
+    <!-- section-8 -->
+    <section class="amenities-section">
+      <div class="amenities-header">
         <span class="reveal-left">Luxury Living</span>
 
         <h2 class="reveal-right">Premium Amenities</h2>
 
         <p class="reveal-up">
-            Experience world-class facilities designed to provide
-            comfort, convenience, and an elevated lifestyle.
+          Experience world-class facilities designed to provide comfort,
+          convenience, and an elevated lifestyle.
         </p>
+      </div>
 
-    </div>
-
-
-
-    <div class="amenities-grid">
-
-
+      <div class="amenities-grid">
         <div class="amenity-card reveal-pop">
+          <div class="amenity-icon">🏊</div>
 
-            <div class="amenity-icon">
-                🏊
-            </div>
+          <h3>Infinity Pool</h3>
 
-            <h3>Infinity Pool</h3>
-
-            <p>
-                Relax and unwind with stunning views from our
-                premium swimming pools.
-            </p>
-
+          <p>
+            Relax and unwind with stunning views from our premium swimming
+            pools.
+          </p>
         </div>
 
-
-
-
         <div class="amenity-card reveal-pop">
+          <div class="amenity-icon">🏋️</div>
 
-            <div class="amenity-icon">
-                🏋️
-            </div>
+          <h3>Fitness Center</h3>
 
-            <h3>Fitness Center</h3>
-
-            <p>
-                Fully equipped modern gyms designed for
-                a healthy lifestyle.
-            </p>
-
+          <p>Fully equipped modern gyms designed for a healthy lifestyle.</p>
         </div>
 
-
-
-
         <div class="amenity-card reveal-pop">
+          <div class="amenity-icon">🔐</div>
 
-            <div class="amenity-icon">
-                🔐
-            </div>
+          <h3>24/7 Security</h3>
 
-            <h3>24/7 Security</h3>
-
-            <p>
-                Advanced security systems ensuring a safe
-                and peaceful environment.
-            </p>
-
+          <p>
+            Advanced security systems ensuring a safe and peaceful environment.
+          </p>
         </div>
 
-
-
-
         <div class="amenity-card reveal-pop">
+          <div class="amenity-icon">🏡</div>
 
-            <div class="amenity-icon">
-                🏡
-            </div>
+          <h3>Smart Home</h3>
 
-            <h3>Smart Home</h3>
-
-            <p>
-                Intelligent automation systems for modern
-                and comfortable living.
-            </p>
-
+          <p>
+            Intelligent automation systems for modern and comfortable living.
+          </p>
         </div>
 
-
-
-
         <div class="amenity-card reveal-pop">
+          <div class="amenity-icon">🌿</div>
 
-            <div class="amenity-icon">
-                🌿
-            </div>
+          <h3>Landscape Gardens</h3>
 
-            <h3>Landscape Gardens</h3>
-
-            <p>
-                Beautiful green spaces created for relaxation
-                and outdoor experiences.
-            </p>
-
+          <p>
+            Beautiful green spaces created for relaxation and outdoor
+            experiences.
+          </p>
         </div>
 
-
-
-
         <div class="amenity-card reveal-pop">
+          <div class="amenity-icon">🚗</div>
 
-            <div class="amenity-icon">
-                🚗
-            </div>
+          <h3>Private Parking</h3>
 
-            <h3>Private Parking</h3>
-
-            <p>
-                Spacious secure parking facilities for
-                residents and guests.
-            </p>
-
+          <p>Spacious secure parking facilities for residents and guests.</p>
         </div>
+      </div>
+    </section>
 
+    <!-- section-9 -->
+    <!-- ========================================= -->
+    <!--        DREAM HOME SHOWCASE                -->
+    <!-- ========================================= -->
 
-    </div>
+    <section class="dream-home">
+      <div class="dream-overlay"></div>
 
-
-</section>
-
-<!-- section-9 -->
-<!-- ========================================= -->
-<!--        DREAM HOME SHOWCASE                -->
-<!-- ========================================= -->
-
-<section class="dream-home">
-
-    <div class="dream-overlay"></div>
-
-    <div class="container">
-
+      <div class="container">
         <div class="dream-content">
+          <span class="dream-tag reveal-left"> ✦ Exclusive Collection </span>
 
-            <span class="dream-tag reveal-left">
-                ✦ Exclusive Collection
-            </span>
+          <h2 class="reveal-right">
+            Discover The Home You've
+            <span>Always Dreamed Of</span>
+          </h2>
 
-            <h2 class="reveal-right">
-                Discover The Home You've
-                <span>Always Dreamed Of</span>
-            </h2>
+          <p class="reveal-up">
+            From luxurious waterfront villas and modern penthouses to elegant
+            family residences, we offer exceptional properties crafted for
+            sophisticated lifestyles and lasting value.
+          </p>
 
-            <p class="reveal-up">
+          <div class="dream-buttons">
+            <a href="error.html" class="btn-primary reveal-pop">
+              Explore Properties
+            </a>
 
-                From luxurious waterfront villas and modern penthouses
-                to elegant family residences, we offer exceptional
-                properties crafted for sophisticated lifestyles and
-                lasting value.
-
-            </p>
-
-            <div class="dream-buttons">
-
-                <a href="error.html" class="btn-primary reveal-pop">
-
-                    Explore Properties
-
-                </a>
-
-                <a href="error.html" class="btn-secondary reveal-pop">
-
-                    Schedule Visit
-
-                </a>
-
-            </div>
-
+            <a href="error.html" class="btn-secondary reveal-pop">
+              Schedule Visit
+            </a>
+          </div>
         </div>
 
         <!-- STATS -->
 
         <div class="dream-stats reveal-pop">
+          <div class="dream-stat">
+            <h3>500+</h3>
 
-            <div class="dream-stat">
+            <p>Luxury Homes</p>
+          </div>
 
-                <h3>500+</h3>
+          <div class="dream-stat">
+            <h3>98%</h3>
 
-                <p>Luxury Homes</p>
+            <p>Client Satisfaction</p>
+          </div>
 
-            </div>
+          <div class="dream-stat">
+            <h3>25+</h3>
 
-            <div class="dream-stat">
+            <p>Years Experience</p>
+          </div>
 
-                <h3>98%</h3>
+          <div class="dream-stat">
+            <h3>40+</h3>
 
-                <p>Client Satisfaction</p>
-
-            </div>
-
-            <div class="dream-stat">
-
-                <h3>25+</h3>
-
-                <p>Years Experience</p>
-
-            </div>
-
-            <div class="dream-stat">
-
-                <h3>40+</h3>
-
-                <p>Expert Agents</p>
-
-            </div>
-
+            <p>Expert Agents</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- section-10 -->
-<!-- =========================================
+    <!-- section-10 -->
+    <!-- =========================================
         CUSTOMER TESTIMONIALS
 ========================================= -->
 
-<section class="testimonials">
-
-    <div class="container">
-
+    <section class="testimonials">
+      <div class="container">
         <!-- Section Heading -->
 
         <div class="section-heading">
+          <span class="section-tag reveal-left"> ★ Client Reviews </span>
 
-            <span class="section-tag reveal-left">
+          <h2 class="reveal-right">What Our Clients Say</h2>
 
-                ★ Client Reviews
-
-            </span>
-
-            <h2 class="reveal-right">
-
-                What Our Clients Say
-
-            </h2>
-
-            <p class="reveal-up">
-
-                Trusted by hundreds of families and investors for
-                delivering exceptional real estate experiences.
-
-            </p>
-
+          <p class="reveal-up">
+            Trusted by hundreds of families and investors for delivering
+            exceptional real estate experiences.
+          </p>
         </div>
 
         <!-- Testimonial Grid -->
 
         <div class="testimonial-grid">
+          <!-- ========================= -->
 
-            <!-- ========================= -->
+          
 
-            <div class="testimonial-feature reveal-pop">
+          <!-- ========================= -->
 
-                <div class="quote-icon">
+          <div class="testimonial reveal-pop">
+            <div class="testimonial-card reveal-pop">
+            <div class="quote-icon">“</div>
 
-                    “
+            <p>
+              Working with Stackly was an outstanding experience. Every step was
+              transparent, professional and stress-free. They found us a luxury
+              villa beyond our expectations.
+            </p>
 
-                </div>
+            <div class="client">
+              <img src="images/team1.webp" alt="" />
 
-                <p>
+              <div>
+                <h4>Sarah Thompson</h4>
 
-                    Working with Stackly was an outstanding experience.
-                    Every step was transparent, professional and stress-free.
-                    They found us a luxury villa beyond our expectations.
-
-                </p>
-
-                <div class="client">
-
-                    <img src="images/team1.webp" alt="">
-
-                    <div>
-
-                        <h4>Sarah Thompson</h4>
-
-                        <span>Luxury Villa Owner</span>
-
-                    </div>
-
-                </div>
-
-                <div class="rating">
-
-                    ★★★★★
-
-                </div>
-
+                <span>Luxury Villa Owner</span>
+              </div>
             </div>
 
-            <!-- ========================= -->
+            <div class="rating">★★★★★</div>
+          </div>
+            <!-- Card -->
 
-            <div class="testimonial-column reveal-pop">
+            <div class="testimonial-card">
+              <div class="quote-small">“</div>
 
-                <!-- Card -->
+              <p>
+                Professional agents with incredible market knowledge. Highly
+                recommended for premium properties.
+              </p>
 
-                <div class="testimonial-card">
+              <div class="client">
+                <img src="images/team2.webp" alt="" />
 
-                    <div class="quote-small">
+                <div>
+                  <h4>Michael Anderson</h4>
 
-                        “
-
-                    </div>
-
-                    <p>
-
-                        Professional agents with incredible market
-                        knowledge. Highly recommended for premium
-                        properties.
-
-                    </p>
-
-                    <div class="client">
-
-                        <img src="images/team2.webp" alt="">
-
-                        <div>
-
-                            <h4>Michael Anderson</h4>
-
-                            <span>Penthouse Buyer</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="rating">
-
-                        ★★★★★
-
-                    </div>
-
+                  <span>Penthouse Buyer</span>
                 </div>
+              </div>
 
-                <!-- Card -->
-
-                <div class="testimonial-card">
-
-                    <div class="quote-small">
-
-                        “
-
-                    </div>
-
-                    <p>
-
-                        Excellent service from property viewing to
-                        documentation. Everything was handled perfectly.
-
-                    </p>
-
-                    <div class="client">
-
-                        <img src="images/team3.webp" alt="">
-
-                        <div>
-
-                            <h4>Emily Carter</h4>
-
-                            <span>Family Home Owner</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="rating">
-
-                        ★★★★★
-
-                    </div>
-
-                </div>
-
+              <div class="rating">★★★★★</div>
             </div>
 
+            <!-- Card -->
+
+            <div class="testimonial-card">
+              <div class="quote-small">“</div>
+
+              <p>
+                Excellent service from property viewing to documentation.
+                Everything was handled perfectly.
+              </p>
+
+              <div class="client">
+                <img src="images/team3.webp" alt="" />
+
+                <div>
+                  <h4>Emily Carter</h4>
+
+                  <span>Family Home Owner</span>
+                </div>
+              </div>
+
+              <div class="rating">★★★★★</div>
+            </div>
+          </div>
         </div>
 
         <!-- Bottom Statistics -->
 
-        <div class="testimonial-stats reveal-pop">
+        <!-- <div class="testimonial-stats reveal-pop">
+          <div>
+            <h3>4.9★</h3>
 
-            <div>
+            <span>Average Rating</span>
+          </div>
 
-                <h3>4.9★</h3>
+          <div>
+            <h3>500+</h3>
 
-                <span>Average Rating</span>
+            <span>Homes Sold</span>
+          </div>
 
-            </div>
+          <div>
+            <h3>1200+</h3>
 
-            <div>
+            <span>Happy Families</span>
+          </div>
 
-                <h3>500+</h3>
+          <div>
+            <h3>25+</h3>
 
-                <span>Homes Sold</span>
+            <span>Years Experience</span>
+          </div>
+        </div> -->
+      </div>
+    </section>
 
-            </div>
-
-            <div>
-
-                <h3>1200+</h3>
-
-                <span>Happy Families</span>
-
-            </div>
-
-            <div>
-
-                <h3>25+</h3>
-
-                <span>Years Experience</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!--=====================================
+    <!--=====================================
             PREMIUM FOOTER
 ======================================-->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <a href="index.html" class="footer-logo"><img src="images/logo-image.webp" alt="Stackly"></a>
-        <p>Stackly connects buyers, sellers and investors with premium real estate through trusted guidance and exceptional service.</p>
-        <div class="footer-social">
-          <a href="error.html"><i class="fab fa-facebook-f"></i></a>
-          <a href="error.html"><i class="fab fa-instagram"></i></a>
-          <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
-          <a href="error.html"><i class="fab fa-x-twitter"></i></a>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo"
+              ><img src="images/logo.webp" alt="Stackly"
+            /></a>
+            <p>
+              Stackly connects buyers, sellers and investors with premium real
+              estate through trusted guidance and exceptional service.
+            </p>
+            <div class="footer-social">
+              <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+              <a href="error.html"><i class="fab fa-instagram"></i></a>
+              <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+              <a href="error.html"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="error.html">Buy Property</a></li>
+              <li><a href="error.html">Sell Property</a></li>
+              <li><a href="error.html">Rent Property</a></li>
+              <li><a href="error.html">Commercial</a></li>
+              <li><a href="error.html">Investment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu,
+              India
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> info@stackly.com</p>
+            <p><i class="fa-solid fa-clock"></i> Mon - Sat : 9 AM - 7 PM</p>
+          </div>
+
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Receive exclusive listings and market updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Stackly. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="error.html">Privacy Policy</a>
+            <a href="error.html">Terms</a>
+            <a href="error.html">Sitemap</a>
+            <a href="#top">Back To Top ↑</a>
+          </div>
         </div>
       </div>
-
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="properties.html">Properties</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="error.html">Buy Property</a></li>
-          <li><a href="error.html">Sell Property</a></li>
-          <li><a href="error.html">Rent Property</a></li>
-          <li><a href="error.html">Commercial</a></li>
-          <li><a href="error.html">Investment</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h3>Contact</h3>
-        <p><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu, India</p>
-        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fa-solid fa-envelope"></i> info@stackly.com</p>
-        <p><i class="fa-solid fa-clock"></i> Mon - Sat : 9 AM - 7 PM</p>
-      </div>
-
-      <div class="footer-newsletter">
-        <h3>Newsletter</h3>
-        <p>Receive exclusive listings and market updates.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email">
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 Stackly. All Rights Reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="error.html">Privacy Policy</a>
-        <a href="error.html">Terms</a>
-        <a href="error.html">Sitemap</a>
-        <a href="#top">Back To Top ↑</a>
-      </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
     <script>
-        fetch("auth/auth.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("auth-container").innerHTML = html;
-  });
+      fetch("auth/auth.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("auth-container").innerHTML = html;
+        });
     </script>
     <script src="auth/auth.js"></script>
     <script src="js/global.js"></script>
-    
-</body>
+  </body>
 </html>

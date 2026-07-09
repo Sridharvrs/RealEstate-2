@@ -1,1382 +1,902 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="auth/auth.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="auth/auth.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <!-- ========= UNIQUE FLOATING PILL NAVBAR ========= -->
-<header class="nav-wrap">
-
-    <nav class="nav-pill">
-
+    <header class="nav-wrap">
+      <nav class="nav-pill">
         <a href="index.html" class="brand">
-
-            <img src="images/logo-image.webp" alt="Stackly" class="brand-logo">
-
+          <img src="images/logo.webp" alt="Stackly" class="brand-logo" />
         </a>
 
         <!-- Desktop Menu -->
 
         <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
 
-            <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
 
-            <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
 
-            <li><a href="services.html">Services</a></li>
+          <li><a href="about.html" class="active">About</a></li>
 
-            <li><a href="about.html" class="active">About</a></li>
-
-            <li><a href="contact.html">Contact</a></li>
-
+          <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <a class="nav-cta" onclick="openAuth()">
-
-            Book a Tour →
-
-        </a>
+        <a class="nav-cta" onclick="openAuth()"> Book a Tour → </a>
 
         <!-- Burger -->
 
         <button class="burger" id="burger">
+          <span></span>
 
-            <span></span>
+          <span></span>
 
-            <span></span>
-
-            <span></span>
-
+          <span></span>
         </button>
+      </nav>
 
-    </nav>
+      <!-- Mobile Menu -->
 
-    <!-- Mobile Menu -->
-
-    <div class="mobile-menu" id="mobileMenu">
-
+      <div class="mobile-menu" id="mobileMenu">
         <a href="index.html">Home</a>
 
         <a href="properties.html">Properties</a>
 
         <a href="services.html">Services</a>
 
-        <a href="about.html">About</a>
+        <a href="about.html" class="active">About</a>
 
         <a href="contact.html">Contact</a>
 
-        <button class="mobile-btn" onclick="openAuth()">
+        <button class="mobile-btn" onclick="openAuth()">Book a Tour →</button>
+      </div>
+    </header>
 
-            Book a Tour →
-
-        </button>
-
-    </div>
-
-</header>
-
-<!--=====================================
+    <!--=====================================
         ABOUT HERO SECTION
 ======================================-->
 
-<section class="about-hero">
+    <section class="about-hero">
+      <div class="hero-overlay"></div>
 
-    <div class="hero-overlay"></div>
-
-    <div class="container">
-
+      <div class="container">
         <div class="about-hero-grid">
+          <!-- Left Content -->
 
-            <!-- Left Content -->
+          <div class="about-content">
+            <span class="hero-badge section-badge reveal-left">
+              ✦ About Stackly
+            </span>
 
-            <div class="about-content">
+            <h1 class="reveal-right">
+              Building Trust,
 
-                <span class="hero-badge section-badge reveal-left">
+              <span>Creating Dream Homes</span>
+            </h1>
 
-                    ✦ About Stackly
+            <p class="reveal-up">
+              For over two decades, we've helped families, investors, and
+              businesses discover exceptional properties through honesty,
+              expertise, and personalized service. Every property tells a story,
+              and we're here to help you write yours.
+            </p>
 
-                </span>
+            <div class="hero-buttons">
+              <a href="" class="hero-btn reveal-pop"> Explore Properties </a>
 
-                <h1 class="reveal-right">
-
-                    Building Trust,
-
-                    <span>Creating Dream Homes</span>
-
-                </h1>
-
-                <p class="reveal-up">
-
-                    For over two decades, we've helped families,
-                    investors, and businesses discover exceptional
-                    properties through honesty, expertise, and
-                    personalized service. Every property tells a story,
-                    and we're here to help you write yours.
-
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="" class="hero-btn reveal-pop">
-
-                        Explore Properties
-
-                    </a>
-
-                    <a href="" class="hero-outline-btn reveal-pop">
-
-                        Contact Our Team
-
-                    </a>
-
-                </div>
-
-                <!-- Company Stats -->
-
-                <div class="about-stats reveal-pop">
-
-                    <div class="about-stat">
-
-                        <h2>500+</h2>
-
-                        <span>Luxury Properties</span>
-
-                    </div>
-
-                    <div class="about-stat">
-
-                        <h2>25+</h2>
-
-                        <span>Years Experience</span>
-
-                    </div>
-
-                    <div class="about-stat">
-
-                        <h2>98%</h2>
-
-                        <span>Client Satisfaction</span>
-
-                    </div>
-
-                    <div class="about-stat">
-
-                        <h2>20+</h2>
-
-                        <span>Prime Locations</span>
-
-                    </div>
-
-                </div>
-
+              <a href="" class="hero-outline-btn reveal-pop">
+                Contact Our Team
+              </a>
             </div>
 
-            <!-- Right Side -->
+            <!-- Company Stats -->
 
-            <div class="about-card reveal-pop">
+            <div class="about-stats reveal-pop">
+              <div class="about-stat">
+                <h2>500+</h2>
 
-                <img src="images/villa21.webp"
-                    alt="Luxury Property">
+                <span>Luxury Properties</span>
+              </div>
 
-                <div class="card-overlay">
+              <div class="about-stat">
+                <h2>25+</h2>
 
-                    <span>
+                <span>Years Experience</span>
+              </div>
 
-                        Trusted Since 2000
+              <div class="about-stat">
+                <h2>98%</h2>
 
-                    </span>
+                <span>Client Satisfaction</span>
+              </div>
 
-                    <h3>
+              <div class="about-stat">
+                <h2>20+</h2>
 
-                        Excellence in Every Transaction
-
-                    </h3>
-
-                    <p>
-
-                        Delivering premium real estate experiences with
-                        transparency, innovation, and lasting
-                        relationships.
-
-                    </p>
-
-                </div>
-
+                <span>Prime Locations</span>
+              </div>
             </div>
+          </div>
 
+          <!-- Right Side -->
+
+          <div class="about-card reveal-pop">
+            <img src="images/villa21.webp" alt="Luxury Property" />
+
+            <div class="card-overlay">
+              <span> Trusted Since 2000 </span>
+
+              <h3>Excellence in Every Transaction</h3>
+
+              <p>
+                Delivering premium real estate experiences with transparency,
+                innovation, and lasting relationships.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
 
-    </div>
+      <!-- Scroll Indicator -->
 
-    <!-- Scroll Indicator -->
-
-    <div class="scroll-indicator">
-
+      <div class="scroll-indicator">
         <span></span>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!--=====================================
+    <!--=====================================
             OUR STORY
 ======================================-->
 
-<section class="our-story">
-
-    <div class="container">
-
+    <section class="our-story">
+      <div class="container">
         <div class="story-grid">
+          <!-- Left Image -->
 
-            <!-- Left Image -->
+          <div class="story-image reveal-pop">
+            <img src="images/villa22.webp" alt="Luxury Property" />
 
-            <div class="story-image reveal-pop">
+            <div class="experience-badge">
+              <h3>25+</h3>
 
-                <img src="images/villa22.webp"
-                    alt="Luxury Property">
+              <span>Years of Excellence</span>
+            </div>
+          </div>
 
-                <div class="experience-badge">
+          <!-- Right Content -->
 
-                    <h3>25+</h3>
+          <div class="story-content">
+            <span class="section-badge reveal-left"> ✦ Our Journey </span>
 
-                    <span>Years of Excellence</span>
+            <h2 class="reveal-right">
+              Building Trust, Creating Extraordinary Living Experiences
+            </h2>
 
-                </div>
+            <p class="reveal-up">
+              Since our foundation, we've been committed to helping families,
+              investors, and businesses discover premium properties that
+              perfectly match their aspirations. Every client relationship is
+              built on transparency, integrity, and personalized service.
+            </p>
 
+            <p class="reveal-left">
+              With decades of market expertise and a passion for excellence,
+              we've transformed thousands of property dreams into reality while
+              setting new standards in luxury real estate.
+            </p>
+
+            <!-- Milestones -->
+
+            <div class="story-highlights reveal-pop">
+              <div class="highlight">
+                <h3>1,250+</h3>
+
+                <span>Luxury Homes Sold</span>
+              </div>
+
+              <div class="highlight">
+                <h3>98%</h3>
+
+                <span>Happy Clients</span>
+              </div>
+
+              <div class="highlight">
+                <h3>20+</h3>
+
+                <span>Prime Locations</span>
+              </div>
             </div>
 
-            <!-- Right Content -->
+            <!-- Quote -->
 
-            <div class="story-content">
+            <div class="founder-quote reveal-pop">
+              <p>
+                "Real estate isn't just about buying property; it's about
+                creating lasting relationships and helping people find the place
+                they truly call home."
+              </p>
 
-                <span class="section-badge reveal-left">
+              <div class="quote-author">
+                <img src="images/team3.webp" alt="Founder" />
 
-                    ✦ Our Journey
+                <div>
+                  <h4>David Anderson</h4>
 
-                </span>
-
-                <h2 class="reveal-right">
-
-                    Building Trust,
-
-                    Creating Extraordinary Living Experiences
-
-                </h2>
-
-                <p class="reveal-up">
-
-                    Since our foundation, we've been committed to helping
-                    families, investors, and businesses discover premium
-                    properties that perfectly match their aspirations.
-                    Every client relationship is built on transparency,
-                    integrity, and personalized service.
-
-                </p>
-
-                <p class="reveal-left">
-
-                    With decades of market expertise and a passion for
-                    excellence, we've transformed thousands of property
-                    dreams into reality while setting new standards in
-                    luxury real estate.
-
-                </p>
-
-                <!-- Milestones -->
-
-                <div class="story-highlights reveal-pop">
-
-                    <div class="highlight">
-
-                        <h3>1,250+</h3>
-
-                        <span>Luxury Homes Sold</span>
-
-                    </div>
-
-                    <div class="highlight">
-
-                        <h3>98%</h3>
-
-                        <span>Happy Clients</span>
-
-                    </div>
-
-                    <div class="highlight">
-
-                        <h3>20+</h3>
-
-                        <span>Prime Locations</span>
-
-                    </div>
-
+                  <span>Founder & CEO</span>
                 </div>
-
-                <!-- Quote -->
-
-                <div class="founder-quote reveal-pop">
-
-                    <p>
-
-                        "Real estate isn't just about buying property;
-                        it's about creating lasting relationships and
-                        helping people find the place they truly call home."
-
-                    </p>
-
-                    <div class="quote-author">
-
-                        <img src="images/team3.webp"
-                            alt="Founder">
-
-                        <div>
-
-                            <h4>David Anderson</h4>
-
-                            <span>Founder & CEO</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+              </div>
             </div>
-
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!--=====================================
+    <!--=====================================
         OUR MISSION & VISION
 ======================================-->
 
-<section class="mission-vision">
-
-    <div class="container">
-
+    <section class="mission-vision">
+      <div class="container">
         <div class="section-header">
+          <span class="section-badge reveal-left"> ✦ Our Purpose </span>
 
-            <span class="section-badge reveal-left">
-                ✦ Our Purpose
-            </span>
+          <h2 class="reveal-right">Our Mission & Vision</h2>
 
-            <h2 class="reveal-right">
-                Our Mission & Vision
-            </h2>
-
-            <p reveal-up>
-                We believe exceptional real estate is built on trust,
-                innovation, and lasting relationships that create value
-                for every client.
-            </p>
-
+          <p reveal-up>
+            We believe exceptional real estate is built on trust, innovation,
+            and lasting relationships that create value for every client.
+          </p>
         </div>
 
         <div class="mission-grid">
+          <!-- Mission -->
 
-            <!-- Mission -->
+          <div class="mission-card reveal-pop">
+            <div class="mv-icon">🎯</div>
 
-            <div class="mission-card reveal-pop">
+            <h3>Our Mission</h3>
 
-                <div class="mv-icon">
-                    🎯
-                </div>
+            <p>
+              To provide transparent, personalized, and premium real estate
+              solutions that help individuals, families, and investors make
+              confident property decisions.
+            </p>
 
-                <h3>
-                    Our Mission
-                </h3>
+            <ul>
+              <li>✔ Client-First Approach</li>
 
-                <p>
-                    To provide transparent, personalized, and premium
-                    real estate solutions that help individuals,
-                    families, and investors make confident property
-                    decisions.
-                </p>
+              <li>✔ Transparent Transactions</li>
 
-                <ul>
+              <li>✔ Verified Properties</li>
 
-                    <li>✔ Client-First Approach</li>
+              <li>✔ End-to-End Support</li>
+            </ul>
+          </div>
 
-                    <li>✔ Transparent Transactions</li>
+          <!-- Vision -->
 
-                    <li>✔ Verified Properties</li>
+          <div class="vision-card reveal-pop">
+            <div class="mv-icon">🚀</div>
 
-                    <li>✔ End-to-End Support</li>
+            <h3>Our Vision</h3>
 
-                </ul>
+            <p>
+              To become the most trusted luxury real estate partner by
+              delivering innovative experiences, exceptional service, and
+              sustainable growth for communities worldwide.
+            </p>
 
-            </div>
+            <ul>
+              <li>✔ Industry Leadership</li>
 
-            <!-- Vision -->
+              <li>✔ Smart Technology</li>
 
-            <div class="vision-card reveal-pop">
+              <li>✔ Global Expansion</li>
 
-                <div class="mv-icon">
-                    🚀
-                </div>
-
-                <h3>
-                    Our Vision
-                </h3>
-
-                <p>
-                    To become the most trusted luxury real estate
-                    partner by delivering innovative experiences,
-                    exceptional service, and sustainable growth for
-                    communities worldwide.
-                </p>
-
-                <ul>
-
-                    <li>✔ Industry Leadership</li>
-
-                    <li>✔ Smart Technology</li>
-
-                    <li>✔ Global Expansion</li>
-
-                    <li>✔ Sustainable Communities</li>
-
-                </ul>
-
-            </div>
-
+              <li>✔ Sustainable Communities</li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!--=====================================
+    <!--=====================================
         OUR CORE VALUES
 ======================================-->
 
-<section class="core-values">
-
-    <div class="container">
-
+    <section class="core-values">
+      <div class="container">
         <div class="section-header">
+          <span class="section-badge reveal-left"> ✦ Our Foundation </span>
 
-            <span class="section-badge reveal-left">
+          <h2 class="reveal-right">Our Core Values</h2>
 
-                ✦ Our Foundation
-
-            </span>
-
-            <h2 class="reveal-right">
-
-                Our Core Values
-
-            </h2>
-
-            <p class="reveal-up">
-
-                Every decision we make is guided by principles that
-                build trust, inspire confidence, and create exceptional
-                real estate experiences.
-
-            </p>
-
+          <p class="reveal-up">
+            Every decision we make is guided by principles that build trust,
+            inspire confidence, and create exceptional real estate experiences.
+          </p>
         </div>
 
         <div class="values-grid">
+          <!-- Value 1 -->
 
-            <!-- Value 1 -->
+          <div class="value-card reveal-pop">
+            <div class="value-icon">🤝</div>
 
-            <div class="value-card reveal-pop">
+            <h3>Integrity</h3>
 
-                <div class="value-icon">
+            <p>
+              We conduct every transaction with honesty, transparency, and
+              ethical responsibility.
+            </p>
+          </div>
 
-                    🤝
+          <!-- Value 2 -->
 
-                </div>
+          <div class="value-card reveal-pop">
+            <div class="value-icon">⭐</div>
 
-                <h3>
+            <h3>Excellence</h3>
 
-                    Integrity
+            <p>
+              Delivering premium service and exceeding expectations in every
+              client interaction.
+            </p>
+          </div>
 
-                </h3>
+          <!-- Value 3 -->
 
-                <p>
+          <div class="value-card reveal-pop">
+            <div class="value-icon">💡</div>
 
-                    We conduct every transaction with honesty,
-                    transparency, and ethical responsibility.
+            <h3>Innovation</h3>
 
-                </p>
+            <p>
+              Leveraging technology and creative thinking to simplify real
+              estate.
+            </p>
+          </div>
 
-            </div>
+          <!-- Value 4 -->
 
-            <!-- Value 2 -->
+          <div class="value-card reveal-pop">
+            <div class="value-icon">❤️</div>
 
-            <div class="value-card reveal-pop">
+            <h3>Customer First</h3>
 
-                <div class="value-icon">
+            <p>
+              Every recommendation is tailored to your unique lifestyle and
+              investment goals.
+            </p>
+          </div>
 
-                    ⭐
+          <!-- Value 5 -->
 
-                </div>
+          <div class="value-card reveal-pop">
+            <div class="value-icon">🛡️</div>
 
-                <h3>
+            <h3>Trust</h3>
 
-                    Excellence
+            <p>
+              Building lasting relationships through dependable service and
+              professionalism.
+            </p>
+          </div>
 
-                </h3>
+          <!-- Value 6 -->
 
-                <p>
+          <div class="value-card reveal-pop">
+            <div class="value-icon">🌍</div>
 
-                    Delivering premium service and exceeding
-                    expectations in every client interaction.
+            <h3>Sustainability</h3>
 
-                </p>
-
-            </div>
-
-            <!-- Value 3 -->
-
-            <div class="value-card reveal-pop">
-
-                <div class="value-icon">
-
-                    💡
-
-                </div>
-
-                <h3>
-
-                    Innovation
-
-                </h3>
-
-                <p>
-
-                    Leveraging technology and creative thinking
-                    to simplify real estate.
-
-                </p>
-
-            </div>
-
-            <!-- Value 4 -->
-
-            <div class="value-card reveal-pop">
-
-                <div class="value-icon">
-
-                    ❤️
-
-                </div>
-
-                <h3>
-
-                    Customer First
-
-                </h3>
-
-                <p>
-
-                    Every recommendation is tailored to your
-                    unique lifestyle and investment goals.
-
-                </p>
-
-            </div>
-
-            <!-- Value 5 -->
-
-            <div class="value-card reveal-pop">
-
-                <div class="value-icon">
-
-                    🛡️
-
-                </div>
-
-                <h3>
-
-                    Trust
-
-                </h3>
-
-                <p>
-
-                    Building lasting relationships through
-                    dependable service and professionalism.
-
-                </p>
-
-            </div>
-
-            <!-- Value 6 -->
-
-            <div class="value-card reveal-pop">
-
-                <div class="value-icon">
-
-                    🌍
-
-                </div>
-
-                <h3>
-
-                    Sustainability
-
-                </h3>
-
-                <p>
-
-                    Supporting communities with responsible,
-                    future-focused real estate solutions.
-
-                </p>
-
-            </div>
-
+            <p>
+              Supporting communities with responsible, future-focused real
+              estate solutions.
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!--=====================================
+    <!--=====================================
         MEET OUR LEADERSHIP
 ======================================-->
 
-<section class="leadership">
-
-    <div class="container">
-
+    <section class="leadership">
+      <div class="container">
         <div class="section-header">
+          <span class="section-badge reveal-left"> ✦ Leadership Team </span>
 
-            <span class="section-badge reveal-left">
+          <h2 class="reveal-right">Meet Our Leadership</h2>
 
-                ✦ Leadership Team
-
-            </span>
-
-            <h2 class="reveal-right">
-
-                Meet Our Leadership
-
-            </h2>
-
-            <p class="reveal-up">
-
-                Visionary leaders with decades of experience,
-                dedicated to delivering excellence in luxury real estate.
-
-            </p>
-
+          <p class="reveal-up">
+            Visionary leaders with decades of experience, dedicated to
+            delivering excellence in luxury real estate.
+          </p>
         </div>
 
         <div class="leadership-grid">
+          <!-- CEO -->
 
-            <!-- CEO -->
+          <div class="leader-card reveal-pop">
+            <div class="leader-image">
+              <img src="images/team5.webp" alt="CEO" />
 
-            <div class="leader-card reveal-pop">
-
-                <div class="leader-image">
-
-                    <img src="images/team5.webp"
-                        alt="CEO">
-
-                    <span class="leader-badge">
-
-                        Founder & CEO
-
-                    </span>
-
-                </div>
-
-                <div class="leader-content">
-
-                    <h3>
-
-                        David Anderson
-
-                    </h3>
-
-                    <h4>
-
-                        Founder & Chief Executive Officer
-
-                    </h4>
-
-                    <p>
-
-                        With over 25 years of experience, David has built
-                        one of the region's most trusted luxury real estate
-                        brands through innovation, integrity, and client-first
-                        service.
-
-                    </p>
-
-                    <div class="leader-stats">
-
-                        <div>
-
-                            <h5>25+</h5>
-
-                            <span>Years</span>
-
-                        </div>
-
-                        <div>
-
-                            <h5>1500+</h5>
-
-                            <span>Deals</span>
-
-                        </div>
-
-                        <div>
-
-                            <h5>4.9★</h5>
-
-                            <span>Rating</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="leader-social">
-
-                        <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
-
-                        <a href="error.html"><i class="fab fa-twitter"></i></a>
-
-                        <a href="error.html"><i class="fas fa-envelope"></i></a>
-
-                    </div>
-
-                </div>
-
+              <span class="leader-badge"> Founder & CEO </span>
             </div>
 
-            <!-- Sales Director -->
+            <div class="leader-content">
+              <h3>David Anderson</h3>
 
-            <div class="leader-card reveal-pop">
+              <h4>Founder & Chief Executive Officer</h4>
 
-                <div class="leader-image">
+              <p>
+                With over 25 years of experience, David has built one of the
+                region's most trusted luxury real estate brands.
+              </p>
 
-                    <img src="images/team2.webp"
-                        alt="Sales Director">
+              <div class="leader-stats">
+                <div>
+                  <h5>25+</h5>
 
-                    <span class="leader-badge">
-
-                        Sales Director
-
-                    </span>
-
+                  <span>Years</span>
                 </div>
 
-                <div class="leader-content">
+                <div>
+                  <h5>1500+</h5>
 
-                    <h3>
-
-                        Emily Carter
-
-                    </h3>
-
-                    <h4>
-
-                        Director of Sales
-
-                    </h4>
-
-                    <p>
-
-                        Emily leads our luxury sales division and has
-                        successfully managed hundreds of premium property
-                        transactions.
-
-                    </p>
-
-                    <div class="leader-stats">
-
-                        <div>
-
-                            <h5>15+</h5>
-
-                            <span>Years</span>
-
-                        </div>
-
-                        <div>
-
-                            <h5>900+</h5>
-
-                            <span>Sales</span>
-
-                        </div>
-
-                        <div>
-
-                            <h5>98%</h5>
-
-                            <span>Success</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="leader-social">
-
-                        <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
-
-                        <a href="error.html"><i class="fab fa-twitter"></i></a>
-
-                        <a href="error.html"><i class="fas fa-envelope"></i></a>
-
-                    </div>
-
+                  <span>Deals</span>
                 </div>
 
+                <div>
+                  <h5>4.9★</h5>
+
+                  <span>Rating</span>
+                </div>
+              </div>
+
+              <div class="leader-social">
+                <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="error.html"><i class="fab fa-twitter"></i></a>
+
+                <a href="error.html"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sales Director -->
+
+          <div class="leader-card reveal-pop">
+            <div class="leader-image">
+              <img src="images/team2.webp" alt="Sales Director" />
+
+              <span class="leader-badge"> Sales Director </span>
             </div>
 
-            <!-- Investment Head -->
+            <div class="leader-content">
+              <h3>Emily Carter</h3>
 
-            <div class="leader-card reveal-pop">
+              <h4>Director of Sales</h4>
 
-                <div class="leader-image">
+              <p>
+                Emily leads our luxury sales division and has successfully
+                managed hundreds of premium property transactions.
+              </p>
 
-                    <img src="images/team6.webp"
-                        alt="Investment">
+              <div class="leader-stats">
+                <div>
+                  <h5>15+</h5>
 
-                    <span class="leader-badge">
-
-                        Investment Head
-
-                    </span>
-
+                  <span>Years</span>
                 </div>
 
-                <div class="leader-content">
+                <div>
+                  <h5>900+</h5>
 
-                    <h3>
-
-                        Michael Brown
-
-                    </h3>
-
-                    <h4>
-
-                        Head of Investments
-
-                    </h4>
-
-                    <p>
-
-                        Michael specializes in luxury investment portfolios,
-                        commercial developments, and long-term wealth
-                        planning.
-
-                    </p>
-
-                    <div class="leader-stats">
-
-                        <div>
-
-                            <h5>18+</h5>
-
-                            <span>Years</span>
-
-                        </div>
-
-                        <div>
-
-                            <h5>$850M</h5>
-
-                            <span>Portfolio</span>
-
-                        </div>
-
-                        <div>
-
-                            <h5>97%</h5>
-
-                            <span>ROI Success</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="leader-social">
-
-                        <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
-
-                        <a href="error.html"><i class="fab fa-twitter"></i></a>
-
-                        <a href="error.html"><i class="fas fa-envelope"></i></a>
-
-                    </div>
-
+                  <span>Sales</span>
                 </div>
 
+                <div>
+                  <h5>98%</h5>
+
+                  <span>Success</span>
+                </div>
+              </div>
+
+              <div class="leader-social">
+                <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="error.html"><i class="fab fa-twitter"></i></a>
+
+                <a href="error.html"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Investment Head -->
+
+          <div class="leader-card reveal-pop">
+            <div class="leader-image">
+              <img src="images/team6.webp" alt="Investment" />
+
+              <span class="leader-badge"> Investment Head </span>
             </div>
 
+            <div class="leader-content">
+              <h3>Michael Brown</h3>
+
+              <h4>Head of Investments</h4>
+
+              <p>
+                Michael specializes in luxury investment portfolios, commercial
+                developments, and long-term wealth planning.
+              </p>
+
+              <div class="leader-stats">
+                <div>
+                  <h5>18+</h5>
+
+                  <span>Years</span>
+                </div>
+
+                <div>
+                  <h5>$850M</h5>
+
+                  <span>Portfolio</span>
+                </div>
+
+                <div>
+                  <h5>97%</h5>
+
+                  <span>ROI Success</span>
+                </div>
+              </div>
+
+              <div class="leader-social">
+                <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="error.html"><i class="fab fa-twitter"></i></a>
+
+                <a href="error.html"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!--=====================================
+    <!--=====================================
         OUR ACHIEVEMENTS
 ======================================-->
 
-<section class="achievements">
-
-    <div class="container">
-
+    <section class="achievements">
+      <div class="container">
         <div class="section-header small-header">
+          <span class="section-badge reveal-left"> ✦ Our Achievements </span>
 
-            <span class="section-badge reveal-left">
-
-                ✦ Our Achievements
-
-            </span>
-
-            <h2 class="reveal-right">
-
-                Numbers That Speak for Themselves
-
-            </h2>
-
+          <h2 class="reveal-right">Numbers That Speak for Themselves</h2>
         </div>
 
         <div class="achievement-grid reveal-pop">
+          <div class="achievement-card">
+            <h3 data-target="1200">0+</h3>
 
-            <div class="achievement-card">
+            <p>Properties Sold</p>
+          </div>
 
-                <h3 data-target="1200">0+</h3>
+          <div class="achievement-card">
+            <h3 data-target="5000">0+</h3>
 
-                <p>Properties Sold</p>
+            <p>Happy Clients</p>
+          </div>
 
-            </div>
+          <div class="achievement-card">
+            <h3 data-target="25">0+</h3>
 
-            <div class="achievement-card">
+            <p>Years Experience</p>
+          </div>
 
-                <h3 data-target="5000">0+</h3>
+          <div class="achievement-card">
+            <h3 data-target="20">0+</h3>
 
-                <p>Happy Clients</p>
-
-            </div>
-
-            <div class="achievement-card">
-
-                <h3 data-target="25">0+</h3>
-
-                <p>Years Experience</p>
-
-            </div>
-
-            <div class="achievement-card">
-
-                <h3 data-target="20">0+</h3>
-
-                <p>Prime Locations</p>
-
-            </div>
-
+            <p>Prime Locations</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!--=====================================
+    <!--=====================================
         WHY CLIENTS TRUST US
 ======================================-->
 
-<section class="trust-section">
-
-    <div class="container">
-
+    <section class="trust-section">
+      <div class="container">
         <div class="trust-grid">
+          <!-- Left -->
 
-            <!-- Left -->
+          <div class="trust-image reveal-pop">
+            <img src="images/villa25.webp" alt="Luxury Home" />
 
-            <div class="trust-image reveal-pop">
+            <div class="trust-badge">
+              <h3>98%</h3>
 
-                <img src="images/villa25.webp"
-                    alt="Luxury Home">
-
-                <div class="trust-badge">
-
-                    <h3>98%</h3>
-
-                    <span>Client Satisfaction</span>
-
-                </div>
-
+              <span>Client Satisfaction</span>
             </div>
+          </div>
 
-            <!-- Right -->
+          <!-- Right -->
 
-            <div class="trust-content">
+          <div class="trust-content">
+            <span class="section-badge reveal-left"> ✦ Why Choose Us </span>
 
-                <span class="section-badge reveal-left">
+            <h2 class="reveal-right">Why Clients Trust Us</h2>
 
-                    ✦ Why Choose Us
+            <p class="reveal-up">
+              Trust is earned through consistency, transparency, and exceptional
+              results. Our commitment to every client has made us one of the
+              most respected names in luxury real estate.
+            </p>
 
-                </span>
+            <div class="trust-list">
+              <div class="trust-item reveal-pop">
+                <div class="trust-icon">✓</div>
 
-                <h2 class="reveal-right">
+                <div>
+                  <h3>Verified Properties</h3>
 
-                    Why Clients Trust Us
-
-                </h2>
-
-                <p class="reveal-up">
-
-                    Trust is earned through consistency, transparency,
-                    and exceptional results. Our commitment to every
-                    client has made us one of the most respected names
-                    in luxury real estate.
-
-                </p>
-
-                <div class="trust-list">
-
-                    <div class="trust-item reveal-pop">
-
-                        <div class="trust-icon">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <h3>Verified Properties</h3>
-
-                            <p>
-
-                                Every listing undergoes careful
-                                verification before being presented.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="trust-item reveal-pop">
-
-                        <div class="trust-icon">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <h3>Transparent Pricing</h3>
-
-                            <p>
-
-                                No hidden costs or unexpected surprises—
-                                only honest guidance.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="trust-item reveal-pop">
-
-                        <div class="trust-icon">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <h3>Expert Negotiation</h3>
-
-                            <p>
-
-                                Skilled professionals securing the best
-                                value for every transaction.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="trust-item reveal-pop">
-
-                        <div class="trust-icon">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <h3>Lifetime Support</h3>
-
-                            <p>
-
-                                We continue supporting clients long after
-                                the deal is completed.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
+                  <p>
+                    Every listing undergoes careful verification before being
+                    presented.
+                  </p>
                 </div>
+              </div>
 
+              <div class="trust-item reveal-pop">
+                <div class="trust-icon">✓</div>
+
+                <div>
+                  <h3>Transparent Pricing</h3>
+
+                  <p>
+                    No hidden costs or unexpected surprises— only honest
+                    guidance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trust-item reveal-pop">
+                <div class="trust-icon">✓</div>
+
+                <div>
+                  <h3>Expert Negotiation</h3>
+
+                  <p>
+                    Skilled professionals securing the best value for every
+                    transaction.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trust-item reveal-pop">
+                <div class="trust-icon">✓</div>
+
+                <div>
+                  <h3>Lifetime Support</h3>
+
+                  <p>
+                    We continue supporting clients long after the deal is
+                    completed.
+                  </p>
+                </div>
+              </div>
             </div>
-
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!--=====================================
+    <!--=====================================
         PARTNERS & BRANDS
 ======================================-->
 
-<section class="partners-section">
-
-    <div class="container">
-
+    <section class="partners-section">
+      <div class="container">
         <div class="section-header">
+          <span class="section-badge reveal-left"> ✦ Trusted Partners </span>
 
-            <span class="section-badge reveal-left">
+          <h2 class="reveal-right">Our Partners & Brands</h2>
 
-                ✦ Trusted Partners
-
-            </span>
-
-            <h2 class="reveal-right">
-
-                Our Partners & Brands
-
-            </h2>
-
-            <p class="reveal-up">
-
-                We collaborate with leading developers, financial
-                institutions, legal advisors, and interior specialists
-                to provide a complete real estate experience.
-
-            </p>
-
+          <p class="reveal-up">
+            We collaborate with leading developers, financial institutions,
+            legal advisors, and interior specialists to provide a complete real
+            estate experience.
+          </p>
         </div>
 
         <div class="partners-grid">
+          <div class="partner-card reveal-pop reveal-pop">
+            <img src="images/team1.webp" alt="Luxury Builders" />
 
-            <div class="partner-card reveal-pop reveal-pop">
+            <h3>Luxury Builders</h3>
 
-                <img src="images/team1.webp" alt="Luxury Builders">
+            <span>Property Development</span>
+          </div>
 
-                <h3>Luxury Builders</h3>
+          <div class="partner-card reveal-pop">
+            <img src="images/team2.webp" alt="National Bank" />
 
-                <span>Property Development</span>
+            <h3>National Bank</h3>
 
-            </div>
+            <span>Home Loans</span>
+          </div>
 
-            <div class="partner-card reveal-pop">
+          <div class="partner-card reveal-pop">
+            <img src="images/team3.webp" alt="Legal Associates" />
 
-                <img src="images/team2.webp" alt="National Bank">
+            <h3>Legal Associates</h3>
 
-                <h3>National Bank</h3>
+            <span>Legal Services</span>
+          </div>
 
-                <span>Home Loans</span>
+          <div class="partner-card reveal-pop">
+            <img src="images/villa21.webp" alt="Luxury Interiors" />
 
-            </div>
+            <h3>Luxury Interiors</h3>
 
-            <div class="partner-card reveal-pop">
+            <span>Interior Design</span>
+          </div>
 
-                <img src="images/team3.webp" alt="Legal Associates">
+          <div class="partner-card reveal-pop">
+            <img src="images/villa28.webp" alt="Secure Insurance" />
 
-                <h3>Legal Associates</h3>
+            <h3>Secure Insurance</h3>
 
-                <span>Legal Services</span>
+            <span>Property Insurance</span>
+          </div>
 
-            </div>
+          <div class="partner-card reveal-pop">
+            <img src="images/villa30.webp" alt="Smart Living" />
 
-            <div class="partner-card reveal-pop">
+            <h3>Smart Living</h3>
 
-                <img src="images/villa21.webp" alt="Luxury Interiors">
-
-                <h3>Luxury Interiors</h3>
-
-                <span>Interior Design</span>
-
-            </div>
-
-            <div class="partner-card reveal-pop">
-
-                <img src="images/villa28.webp" alt="Secure Insurance">
-
-                <h3>Secure Insurance</h3>
-
-                <span>Property Insurance</span>
-
-            </div>
-
-            <div class="partner-card reveal-pop">
-
-                <img src="images/villa30.webp" alt="Smart Living">
-
-                <h3>Smart Living</h3>
-
-                <span>Home Automation</span>
-
-            </div>
-
+            <span>Home Automation</span>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!--=====================================
+    <!--=====================================
         CALL TO ACTION
 ======================================-->
 
-<section class="cta-section">
+    <section class="cta-section">
+      <div class="cta-overlay"></div>
 
-    <div class="cta-overlay"></div>
-
-    <div class="container">
-
+      <div class="container">
         <div class="cta-content">
+          <span class="section-badge reveal-left"> ✦ Let's Get Started </span>
 
-            <span class="section-badge reveal-left">
+          <h2 class="reveal-right">Find Your Dream Property With Confidence</h2>
 
-                ✦ Let's Get Started
+          <p class="reveal-up">
+            Whether you're searching for your forever home, planning your next
+            investment, or selling a luxury property, our experts are here to
+            guide you every step of the way.
+          </p>
 
-            </span>
+          <div class="cta-buttons">
+            <a href="error.html" class="cta-btn reveal-pop">
+              Explore Properties
+            </a>
 
-            <h2 class="reveal-right">
-
-                Find Your Dream Property With Confidence
-
-            </h2>
-
-            <p class="reveal-up">
-
-                Whether you're searching for your forever home,
-                planning your next investment, or selling a luxury
-                property, our experts are here to guide you every
-                step of the way.
-
-            </p>
-
-            <div class="cta-buttons">
-
-                <a href="error.html" class="cta-btn reveal-pop">
-
-                    Explore Properties
-
-                </a>
-
-                <a href="error.html" class="cta-outline reveal-pop">
-
-                    Contact Our Experts
-
-                </a>
-
-            </div>
-
+            <a href="error.html" class="cta-outline reveal-pop">
+              Contact Our Experts
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!--=====================================
+    <!--=====================================
             PREMIUM FOOTER
 ======================================-->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <a href="index.html" class="footer-logo"><img src="images/logo-image.webp" alt="Stackly"></a>
-        <p>Stackly connects buyers, sellers and investors with premium real estate through trusted guidance and exceptional service.</p>
-        <div class="footer-social">
-          <a href="error.html"><i class="fab fa-facebook-f"></i></a>
-          <a href="error.html"><i class="fab fa-instagram"></i></a>
-          <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
-          <a href="error.html"><i class="fab fa-x-twitter"></i></a>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo"
+              ><img src="images/logo.webp" alt="Stackly"
+            /></a>
+            <p>
+              Stackly connects buyers, sellers and investors with premium real
+              estate through trusted guidance and exceptional service.
+            </p>
+            <div class="footer-social">
+              <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+              <a href="error.html"><i class="fab fa-instagram"></i></a>
+              <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+              <a href="error.html"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="error.html">Buy Property</a></li>
+              <li><a href="error.html">Sell Property</a></li>
+              <li><a href="error.html">Rent Property</a></li>
+              <li><a href="error.html">Commercial</a></li>
+              <li><a href="error.html">Investment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu,
+              India
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> info@stackly.com</p>
+            <p><i class="fa-solid fa-clock"></i> Mon - Sat : 9 AM - 7 PM</p>
+          </div>
+
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Receive exclusive listings and market updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Stackly. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="error.html">Privacy Policy</a>
+            <a href="error.html">Terms</a>
+            <a href="error.html">Sitemap</a>
+            <a href="#top">Back To Top ↑</a>
+          </div>
         </div>
       </div>
+    </footer>
 
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="properties.html">Properties</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="error.html">Buy Property</a></li>
-          <li><a href="error.html">Sell Property</a></li>
-          <li><a href="error.html">Rent Property</a></li>
-          <li><a href="error.html">Commercial</a></li>
-          <li><a href="error.html">Investment</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h3>Contact</h3>
-        <p><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu, India</p>
-        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fa-solid fa-envelope"></i> info@stackly.com</p>
-        <p><i class="fa-solid fa-clock"></i> Mon - Sat : 9 AM - 7 PM</p>
-      </div>
-
-      <div class="footer-newsletter">
-        <h3>Newsletter</h3>
-        <p>Receive exclusive listings and market updates.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email">
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 Stackly. All Rights Reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="error.html">Privacy Policy</a>
-        <a href="error.html">Terms</a>
-        <a href="error.html">Sitemap</a>
-        <a href="#top">Back To Top ↑</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-        fetch("auth/auth.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("auth-container").innerHTML = html;
-  });
+    <script>
+      fetch("auth/auth.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("auth-container").innerHTML = html;
+        });
     </script>
     <script src="auth/auth.js"></script>
-<script src="js/global.js"></script>
-</body>
+    <script src="js/global.js"></script>
+    <script src="js/about.js"></script>
+  </body>
 </html>
