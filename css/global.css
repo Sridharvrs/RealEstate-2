@@ -133,6 +133,70 @@ body.menu-open{
     letter-spacing:.5px;
 }
 
+.brand-dot{
+    display:none;
+}
+
+.brand-name{
+    display:none;
+}
+
+/*========================
+        BRAND LOGO
+=========================*/
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
+}
+
+.brand-logo{
+
+    width:180px;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+    transition:.35s;
+
+}
+
+.brand:hover .brand-logo{
+
+    transform:scale(1.05);
+
+    filter:drop-shadow(0 0 12px rgba(212,175,55,.35));
+
+}
+
+@media(max-width:992px){
+
+.brand-logo{
+
+width:150px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.brand-logo{
+
+width:130px;
+
+}
+
+}
+
 /*========================
       LINKS
 =========================*/
@@ -471,7 +535,111 @@ display:none;
 
 }
 
+/*=========================
+      MOBILE CONTACT
+=========================*/
 
+.mobile-contact{
+
+    margin-top:18px;
+
+    padding-top:16px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.mobile-contact h5{
+
+    color:#FFD76A;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.mobile-contact a,
+.mobile-contact p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#C7CFDA;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+    transition:.3s;
+
+}
+
+.mobile-contact a:hover{
+
+    color:#FFD76A;
+
+}
+
+.mobile-contact p{
+
+    margin-bottom:0;
+
+}
+
+.mobile-contact i{
+
+    width:28px;
+
+    height:28px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,.10);
+
+    color:#FFD76A;
+
+    font-size:12px;
+
+    margin-top:2px;
+
+}
+
+.mobile-contact a,
+.mobile-contact p{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    color:#C7CFDA;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    word-break:break-word;
+
+}
 /* ===================================================================== */
 /*==================================================
                 PREMIUM FOOTER
@@ -587,6 +755,7 @@ display:none;
     width:44px;
     height:44px;
     display:flex;
+    
     justify-content:center;
     align-items:center;
     border-radius:50%;
