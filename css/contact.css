@@ -1155,13 +1155,7 @@ font-size:22px;
             LAYOUT
 =========================================*/
 
-.contact-wrapper{
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:40px;
-    margin-top:70px;
-    align-items:start;   /* Important */
-}
+
 
 /*==================================================
                 CONTACT FORM
@@ -1194,7 +1188,7 @@ font-size:22px;
 
 .contact-form-box textarea{
     flex:1;
-    min-height:120px;
+    height:20px;
 }
 
 .input-grid{
@@ -1360,6 +1354,53 @@ font-size:22px;
     line-height:1.8;
     font-size:15px;
 }
+
+/* =====================------------------------===================== */
+/*=====================================
+        MESSAGE TEXTAREA
+======================================*/
+
+.contact-form textarea{
+
+    width:100%;
+
+    height:20px;
+
+    padding:16px 20px;
+
+    resize:none;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.05);
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.contact-form textarea:focus{
+
+    border-color:#D4AF37;
+
+    box-shadow:0 0 0 4px rgba(212,175,55,.12);
+
+}
+
+.contact-form textarea::placeholder{
+
+    color:#AEB8C5;
+
+}
+
+
 
 /*==================================================
             SOCIAL ICONS
@@ -2259,5 +2300,45 @@ width:100%;
 border-radius:0;
 
 }
+
+}
+
+
+/* ============ */
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+.contact-left{
+
+    height:fit-content;
+
+}
+
+.contact-left{
+
+    padding:30px;
+
+}
+
+.contact-left .info-item{
+
+    margin-bottom:18px;
+
+}
+
+.contact-info-box{
+
+    height:fit-content;
+
+    align-self:start;
 
 }

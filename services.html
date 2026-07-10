@@ -179,11 +179,11 @@
             </ul>
 
             <form>
-              <input type="text" placeholder="Your Name" />
+              <input type="text" placeholder="Your Name" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" />
 
               <input type="email" placeholder="Email Address" />
 
-              <input type="tel" placeholder="Phone Number" />
+              <input type="tel" placeholder="Phone Number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
 
               <button>Schedule Consultation</button>
             </form>
