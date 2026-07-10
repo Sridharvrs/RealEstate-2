@@ -367,6 +367,7 @@ section{
     position:relative;
     min-height:100vh;
     display:flex;
+    justify-content: center;
     align-items:center;
     overflow:hidden;
     padding:150px 8% 100px;
@@ -403,6 +404,7 @@ section{
     position:relative;
     z-index:5;
     max-width:850px;
+    text-align: center;
 }
 
 /*==============================
@@ -476,7 +478,7 @@ section{
 
     line-height:1.8;
 
-    max-width:700px;
+    width: 100%;
 
     margin-bottom:55px;
 
